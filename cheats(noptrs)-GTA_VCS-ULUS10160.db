@@ -3,17 +3,17 @@ _G GTA: VCS [USA]
 
 _C0 Game speed 100% (default)
 // Float 4 byte variable
-_L 0x08BB3B58 0x3F800000
+_L 0x203B3B58 0x3F800000
 _C0 Game speed 200%
 // Float 4 byte variable
-_L 0x08BB3B58 0x40000000
+_L 0x203B3B58 0x40000000
 _C0 Game speed 50%
 // Float 4 byte variable
-_L 0x08BB3B58 0x3F000000
+_L 0x203B3B58 0x3F000000
 
 _C0 Set time to "12:24"
-// Int 2 bytes, p32() in python's pwn
-_L 0x08BB3B40 0x0000180C
+_L 0x003B3B40 0x0000000C // 12
+_L 0x003B3B41 0x00000018 // 24
 
 // In game flags, 1 byte
 _C0 Cheat: Black cars
