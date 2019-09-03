@@ -1,0 +1,127 @@
+_S ULUS10160
+_G GTA: VCS [USA]
+//
+_C0 Game speed 100% (default)
+// Float 4 byte variable
+_L 0x203B3B58 0x3F800000
+_C0 Game speed 200%
+// Float 4 byte variable
+_L 0x203B3B58 0x40000000
+_C0 Game speed 50%
+// Float 4 byte variable
+_L 0x203B3B58 0x3F000000
+//
+_C0 Tons of money
+// hex(99999999) = 0x5F5E0FF
+_L 0x003DE55C 0x5F5C000 // real
+_L 0x203DE560 0x5F5C000 // visible, MAY cause glitches upon freeze
+//
+_C0 Set time to "12:24"
+_L 0x003B3B40 0x0000000C // 12
+_L 0x003B3B41 0x00000018 // 24
+//
+_C0 Max HP & Armor
+_L 0x603DE4B0 0x447A0000
+_L 0x00020001 0x000004E4 // hp
+_L 0x603DE4B0 0x447A0000
+_L 0x00020001 0x000004E8 // armor
+//
+_C0 Suicide
+_L 0x603DE4B0 0x00000000
+_L 0x00020001 0x000004E4 // hp
+//
+_C0 Partial invincibility
+_L 0x603DE4B0 0x00002010 // 32 16
+_L 0x00010001 0x0000004C
+//
+_C0 Partial invincibility [disable]
+_L 0x603DE4B0 0x00000000
+_L 0x00010001 0x0000004C
+//
+_C0 Freeze camera
+_L 0x603DE4B0 0x00000001
+_L 0x00000001 0x00000550
+//
+_C0 Freeze camera [disable]
+_L 0x603DE4B0 0x00000000
+_L 0x00000001 0x00000550
+//
+_C0 Kill with aim 
+_L 0x603A1D70 0x00000000
+_L 0x00020001 0x000004E4
+// 4E8 - armour 
+//
+_C0 Indestructible driven vehicles
+_L 0x603C85F0 0x49742400
+_L 0x00020001 0x0000027C
+//
+_C0 Max ammo
+// max ammo (9600)
+// throwable
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x000005BC 
+// pistol
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x000005D8
+// shotgun
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x000005F4
+// smg
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x00000610
+// carbine
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x0000062C
+// rockets
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x00000648
+// sniper
+_L 0x603DE4B0 0x00002580
+_L 0x00020001 0x00000664
+//
+_C1 No reloading
+// I pick 1000 dec = 3E8 HEX
+// throwable
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x000005B8
+// pistol
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x000005D4
+// shotgun
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x000005F0
+// smg
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x0000060C
+// carbine
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x00000628
+// rockets
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x00000644
+// sniper
+_L 0x603DE4B0 0x000003E8
+_L 0x00020001 0x00000660
+//
+// In game flags, 1 byte
+_C0 Cheat: Black cars
+_L 0x003B10D4 0x00000001
+_C0 Cheat: White cars
+_L 0x003B10D5 0x00000001
+_C0 Cheat: Chrome cars
+_L 0x003AD856 0x00000001
+_C0 Cheat: Reckless drivers
+_L 0x003B32C8 0x00000001
+_C0 Cheat: Green traffic lights
+_L 0x003AFD80 0x00000001
+_C0 Cheat: Perfect Traction
+_L 0x003B2452 0x00000001
+_C0 Cheat: Timeflow faster
+_L 0x003B2DB4 0x00000001
+_C0 Cheat: Everyone follows you
+_L 0x003ACDF5 0x00000001
+_C0 Cheat: Everyone bears firearms
+_L 0x003AEF2C 0x00000001
+_C0 Cheat: Upside down
+_L 0x003AB98C 0x00000001
+//
