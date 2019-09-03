@@ -1,0 +1,17 @@
+_S ULES00637
+_G Test Drive Unlimited [EUR]
+// * Original ULUS patch by LunaMoo,
+// https://github.com/LunaMoo/PPSSPP_workarounds/
+// * Inspired by https://github.com/LunaMoo/PPSSPP_workarounds/issues/2
+//
+//
+_C0 Remove stupid GBA-like pixelisation
+//This patches stuff on boot, aka requires restarting emulation/starting the game with cheat activated
+_L 0xE0020406 0x002DC288
+_L 0x202DC288 0x00003021
+_L 0x202DC28C 0x00000000
+//
+_C0 Remove stupid GBA-like pixelisation [Disable]
+_L 0x202DC288 0x3C060406
+_L 0x202DC28C 0x34C60002
+//
