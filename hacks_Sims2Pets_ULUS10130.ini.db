@@ -1,0 +1,8 @@
+_S ULUS10130
+_G Sims 2 Pets
+//
+_C0 Disable "FIRE CODE"
+_L 0x20013A64 0x00000000
+//
+_C0 Re-enable "FIRE CODE" [default]
+_L 0x20013A64 0x6855B5C6
