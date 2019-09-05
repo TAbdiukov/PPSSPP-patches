@@ -23,7 +23,7 @@ _L 0x20356420 0x3F000000
 //
 _C0 Tons of money
 // hex(99999999) = 0x5F5E0FF
-_L 0x003DE5CC 0x5F5C000 // real
+_L 0x203DE5CC 0x5F5C000 // real
 _L 0x20389BD0 0x5F5C000 // visible, MAY cause glitches upon freeze
 //
 _C0 Set time to "12:24"
