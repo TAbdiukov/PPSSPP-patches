@@ -56,7 +56,7 @@ _L 0x00000001 0x00000560
 // Kill with aim - not implemented
 //
 _C0 Indestructible driven vehicles
-_L 0x60383784 0x49742400
+_L 0x60383684 0x49742400
 _L 0x00020001 0x00000268
 //
 _C0 Max ammo
