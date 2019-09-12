@@ -1,0 +1,16 @@
+_S UCES00015
+_G Fired Up
+//
+_C0 Infinite ammo [Enable]
+_L 0xE00200A0 0x000BDFE4 // check, 1/2
+_L 0xE001AE05 0x000BDFE6 // check, 2/2
+_L 0x200BDFE4 0x00000000 // nop
+//
+_C0 Infinite ammo [Disable]
+_L 0xE0020000 0x000BDFE4 // check, 1/2
+_L 0xE0010000 0x000BDFE6 // check, 2/2
+_L 0x200BDFE4 0xAE0500A0 // orig
+//
+// 088BDFE4:AE0500A0 // orig
+// 088BDFE4:00000000 //mod
+//
