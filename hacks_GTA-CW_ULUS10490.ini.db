@@ -1,0 +1,158 @@
+_S ULUS10490
+_G GTA: CW [USA]
+//
+_C0 Dbg - Toggle first camera
+_L 0x00F836E9 0x00000046 // 1 byte
+//
+_C0 Dbg - Toggle second camera
+_L 0x00F836E9 0x00000048 // 1 byte
+//
+_C0 Dbg - Cinematic mode [Disable]
+_L 0x00F836F3 0x00000000
+//
+_C0 Dbg - Cinematic mode [Enable]
+_L 0x00F836F3 0x00000001
+//
+_C0 Dbg - Cinematic mode - Freeze
+_L 0x10F836F4 0x0000012C
+//
+_C0 Main - UnPatch cam angle [Default]
+_L 0x200559D8 0x8604012C // 2
+//
+_C0 Main - Patch cam angle [Enable]
+_L 0x200559D8 0x860401FE // 2
+//
+_C0 Main - Set patched cam angle [Enable]
+_L 0x60F836E8 0x0000E890 // value
+_L 0x00010001 0x000001FE // +510 - new. 512 - 2
+//
+_C0 Main - UnSet patched cam angle [Enable]
+_L 0x60F836E8 0x00000000 // value
+_L 0x00010001 0x000001FE // +510 - new. 512 - 2
+//
+_C0 Main - Patch cam Z
+_L 0x20054D60 0x00000000 // Map Load
+_L 0x200CC370 0x00000000 // Camera switching - 1
+_L 0x200CC388 0x00000000 // Camera switching - 2
+_L 0x200CC694 0x00000000 // Camera switching - 3
+_L 0x200CC6C4 0x00000000 // Camera switching - 4
+_L 0x20053EBC 0x00000000 // Camera switching - 5
+_L 0x2013DF20 0x00000000 // Small camera correction
+_L 0x200CDC8C 0x00000000 // On foot - 1
+_L 0x200CCDAC 0x00000000 // On food - 2
+_L 0x200CA400 0x00000000 // Entering car - 1
+_L 0x200CA410 0x00000000 // Entering car - 2
+_L 0x200CBFB0 0x00000000 // Driving car
+_L 0x200C9000 0x00000000 // Entering boat - 1
+_L 0x200C9024 0x00000000 // Entering boat - 2
+_L 0x200C9158 0x00000000 // Entering boat - 3
+_L 0x200CA140 0x00000000 // Piloting boat
+_L 0x20075CB4 0x00000000 // Exiting taxi
+_L 0x20053D54 0x00000000 // Big bang - 1 (+)
+_L 0x20053BF4 0x00000000 // Big bang - 2 (-)
+_L 0x2013D828 0x00000000 // Interact. event
+_L 0x20052160 0x00000000 // Cinematic camera - 1
+_L 0x20075C1C 0x00000000 // Cinematic camera - 2
+_L 0x20074934 0x00000000 // Cinematic camera - 3
+_L 0x200745E0 0x00000000 // Cinematic camera - chopper
+_L 0x20074BC8 0x00000000 // Cinematic camera - side view 1
+_L 0x2007474C 0x00000000 // Cinematic camera - side view 2
+_L 0x200521B0 0x00000000 // Cinematic camera - hovering around
+_L 0x202714B8 0x00000000 // Mission - 1
+_L 0x20272050 0x00000000 // Mission - 2
+_L 0x20272208 0x00000000 // Mission - 3
+_L 0x20271408 0x00000000 // Mission - 4
+_L 0x2020C258 0x00000000 // Mission - 5
+_L 0x20271FBC 0x00000000 // Mission - 6
+_L 0x20272194 0x00000000 // Mission - 7
+_L 0x200CC5C8 0x00000000 // Buildings/Garages/Missions - 1
+_L 0x20053640 0x00000000 // Buildings/Garages/Missions - 2
+_L 0x20271320 0x00000000 // Gas station/Shooting range
+_L 0x20074E10 0x00000000 // Unique stunt
+_L 0x20135234 0x00000000 // Ad destruction - 1
+// Ad destruction - 2 -> Cinematic camera - hovering around
+_L 0x20135B04 0x00000000 // Ad destruction - 3
+_L 0x200CA55C 0x00000000 // Ad destruction - 4
+_L 0x200440FC 0x00000000 // Arrested - 1
+_L 0x20044160 0x00000000 // Arrested - 2
+_L 0x200442C0 0x00000000 // Arrested - 3
+_L 0x200988A8 0x00000000 // Wasted - 1
+_L 0x200988C0 0x00000000 // Wasted - 2
+//
+_C0 Main - UnPatch cam Z
+_L 0x20054D60 0xAC850108 // Map Load
+_L 0x200CC370 0xAE240108 // Camera switching - 1
+_L 0x200CC388 0xAE240108 // Camera switching - 2
+_L 0x200CC694 0xAE040108 // Camera switching - 3
+_L 0x200CC6C4 0xAE040108 // Camera switching - 4
+_L 0x20053EBC 0xAE040108 // Camera switching - 5
+_L 0x2013DF20 0xAE040108 // Small camera correction
+_L 0x200CDC8C 0xAE040108 // On foot - 1
+_L 0x200CCDAC 0xAE040108 // On food - 2
+_L 0x200CA400 0xAE040108 // Entering car - 1
+_L 0x200CA410 0xAE040108 // Entering car - 2
+_L 0x200CBFB0 0xAEC40108 // Driving car
+_L 0x200C9000 0xAE040108 // Entering boat - 1
+_L 0x200C9024 0xAE040108 // Entering boat - 2
+_L 0x200C9158 0xAE050108 // Entering boat - 3
+_L 0x200CA140 0xAE440108 // Piloting boat
+_L 0x20075CB4 0xAE040108 // Exiting taxi
+_L 0x20053D54 0xAE040108 // Big bang - 1 (+)
+_L 0x20053BF4 0xAE040108 // Big bang - 2 (-)
+_L 0x2013D828 0xAE240108 // Interact. event
+_L 0x20052160 0xAC850000 // Cinematic camera - 1
+_L 0x20075C1C 0xAE040108 // Cinematic camera - 2
+_L 0x20074934 0xAE240108 // Cinematic camera - 3
+_L 0x200745E0 0xAE240108 // Cinematic camera - chopper
+_L 0x20074BC8 0xAE240108 // Cinematic camera - side view 1
+_L 0x2007474C 0xAE240108 // Cinematic camera - side view 2
+_L 0x200521B0 0xAC850000 // Cinematic camera - hovering around
+_L 0x202714B8 0xAE050108 // Mission - 1
+_L 0x20272050 0xAE040108 // Mission - 2
+_L 0x20272208 0xAE040108 // Mission - 3
+_L 0x20271408 0xAE040108 // Mission - 4
+_L 0x2020C258 0xACC50108 // Mission - 5
+_L 0x20271FBC 0xAE050108 // Mission - 6
+_L 0x20272194 0xAE050108 // Mission - 7
+_L 0x200CC5C8 0xAE040108 // Buildings/Garages/Missions - 1
+_L 0x20053640 0xAE040108 // Buildings/Garages/Missions - 2
+_L 0x20271320 0xAE050108 // Gas station/Shooting range
+_L 0x20074E10 0xAE240108 // Unique stunt
+_L 0x20135234 0xAE240108 // Ad destruction - 1
+// Ad destruction - 2 -> Cinematic camera - hovering around
+_L 0x20135B04 0xAE040108 // Ad destruction - 3
+_L 0x200CA55C 0xAE050108 // Ad destruction - 4
+_L 0x200440FC 0xAE040108 // Arrested - 1
+_L 0x20044160 0xAE040108 // Arrested - 2
+_L 0x200442C0 0xAE260108 // Arrested - 3
+_L 0x200988A8 0xAE040108 // Wasted - 1
+_L 0x200988C0 0xAE040108 // Wasted - 2
+//
+_C0 Main - Set Z to arbitrary value
+_L 0x60F836E8 0x0000EA60 // value. I pick 60,000
+_L 0x00020001 0x00000108 // 264
+
+//
+// # pointers in standard format
+//
+// Camera 1:	000008B542E0 + 0
+// Camera 2:	0000097836E8 + 0
+// Target:	00000978376C + 0 -> 000008BF2048 + 582/993
+// Vehicle:	000009EA6B64 + 0
+// Ammo-nation truck:	000009EA476C + 0
+// Drug van:	000009EA48B0 + 0
+// Garage:	000008BC8220 + 2208
+// Auto-merchant:	000008D56950 + 0 -> X + 0
+//
+// Weapon - Type:	00000958E428
+// Weapon - Fist:	0000097829B4
+// Weapon - Melee:	0000097829B8
+// Weapon - Pistol:	0000097829BC
+// Weapon - Shotgun:	0000097829C0
+// Weapon - SMG:	0000097829C4
+// Weapon - Carbine:	0000097829C8
+// Weapon - Heavy:	0000097829CC
+// Weapon - Secret:	0000097829D0
+// Weapon - Grenade:	0000097829D4
+//
+//
