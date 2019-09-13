@@ -1,6 +1,7 @@
 _S ULUS10490
 _G GTA: CW [USA]
 //
+// no known "is game loaded" ptr
 _C0 Max HP & Armor
 _L 0x00F82B06 0x000000FF // hp; 1 byte
 _L 0x00F82B07 0x000000FF // armour; 1 byte
@@ -26,56 +27,70 @@ _L 0x10F82B98 0x00000000 // heat, 2 byte int
 // 	Todo kill with aim
 //
 _C0 Helicopter in nearest garage
+_L 0xD03C8222 0x00300000 // check, garage
 _L 0x603C8220 0x0000005F // 4 bytes
 _L 0x00020001 0x00000958 // vehicle ID (2392)
 _L 0x603C8220 0x00000000 // 4 bytes
 _L 0x00020001 0x00000964 // vehicle colour (2404)
 //
 _C0 Vehicle - Max HP
+_L 0xD16A6B66 0x00300000 // check, vehicle
 _L 0x616A6B64 0x000000FF // 1 byte. 
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 _C0 Vehicle - Inf Burnout
+_L 0xD16A6B66 0x00300000 // check, vehicle
 _L 0x616A6B64 0x000000F0 // 1 byte. FF - 0F (for safety) = F0
 _L 0x00000001 0x00000611 // vehicle burning tyres timer (1553)
 _C0 Vehicle - Kill alarm
+_L 0xD16A6B66 0x00300000 // check, vehicle
 _L 0x616A6B64 0x00000000 // 1 byte
 _L 0x00000001 0x000003BD // vehicle alarm (957)
 _C0 Vehicle - Kill radio
+_L 0xD16A6B66 0x00300000 // check, vehicle
 _L 0x616A6B64 0x0000000B // 1 byte; 0B for no radio
 _L 0x00000001 0x000003E3 // vehicle radio (995)
 _C0 Vehicle - Kill traffic [UNSTABLE, use w/ max HP, disable if exiting vehicle!]
+_L 0xD16A6B66 0x00300000 // check, vehicle
 _L 0x616A6B64 0x0000007F // 1 byte; 7f for glitchy ID
 _L 0x00000001 0x000003E2 // vehicle ID (994)
 //
 _C0 Ammo-nation Van - Low HP
+_L 0xD16A476E 0x00300000 // check, Ammo-nation Van
 _L 0x616A476C 0x00000060 // 1 byte. hex(60) - confirmed good val 
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 _C0 Ammo-nation Van - Max HP
+_L 0xD16A476E 0x00300000 // check, Ammo-nation Van
 _L 0x616A476C 0x000000FF // 1 byte.
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 _C0 Ammo-nation Van - Freeze
+_L 0xD16A476E 0x00300000 // check, Ammo-nation Van
 _L 0x616A476C 0x00000000 // 2 bytes.
 _L 0x00010001 0x000004FA // vehicle spd (1274)
 _L 0x616A476C 0x00000000 // 1 byte.
 _L 0x00000001 0x0000054A // vehicle RPM (1354)
 _C0 Ammo-nation Van - Inf Burnout
+_L 0xD16A476E 0x00300000 // check, Ammo-nation Van
 _L 0x616A476C 0x000000F0 // 1 byte. FF - 0F (for safety) = F0
 _L 0x00000001 0x00000611 // vehicle burning tyres timer (1553)
 //
-_C0 Ammo-nation Van - Low HP
-_L 0x616A48B0 0x00000060 // 1 byte. hex(60) - confirmed good val 
-_L 0x00000001 0x000003E1 // vehicle hp (993)
-_C0 Ammo-nation Van - Max HP
-_L 0x616A48B0 0x000000FF // 1 byte.
-_L 0x00000001 0x000003E1 // vehicle hp (993)
-_C0 Ammo-nation Van - Freeze
-_L 0x616A48B0 0x00000000 // 2 bytes.
-_L 0x00010001 0x000004FA // vehicle spd (1274)
-_L 0x616A48B0 0x00000000 // 1 byte.
-_L 0x00000001 0x0000054A // vehicle RPM (1354)
-_C0 Ammo-nation Van - Inf Burnout
-_L 0x616A48B0 0x000000F0 // 1 byte. FF - 0F (for safety) = F0
-_L 0x00000001 0x00000611 // vehicle burning tyres timer (1553)
+//_C0 Drug Van - Low HP
+//_L 0xD16A48B0 0x00300000 // check, drug van 
+//_L 0x616A48B0 0x00000060 // 1 byte. hex(60) - confirmed good val 
+//_L 0x00000001 0x000003E1 // vehicle hp (993)
+//_C0 Drug Van - Max HP
+//_L 0xD16A48B0 0x00300000 // check, drug van 
+//_L 0x616A48B0 0x000000FF // 1 byte.
+//_L 0x00000001 0x000003E1 // vehicle hp (993)
+//_C0 Drug Van - Freeze
+//_L 0xD16A48B0 0x00300000 // check, drug van 
+//_L 0x616A48B0 0x00000000 // 2 bytes.
+//_L 0x00010001 0x000004FA // vehicle spd (1274)
+//_L 0x616A48B0 0x00000000 // 1 byte.
+//_L 0x00000001 0x0000054A // vehicle RPM (1354)
+//_C0 Drug Van - Inf Burnout
+//_L 0xD16A48B0 0x00300000 // check, drug van 
+//_L 0x616A48B0 0x000000F0 // 1 byte. FF - 0F (for safety) = F0
+//_L 0x00000001 0x00000611 // vehicle burning tyres timer (1553)
 //
 _C0 Cheats - Remove old info
 _L 0x2041F978 0x00000000 // cheats used flag (0/1). 4 bytes
@@ -90,6 +105,7 @@ _C0 Ammo - Inf Feed (crazy!)
 // all 1 byte long
 // feed at +0
 // melee is skipped as it causes minor glitches
+_L 0xD0D8E428 0x00300000 // check, Type. If type present, weapons present
 _L 0x60F829B4 0x00000000 // fist
 _L 0x00000001 0x00000000
 _L 0x60F829BC 0x00000000 // pistol
@@ -102,6 +118,8 @@ _L 0x60F829C8 0x00000000 // carbine
 _L 0x00000001 0x00000000
 _L 0x60F829CC 0x00000000 // heavy
 _L 0x00000001 0x00000000
+_L 0x60F829D0 0x00000000 // secret
+_L 0x00000001 0x00000000
 _L 0x60F829D4 0x00000000 // throwable
 _L 0x00000001 0x00000000
 //
@@ -109,6 +127,7 @@ _C0 Ammo - Inf Ammo
 // all 2 byte long (confirmed), at +16
 // I pick 0x7F80 -> 32640
 // fist and melee are skipped as cause major crashes
+_L 0xD0D8E428 0x00300000 // check, Type. If type present, weapons present
 _L 0x60F829BC 0x00007F80 // pistol
 _L 0x00010001 0x00000010
 _L 0x60F829C0 0x00007F80 // shotgun
@@ -119,6 +138,8 @@ _L 0x60F829C8 0x00007F80 // carbine
 _L 0x00010001 0x00000010
 _L 0x60F829CC 0x00007F80 // heavy
 _L 0x00010001 0x00000010
+_L 0x60F829D0 0x00007F80 // secret
+_L 0x00010001 0x00000010
 _L 0x60F829D4 0x00007F80 // throwable
 _L 0x00010001 0x00000010
 //
@@ -126,6 +147,7 @@ _C0 Ammo - No reload
 // all 1 byte long (confirmed), at +18 DEC = 12 HEX
 // I pick 0x7F -> 127
 // fist and melee are skipped as cause major crashes
+_L 0xD0D8E428 0x00300000 // check, Type. If type present, weapons present
 _L 0x60F829BC 0x0000007F // pistol
 _L 0x00000001 0x00000012
 _L 0x60F829C0 0x0000007F // shotgun
@@ -135,6 +157,8 @@ _L 0x00000001 0x00000012
 _L 0x60F829C8 0x0000007F // carbine
 _L 0x00000001 0x00000012
 _L 0x60F829CC 0x0000007F // heavy
+_L 0x00000001 0x00000012
+_L 0x60F829D0 0x0000007F // secret
 _L 0x00000001 0x00000012
 _L 0x60F829D4 0x0000007F // throwable
 _L 0x00000001 0x00000012
