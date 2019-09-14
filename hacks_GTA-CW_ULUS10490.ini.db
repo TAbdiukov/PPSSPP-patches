@@ -131,7 +131,11 @@ _L 0x200988C0 0xAE040108 // Wasted - 2
 _C0 Main - Set Z to arbitrary value
 _L 0x60F836E8 0x0000EA60 // value. I pick 60,000
 _L 0x00020001 0x00000108 // 264
-
+//
+// 60 FPS patch by theboy181
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+_C1 60FPS (beta)
+_L 0x2010D694 0x00000000 //60FPS
 //
 // # pointers in standard format
 //
