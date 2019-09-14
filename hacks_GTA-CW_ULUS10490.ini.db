@@ -19,15 +19,15 @@ _L 0x10F836F4 0x0000012C
 _C0 Main - UnPatch cam angle [Default]
 _L 0x200559D8 0x8604012C // 2
 //
-_C0 Main - Patch cam angle [Enable]
+_C0 Main - Patch cam angle
 _L 0x200559D8 0x860401FE // 2
 //
-_C0 Main - Set patched cam angle [Enable]
-_L 0x60F836E8 0x0000E890 // value
+_C0 Main - UnSet patched cam angle [Default]
+_L 0x60F836E8 0x00000000 // value
 _L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
-_C0 Main - UnSet patched cam angle [Enable]
-_L 0x60F836E8 0x00000000 // value
+_C0 Main - Set patched cam angle
+_L 0x60F836E8 0x0000E890 // value
 _L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
 _C0 Main - Patch cam Z
