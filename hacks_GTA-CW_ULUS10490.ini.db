@@ -2,18 +2,28 @@ _S ULUS10490
 _G GTA: CW [USA]
 //
 _C0 Dbg - Toggle first camera
+_L 0x60F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0x60F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x00F836E9 0x00000046 // 1 byte
 //
 _C0 Dbg - Toggle second camera
+_L 0x60F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0x60F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x00F836E9 0x00000048 // 1 byte
 //
 _C0 Dbg - Cinematic mode [Disable]
+_L 0x60F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0x60F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x00F836F3 0x00000000
 //
 _C0 Dbg - Cinematic mode [Enable]
+_L 0x60F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0x60F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x00F836F3 0x00000001
 //
 _C0 Dbg - Cinematic mode - Freeze
+_L 0x60F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0x60F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x10F836F4 0x0000012C
 //
 _C0 Main - UnPatch cam angle [Default]

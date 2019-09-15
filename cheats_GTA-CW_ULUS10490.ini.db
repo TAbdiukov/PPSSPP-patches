@@ -142,24 +142,24 @@ _C0 Misc - Always run
 _L 0x00F82AFE 0x00000003 // run spd. 1 byte, val < 3 -> crash
 //
 _C1 Ammo-nation Van - Low HP
-_L 0xD16A476D 0x00300000 // check, Ammo-nation Van, 1/2
+_L 0xD16A476C 0x00300000 // check, Ammo-nation Van, 1/2
 _L 0xD16A476E 0x00300000 // check, Ammo-nation Van, 2/2
 _L 0x616A476C 0x00000060 // 1 byte. hex(60) - confirmed good val
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 _C0 Ammo-nation Van - Max HP
-_L 0xD16A476D 0x00300000 // check, Ammo-nation Van, 1/2
+_L 0xD16A476C 0x00300000 // check, Ammo-nation Van, 1/2
 _L 0xD16A476E 0x00300000 // check, Ammo-nation Van, 2/2
 _L 0x616A476C 0x000000FF // 1 byte.
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 _C1 Ammo-nation Van - Freeze
-_L 0xD16A476D 0x00300000 // check, Ammo-nation Van, 1/2
+_L 0xD16A476C 0x00300000 // check, Ammo-nation Van, 1/2
 _L 0xD16A476E 0x00300000 // check, Ammo-nation Van, 2/2
 _L 0x616A476C 0x00000000 // 1 byte.
 _L 0x00000001 0x000004FA // vehicle spd (1274)
 _L 0x616A476C 0x00000000 // 1 byte.
 _L 0x00000001 0x0000054A // vehicle RPM (1354)
 _C1 Ammo-nation Van - Inf Burnout
-_L 0xD16A476D 0x00300000 // check, Ammo-nation Van, 1/2
+_L 0xD16A476C 0x00300000 // check, Ammo-nation Van, 1/2
 _L 0xD16A476E 0x00300000 // check, Ammo-nation Van, 2/2
 _L 0x616A476C 0x000000F0 // 1 byte. FF - 0F (for safety) = F0
 _L 0x00000001 0x00000611 // vehicle burning tyres timer (1553)
