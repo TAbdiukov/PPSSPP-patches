@@ -49,6 +49,7 @@ _L 0x00010001 0x000001FE // +510 - new. 512 - 2
 _C0 Main - Patch cam Z
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+//
 _L 0x20054D60 0x00000000 // Map Load
 _L 0x200CC370 0x00000000 // Camera switching - 1
 _L 0x200CC388 0x00000000 // Camera switching - 2
@@ -100,6 +101,7 @@ _L 0x200988C0 0x00000000 // Wasted - 2
 _C0 Main - UnPatch cam Z
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+//
 _L 0x20054D60 0xAC850108 // Map Load
 _L 0x200CC370 0xAE240108 // Camera switching - 1
 _L 0x200CC388 0xAE240108 // Camera switching - 2
