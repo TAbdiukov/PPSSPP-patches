@@ -1,6 +1,48 @@
 _S ULUS10490
 _G GTA: CW [USA]
 //
+_C0 Speedup apps
+// V1. Imperfect but works
+// menu
+//08BB3BEC:0E26277D
+//08BB3BF0:00002825
+//08BB3BF4:8E0401EC
+//08BB3BF8:10800003
+// can shellcode 08BB3BF8 .. 08BB3C0C
+_L 0xE006277D 0x003B3BEC // check 1/4, 1/2
+_L 0xE0050E26 0x003B3BEE // check 1/4, 2/2
+_L 0xE0042825 0x003B3BF0 // check 2/4, 1/2 (2/2 skipped for perf)
+_L 0xE0038E04 0x003B3BF6 // check 3/4, 2/2 (1/2 skipped for vers)
+_L 0xE0020003 0x003B3BF8 // check 4/4, 1/2
+_L 0xE0011080 0x003B3BFA // check 4/4, 2/2
+_L 0x203B3BF4 0x34040001 // "li a0, 1"
+// email
+//08BB6DB4:0E26277D
+//08BB6DB8:00002825
+//08BB6DBC:8E0405B4
+//08BB6DC0:10800003
+//similar shellcode possible
+_L 0xE007277D 0x003B6DB4 // check 1/4, 1/2
+_L 0xE0060E26 0x003B6DB6 // check 1/4, 2/2
+_L 0xE0052825 0x003B6DB8 // check 2/4, 1/2 (2/2 skipped for perf)
+_L 0xE0038E04 0x003B6DBE // check 3/4, 2/2 (1/2 skipped for vers)
+_L 0xE0020003 0x003B6DC0 // check 4/4, 1/2
+_L 0xE0011080 0x003B6DC2 // check 4/4, 2/2
+_L 0x203B6DBC 0x34040001 // "li a0, 1"
+// gps (Google maps)
+//similar shellcode possible
+// 08BBC9C0:0E26277D
+// 08BBC9C4:00002825
+// 08BBC9C8:8E0406DC
+// 08BBC9CC:10800003
+_L 0xE007277D 0x003BC9C0 // check 1/4, 1/2
+_L 0xE0060E26 0x003BC9C2 // check 1/4, 2/2
+_L 0xE0052825 0x003BC9C4 // check 2/4, 1/2 (2/2 skipped for perf)
+_L 0xE0038E04 0x003BC9CA // check 3/4, 2/2 (1/2 skipped for vers)
+_L 0xE0020003 0x003BC9CC // check 4/4, 1/2
+_L 0xE0011080 0x003BC9CE // check 4/4, 2/2
+_L 0x203BC9C8 0x34040001 // "li a0, 1"
+//
 _C0 Dbg - Toggle first camera
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
