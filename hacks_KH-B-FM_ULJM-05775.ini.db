@@ -7,3 +7,5 @@ _C0 Enable 60 FPS
 _L 0x21725EC8 0x00000000
 _C0 Japanese Voices
 _L 0x0035B02E 0x00000001
+_C0 Disable Subtitles(Broken outside Theater)
+_L 0x017189FC 0x00000000
