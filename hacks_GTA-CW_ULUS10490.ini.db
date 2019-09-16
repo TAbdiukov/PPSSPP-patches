@@ -22,9 +22,9 @@ _L 0x203B3BF4 0x34040001 // "li a0, 1"
 //08BB6DBC:8E0405B4
 //08BB6DC0:10800003
 //similar shellcode possible
-_L 0xE007277D 0x003B6DB4 // check 1/4, 1/2
-_L 0xE0060E26 0x003B6DB6 // check 1/4, 2/2
-_L 0xE0052825 0x003B6DB8 // check 2/4, 1/2 (2/2 skipped for perf)
+_L 0xE006277D 0x003B6DB4 // check 1/4, 1/2
+_L 0xE0050E26 0x003B6DB6 // check 1/4, 2/2
+_L 0xE0042825 0x003B6DB8 // check 2/4, 1/2 (2/2 skipped for perf)
 _L 0xE0038E04 0x003B6DBE // check 3/4, 2/2 (1/2 skipped for vers)
 _L 0xE0020003 0x003B6DC0 // check 4/4, 1/2
 _L 0xE0011080 0x003B6DC2 // check 4/4, 2/2
@@ -35,9 +35,9 @@ _L 0x203B6DBC 0x34040001 // "li a0, 1"
 // 08BBC9C4:00002825
 // 08BBC9C8:8E0406DC
 // 08BBC9CC:10800003
-_L 0xE007277D 0x003BC9C0 // check 1/4, 1/2
-_L 0xE0060E26 0x003BC9C2 // check 1/4, 2/2
-_L 0xE0052825 0x003BC9C4 // check 2/4, 1/2 (2/2 skipped for perf)
+_L 0xE006277D 0x003BC9C0 // check 1/4, 1/2
+_L 0xE0050E26 0x003BC9C2 // check 1/4, 2/2
+_L 0xE0042825 0x003BC9C4 // check 2/4, 1/2 (2/2 skipped for perf)
 _L 0xE0038E04 0x003BC9CA // check 3/4, 2/2 (1/2 skipped for vers)
 _L 0xE0020003 0x003BC9CC // check 4/4, 1/2
 _L 0xE0011080 0x003BC9CE // check 4/4, 2/2
