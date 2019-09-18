@@ -48,28 +48,28 @@ _L 0x203BC9C8 0x34040001 // "li a0, 1"
 _C0 60 FPS (beta)
 _L 0x2010D694 0x00000000 //60FPS
 //
-_C0 Main - UnPatch cam angle [Default]
+_C0 UnPatch cam angle [Default]
 _L 0xE0018604 0x000559DA // check, instr canary, 100%
 _L 0x200559D8 0x8604012C // 2
 //
-_C0 Main - Patch cam angle
+_C0 Patch cam angle
 _L 0xE0018604 0x000559DA // check, instr canary, 100%
 _L 0x200559D8 0x860401FE // 2
 //
 //since address unused, hack commented out until further need
-//_C0 Main - UnSet patched cam angle value [Default]
+//_C0 UnSet patched cam angle value [Default]
 //_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 //_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 //_L 0x60F836E8 0x00000000 // value
 //_L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
-_C0 Main - Set patched cam angle value
+_C0 Set patched cam angle value
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x60F836E8 0x0000E890 // value
 _L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
-_C0 Main - UnPatch cam Z [Default]
+_C0 UnPatch cam Z [Default]
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 //
@@ -121,7 +121,7 @@ _L 0x200442C0 0xAE260108 // Arrested - 3
 _L 0x200988A8 0xAE040108 // Wasted - 1
 _L 0x200988C0 0xAE040108 // Wasted - 2
 //
-_C0 Main - Patch cam Z
+_C0 Patch cam Z
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 //
@@ -173,7 +173,7 @@ _L 0x200442C0 0x00000000 // Arrested - 3
 _L 0x200988A8 0x00000000 // Wasted - 1
 _L 0x200988C0 0x00000000 // Wasted - 2
 //
-_C0 Main - Set Z to arbitrary value
+_C0 Set Z to arbitrary value
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x60F836E8 0x0000EA60 // value. I pick 60,000
@@ -201,7 +201,7 @@ _L 0x00020001 0x00000108 // 264
 // Weapon - Secret:	0000097829D0
 // Weapon - Grenade:	0000097829D4
 //
-_C0 Main - Unlock undocumented cars at car dealership
+_C0 Unlock undocumented cars at car dealership
 // Essentially removes the upper bound from the car option id
 // orig
 //08B8B118:14E60002
