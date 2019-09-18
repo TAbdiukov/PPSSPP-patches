@@ -1,7 +1,7 @@
 _S ULUS10490
 _G GTA: CW [USA]
 //
-_C0 Speedup apps
+_C1 Speedup apps
 // V1. Imperfect but works
 // menu
 //08BB3BEC:0E26277D
@@ -43,6 +43,11 @@ _L 0xE0020003 0x003BC9CC // check 4/4, 1/2
 _L 0xE0011080 0x003BC9CE // check 4/4, 2/2
 _L 0x203BC9C8 0x34040001 // "li a0, 1"
 //
+// 60 FPS patch by theboy181
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+_C1 60 FPS (beta)
+_L 0x2010D694 0x00000000 //60FPS
+//
 _C0 Main - UnPatch cam angle [Default]
 _L 0xE0018604 0x000559DA // check, instr canary, 100%
 _L 0x200559D8 0x8604012C // 2
@@ -51,69 +56,18 @@ _C0 Main - Patch cam angle
 _L 0xE0018604 0x000559DA // check, instr canary, 100%
 _L 0x200559D8 0x860401FE // 2
 //
-_C0 Main - UnSet patched cam angle value [Default]
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
-_L 0x60F836E8 0x00000000 // value
-_L 0x00010001 0x000001FE // +510 - new. 512 - 2
+//since address unused, hack commented out until further need
+//_C0 Main - UnSet patched cam angle value [Default]
+//_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
+//_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+//_L 0x60F836E8 0x00000000 // value
+//_L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
 _C0 Main - Set patched cam angle value
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x60F836E8 0x0000E890 // value
 _L 0x00010001 0x000001FE // +510 - new. 512 - 2
-//
-_C0 Main - Patch cam Z
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
-//
-_L 0x20054D60 0x00000000 // Map Load
-_L 0x200CC370 0x00000000 // Camera switching - 1
-_L 0x200CC388 0x00000000 // Camera switching - 2
-_L 0x200CC694 0x00000000 // Camera switching - 3
-_L 0x200CC6C4 0x00000000 // Camera switching - 4
-_L 0x20053EBC 0x00000000 // Camera switching - 5
-_L 0x2013DF20 0x00000000 // Small camera correction
-_L 0x200CDC8C 0x00000000 // On foot - 1
-_L 0x200CCDAC 0x00000000 // On food - 2
-_L 0x200CA400 0x00000000 // Entering car - 1
-_L 0x200CA410 0x00000000 // Entering car - 2
-_L 0x200CBFB0 0x00000000 // Driving car
-_L 0x200C9000 0x00000000 // Entering boat - 1
-_L 0x200C9024 0x00000000 // Entering boat - 2
-_L 0x200C9158 0x00000000 // Entering boat - 3
-_L 0x200CA140 0x00000000 // Piloting boat
-_L 0x20075CB4 0x00000000 // Exiting taxi
-_L 0x20053D54 0x00000000 // Big bang - 1 (+)
-_L 0x20053BF4 0x00000000 // Big bang - 2 (-)
-_L 0x2013D828 0x00000000 // Interact. event
-_L 0x20052160 0x00000000 // Cinematic camera - 1
-_L 0x20075C1C 0x00000000 // Cinematic camera - 2
-_L 0x20074934 0x00000000 // Cinematic camera - 3
-_L 0x200745E0 0x00000000 // Cinematic camera - chopper
-_L 0x20074BC8 0x00000000 // Cinematic camera - side view 1
-_L 0x2007474C 0x00000000 // Cinematic camera - side view 2
-_L 0x200521B0 0x00000000 // Cinematic camera - hovering around
-_L 0x202714B8 0x00000000 // Mission - 1
-_L 0x20272050 0x00000000 // Mission - 2
-_L 0x20272208 0x00000000 // Mission - 3
-_L 0x20271408 0x00000000 // Mission - 4
-_L 0x2020C258 0x00000000 // Mission - 5
-_L 0x20271FBC 0x00000000 // Mission - 6
-_L 0x20272194 0x00000000 // Mission - 7
-_L 0x200CC5C8 0x00000000 // Buildings/Garages/Missions - 1
-_L 0x20053640 0x00000000 // Buildings/Garages/Missions - 2
-_L 0x20271320 0x00000000 // Gas station/Shooting range
-_L 0x20074E10 0x00000000 // Unique stunt
-_L 0x20135234 0x00000000 // Ad destruction - 1
-// Ad destruction - 2 -> Cinematic camera - hovering around
-_L 0x20135B04 0x00000000 // Ad destruction - 3
-_L 0x200CA55C 0x00000000 // Ad destruction - 4
-_L 0x200440FC 0x00000000 // Arrested - 1
-_L 0x20044160 0x00000000 // Arrested - 2
-_L 0x200442C0 0x00000000 // Arrested - 3
-_L 0x200988A8 0x00000000 // Wasted - 1
-_L 0x200988C0 0x00000000 // Wasted - 2
 //
 _C0 Main - UnPatch cam Z [Default]
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
@@ -167,16 +121,63 @@ _L 0x200442C0 0xAE260108 // Arrested - 3
 _L 0x200988A8 0xAE040108 // Wasted - 1
 _L 0x200988C0 0xAE040108 // Wasted - 2
 //
+_C0 Main - Patch cam Z
+_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
+_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+//
+_L 0x20054D60 0x00000000 // Map Load
+_L 0x200CC370 0x00000000 // Camera switching - 1
+_L 0x200CC388 0x00000000 // Camera switching - 2
+_L 0x200CC694 0x00000000 // Camera switching - 3
+_L 0x200CC6C4 0x00000000 // Camera switching - 4
+_L 0x20053EBC 0x00000000 // Camera switching - 5
+_L 0x2013DF20 0x00000000 // Small camera correction
+_L 0x200CDC8C 0x00000000 // On foot - 1
+_L 0x200CCDAC 0x00000000 // On food - 2
+_L 0x200CA400 0x00000000 // Entering car - 1
+_L 0x200CA410 0x00000000 // Entering car - 2
+_L 0x200CBFB0 0x00000000 // Driving car
+_L 0x200C9000 0x00000000 // Entering boat - 1
+_L 0x200C9024 0x00000000 // Entering boat - 2
+_L 0x200C9158 0x00000000 // Entering boat - 3
+_L 0x200CA140 0x00000000 // Piloting boat
+_L 0x20075CB4 0x00000000 // Exiting taxi
+_L 0x20053D54 0x00000000 // Big bang - 1 (+)
+_L 0x20053BF4 0x00000000 // Big bang - 2 (-)
+_L 0x2013D828 0x00000000 // Interact. event
+_L 0x20052160 0x00000000 // Cinematic camera - 1
+_L 0x20075C1C 0x00000000 // Cinematic camera - 2
+_L 0x20074934 0x00000000 // Cinematic camera - 3
+_L 0x200745E0 0x00000000 // Cinematic camera - chopper
+_L 0x20074BC8 0x00000000 // Cinematic camera - side view 1
+_L 0x2007474C 0x00000000 // Cinematic camera - side view 2
+_L 0x200521B0 0x00000000 // Cinematic camera - hovering around
+_L 0x202714B8 0x00000000 // Mission - 1
+_L 0x20272050 0x00000000 // Mission - 2
+_L 0x20272208 0x00000000 // Mission - 3
+_L 0x20271408 0x00000000 // Mission - 4
+_L 0x2020C258 0x00000000 // Mission - 5
+_L 0x20271FBC 0x00000000 // Mission - 6
+_L 0x20272194 0x00000000 // Mission - 7
+_L 0x200CC5C8 0x00000000 // Buildings/Garages/Missions - 1
+_L 0x20053640 0x00000000 // Buildings/Garages/Missions - 2
+_L 0x20271320 0x00000000 // Gas station/Shooting range
+_L 0x20074E10 0x00000000 // Unique stunt
+_L 0x20135234 0x00000000 // Ad destruction - 1
+// Ad destruction - 2 -> Cinematic camera - hovering around
+_L 0x20135B04 0x00000000 // Ad destruction - 3
+_L 0x200CA55C 0x00000000 // Ad destruction - 4
+_L 0x200440FC 0x00000000 // Arrested - 1
+_L 0x20044160 0x00000000 // Arrested - 2
+_L 0x200442C0 0x00000000 // Arrested - 3
+_L 0x200988A8 0x00000000 // Wasted - 1
+_L 0x200988C0 0x00000000 // Wasted - 2
+//
 _C0 Main - Set Z to arbitrary value
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x60F836E8 0x0000EA60 // value. I pick 60,000
 _L 0x00020001 0x00000108 // 264
-//
-// 60 FPS patch by theboy181
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
-_C1 60 FPS (beta)
-_L 0x2010D694 0x00000000 //60FPS
 //
 // # pointers in standard format
 //
