@@ -45,7 +45,7 @@ _L 0x203BC9C8 0x34040001 // "li a0, 1"
 //
 // 60 FPS patch by theboy181
 // For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
-_C1 60 FPS (beta)
+_C0 60 FPS (beta)
 _L 0x2010D694 0x00000000 //60FPS
 //
 _C0 Main - UnPatch cam angle [Default]
@@ -201,4 +201,15 @@ _L 0x00020001 0x00000108 // 264
 // Weapon - Secret:	0000097829D0
 // Weapon - Grenade:	0000097829D4
 //
-//
+_C0 Main - Unlock undocumented cars at car dealership
+// Essentially removes the upper bound from the car option id
+// orig
+//08B8B118:14E60002
+//08B8B120:AC8003F4
+//mod
+//08B8B120:00000000
+//can shellcode at least 08B8B114 .. 08B8B120
+_L 0xE0030000 0x30556950 // check, merchant ptr, 1/2
+_L 0xE0020000 0x30556952 // check, merchant ptr, 2/2
+_L 0xE00114E6 0x0038B11A // check, chk before correction, 2/2 (1/2 skipped for perf)
+_L 0x2038B120 0x20000000 // patch
