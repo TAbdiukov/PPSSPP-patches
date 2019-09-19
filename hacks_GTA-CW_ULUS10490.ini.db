@@ -120,8 +120,11 @@ _L 0x20044160 0xAE040108 // Arrested - 2
 _L 0x200442C0 0xAE260108 // Arrested - 3
 _L 0x200988A8 0xAE040108 // Wasted - 1
 _L 0x200988C0 0xAE040108 // Wasted - 2
-//
-// todo
+// nightly
+_L 0xE0020000 0x0006F600 // check, 
+_L 0xE0010000 0x0006F602 // check, 
+_L 0x2006F600 0x682F7B4A
+
 // 00000886F600 - Entering car/mission - can cause crashes if NOPed
 //
 //
@@ -176,6 +179,11 @@ _L 0x20044160 0x00000000 // Arrested - 2
 _L 0x200442C0 0x00000000 // Arrested - 3
 _L 0x200988A8 0x00000000 // Wasted - 1
 _L 0x200988C0 0x00000000 // Wasted - 2
+//
+_C0 Patch cam Z (Nightly)
+_L 0xE002682F 0x0006F600 // check, 
+_L 0xE0017B4A 0x0006F602 // check, 
+_L 0x2006F600 0x00000000
 //
 _C0 Set Z to arbitrary value
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
