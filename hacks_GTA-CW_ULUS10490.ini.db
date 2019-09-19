@@ -121,6 +121,10 @@ _L 0x200442C0 0xAE260108 // Arrested - 3
 _L 0x200988A8 0xAE040108 // Wasted - 1
 _L 0x200988C0 0xAE040108 // Wasted - 2
 //
+// todo
+// 00000886F600 - Entering car/mission - can cause crashes if NOPed
+//
+//
 _C0 Patch cam Z
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
