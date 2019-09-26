@@ -1,0 +1,43 @@
+_S ULUS10509
+_G MGS PM [USA]
+//
+// Patch is at VERY pre-alpha state! Version 1.2
+// Consider getting the last version at https://github.com/TAbdiukov/PPSSPP-patches
+//
+_C0 Higher server lim (9)
+_L 0xD14A6490 0x00300000 // check struct ptr, 1/2
+_L 0xD14A6492 0x00300000 // check struct ptr, 2/2
+_L 0x614A6490 0x00000009 // max = 9
+_L 0x00000001 0x0000003C // 3C is max in the struct
+//
+_C0 Even higher server lim (255)
+_L 0xD14A6490 0x00300000 // check struct ptr, 1/2
+_L 0xD14A6492 0x00300000 // check struct ptr, 2/2
+_L 0x614A6490 0x000000FF // max = 255
+_L 0x00000001 0x0000003C // 3C is max in the struct
+
+
+
+// For developers
+//
+// ## Known, **allegedly** working pointer chains to "max players" variable in the "server selection" struct
+// (in traditional virtual memory allocation standard, not the CWCheat one)
+// (most pointers are likely incidential
+// 1. 0000093A8968 + 1380 -> 000009CA6490 + 60
+// 2. 0000093AAE98 + 1380 -> 000009CA6490 + 60
+// 3. 0000094EC3B0 + 7460 -> 000009CA6490 + 60
+// 4. 00000970774C + 4629 -> 000009CA6490 + 60 // [B]Odd offset;
+// 5. 0000097B12CC + 0056 -> 000009CA6490 + 60 // [!]Small offset;
+// 6. 000009C48D40 + 0192 -> 000009CA6490 + 60 // [!]Small offset; [B]Odd anomaly in MotherBase
+// 7. 000009C9AB94 + 0192 -> 000009CA6490 + 60 // [!]Small offset;
+// 8. 000009C9AC00 + 0192 -> 000009CA6490 + 60 // [!]Small offset;
+// 9. 000009CA6414 + 0192 -> 000009CA6490 + 60 // [!]Small offset;
+// A. 000009CA64E4 + 0208 -> 000009CA6490 + 60 // [!]Small offset; [B]Odd anomaly in MotherBase
+// B. 000009CA6490 -> 60 // [!]Nice and elegant; [!]No anomalies anywhere. // <-Used here
+//	
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+// Cheers!
+//
+//
+// Max reads at: { 08FC3744 08FC7FC8 08FC53FC 08FC02BC 08FC8284 08FC3E38 }
+
