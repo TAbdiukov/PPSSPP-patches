@@ -3,3 +3,7 @@
 ![2](xZusbDA.png)
 
 [Debug representation by IDA Pro](https://dropmefiles.com/IcgFu)
+
+### Credits
+
+Thanks to Frog1
