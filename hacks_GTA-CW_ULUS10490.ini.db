@@ -43,6 +43,15 @@ _L 0xE0020003 0x003BC9CC // check 4/4, 1/2
 _L 0xE0011080 0x003BC9CE // check 4/4, 2/2
 _L 0x203BC9C8 0x34040001 // "li a0, 1"
 //
+// Original by [abc123210]( https://web.archive.org/web/20170701165027/http://gtaforums.com/topic/864596-nintendo-ds-top-health-bar-in-pspiosandroid-version/ )
+// Tipped off by [Frog1/Clouder11]( https://github.com/Clouder11 )
+// Converted to CWCheat later
+// Requires interface/complete restart (aka S.Restart, aka soft restart), go to menu and then go back
+_C0 Enable undocumented DS bars [S.Restart]
+_L 0x00554A14 0x00000001
+_C0 Disable undocumented DS bars [Default;S.Restart]
+_L 0x00554A14 0x00000000
+//
 // 60 FPS patch by theboy181
 // For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
 _C0 60 FPS (beta)
