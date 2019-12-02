@@ -5,7 +5,8 @@ My cheats, fixes and workarounds
 * [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) - gotten inspired by this repo
 
 # Docs
-** Extemely useful ** (although contradictory)
+
+**Extemely useful** (although contradictory)
 
 * [Some Wiki](https://datacrystal.romhacking.net/wiki/CwCheat)
 * [Human explanation on some forum](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
