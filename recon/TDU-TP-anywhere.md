@@ -1,13 +1,17 @@
 # Project: TDU TP anywhere
 
 ## Milestones:
+
 I. TP to marker
+
 II. Put marker anywhere
+
 III. Take care of the Height
 
 ## Essentials
+
 Conseq | 32-bit conseq | Ltr | Literal meaning | Humane meaning
----- | ---- | ---- | ---- | ---- | ----
+---- | ---- | ---- | ---- | ----
 1 | 0(+8) | X | Left-Right | West - East
 2 | 4(+8) | Y | Low-High | Ground - Sky (Height)
 3 | 8(+8) | Z | Up-Down | North - South
@@ -26,7 +30,7 @@ Reading: 000008D49568 (return pos x)
 ##### Round 1
 
 Address  |  Assembly | Thus struct pointer offset | On "sub.s f3, f3, f3" | Preliminary notes
------ | ---- |  ---- | ---- | ---- | ---- | ----
+----- | ---- |  ---- | ---- | ----
 **08A1D250** |  lwc1  f3,0x30(v0) | 0x30 | Soft/Hardlock, no further reads | #1, passes >=1 frame till next . Sth core?
 ~~0894D858~~ | 	lwc1 f3,0x0(s0) | 0x0 | Nothing changes (2 times) | rep 2 times; seems to copy one struct to another - possibly for the long-term future ingame use
 ~~089D14A4~~ |	lwc1 f3,0x0(a1) | 0x0 | Nothing changes (2 times) | rep 2 times; Quick function/code block that quickly adds data down the struct 
@@ -95,6 +99,3 @@ Address | Old ASM | New ASM | Old HEX | New HEX
 ---- | ---- | ---- | ---- | ----
 08A87B04 | 	lui	a0,0x8D5 | 	lui	a0,0x8D6 | 3C0408D5 | 3C0408D6
 08A87B0C | 	addiu	a0,a0,-0x6BEC | 	addiu	a0,a0,0x22AC | 24849414 | 248422AC
-
-
-lk
