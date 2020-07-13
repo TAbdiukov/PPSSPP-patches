@@ -29,11 +29,41 @@ _L 0x20154AAC 0x10A30011 // original boring instruction
 // * ( -inf .. -2 ] -> "DESIGNO MOCHA BLACK" [Often causes crashes at not-equal -2]
 // * -1 -> (last used colour)
 // * [0 .. ~10]  -> valid colour ranges
-// * (10 .. +inf ] -> same as colour at 0 (first colour at the paint shop)
+// * (10 .. +inf ) -> same as colour at 0 (first colour at the paint shop)
 //
 // ## Misc
 // "DESIGNO MOCHA BLACK" - the textbox seems to be malfunctioning
 // Pointer to the currently driven vehicle doesn't (seem to) exist. The functions (seem to) look up the currently driven vehicle every time, among all owned vehicles. Hence, and also from the realism perspectve, the hack is implemented at the paint shop
 // For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
 // Cheers!
+//
+_C0 Teleport to marker [Enable]
+_L 0xE00308D5 0x00287B04 // check, 1/4 (2/4 skipped for perf)
+_L 0xE0029414 0x00287B0C // check, 3/4 (4/4 skipped for perf)
+_L 0x20287B04 0x3C0408D6 // new, 1/2
+_L 0x20287B0C 0x248422AC // new, 2/2
+//
+_C0 Teleport to marker [Disable]
+_L 0xE00308D6 0x00287B04 // check, 1/4 (2/4 skipped for perf)
+_L 0xE00222AC 0x00287B0C // check, 3/4 (4/4 skipped for perf)
+_L 0x20287B04 0x3C0408D5 // old, 1/2
+_L 0x20287B0C 0x24849414 // old, 2/2
+//
+// game reads the return pos 2 times for actually returning AND both times TP occurs (sausage code?) when exiting map:
+// in 08A1D250 and 08A87B74
+// The patch below modifies the 08A87B74 reading, since it seems to be faster in game
+// AND it's safer (if teleport in water, the game doesn't crash)
+// HOWEVER although none found, glitches might arise
+// please report them if they do
+_C1 Teleport to marker [Enable]
+_L 0xE00308D5 0x00287B04 // check, 1/4 (2/4 skipped for perf)
+_L 0xE0029414 0x00287B0C // check, 3/4 (4/4 skipped for perf)
+_L 0x20287B04 0x3C0408D6 // new, 1/2
+_L 0x20287B0C 0x248422AC // new, 2/2
+//
+_C0 Teleport to marker [Disable]
+_L 0xE00308D6 0x00287B04 // check, 1/4 (2/4 skipped for perf)
+_L 0xE00222AC 0x00287B0C // check, 3/4 (4/4 skipped for perf)
+_L 0x20287B04 0x3C0408D5 // old, 1/2
+_L 0x20287B0C 0x24849414 // old, 2/2
 //
