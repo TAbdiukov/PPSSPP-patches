@@ -10,7 +10,7 @@ _G Test Drive Unlimited [USA]
 // AND it's safer (if teleport in water, the game doesn't crash)
 // HOWEVER although none found, glitches might arise
 // please report them if they do
-_C1 Teleport to marker (old & risky) [Enable]
+_C0 Teleport to marker (old & risky) [Enable]
 _L 0xE00308D5 0x00287B04 // check, 1/4 (2/4 skipped for perf)
 _L 0xE0029414 0x00287B0C // check, 3/4 (4/4 skipped for perf)
 _L 0x20287B04 0x3C0408D6 // new, 1/2
