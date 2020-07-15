@@ -42,8 +42,8 @@ _L 0x20154AAC 0x10A30011 // original boring instruction
 // The patch below modifies the 08A1D250 reading, since:
 // * it seems to be less glitchy (in game map works correctly)
 // * earlier read
-// Unlike for the deprecated hack, glitches are unlike, however happen they occur
-// please report them if they do
+// Unlike for the deprecated hack, glitches are unlikely. 
+// However, happen they occur, please report them
 _C0 Teleport to marker (new) [Enable]
 _L 0xE00308D5 0x0021D1D8 // check, 1/4 (2/4 skipped for perf)
 _L 0xE0029414 0x0021D1E0 // check, 3/4 (4/4 skipped for perf)
