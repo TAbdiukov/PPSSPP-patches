@@ -99,3 +99,20 @@ Address | Old ASM | New ASM | Old HEX | New HEX
 ---- | ---- | ---- | ---- | ----
 08A87B04 | 	lui	a0,0x8D5 | 	lui	a0,0x8D6 | 3C0408D5 | 3C0408D6
 08A87B0C | 	addiu	a0,a0,-0x6BEC | 	addiu	a0,a0,0x22AC | 24849414 | 248422AC
+
+
+=====================
+
+Try 2: Stable approach: 08A1D250
+==================
+
+Exactly same struct for generating V0 recognised at beginning: 08A1D1D8
+
+08A1D1D8 & 08A1D1E0 - same codezzz
+
+--------------------------------
+
+
+
+
+
