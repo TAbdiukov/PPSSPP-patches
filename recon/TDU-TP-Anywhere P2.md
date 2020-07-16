@@ -66,7 +66,7 @@ going up the stack, since always the same caller
 Note: parameters shuffled around for my own convenience
 
 Address | Farthest Water  | Outback with existing closest point | Road with crosshair  |  Far outback w/o approximation |  Presumed Meaning |
----- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+---- | ---- | ---- | ---- | ---- | ---- 
 08A1F750 | S | S | S | **N** | Goto function end `	b	pos_08A1F880`
 08A1F778 | + | + | + | N | JAL = call sub-function 
 08A1F788 | + | + | + | N | JAL = call sub-function 
@@ -205,29 +205,3 @@ Type | Address | old HEX | new HEX
 ---- | ---- | ---- | ----
 before chk | 08A1F0D0 | 0E28A437 | -
 main | 08A1F0D8 | 305100FF | 34110001
-
-
-Cwcheat
-====
-
-```
-// lets you put the marker anywhere (even in the no-go areas), 
-// though it still "approximates" to the appropriate marker pos
-// this hack brings teleportation anywhere one step closer
-// assert 08A1F0D0 == 0E28A437
-// modify 08A1F0D8 thereafter ( 305100FF -->  34110001 ) 
-_C0 TP hack - Disobey land-marking blacklist [Enable]
-_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
-_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
-_L 0xE00200FF 0x0021F0D8 // check, 3/4, "andi s1,v0,0xFF"
-_L 0xE0013051 0x0021F0DA // check, 4/4, "andi s1,v0,0xFF"
-_L 0x2021F0D8 0x34110001 // new opcode
-//
-_C0 TP hack - Disobey land-marking blacklist [Disable]
-_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
-_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
-_L 0xE0020001 0x0021F0D8 // check, 3/4, modded opcode
-_L 0xE0013411 0x0021F0DA // check, 4/4, modded opcode
-_L 0x2021F0D8 0x305100FF // orig opcode
-//
-```
