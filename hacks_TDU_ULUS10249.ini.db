@@ -44,15 +44,34 @@ _L 0x20154AAC 0x10A30011 // original boring instruction
 // * earlier read
 // Unlike for the deprecated hack, glitches are unlikely. 
 // However, happen they occur, please report them
-_C0 Teleport to marker (new) [Enable]
+_C0 TP to marker - main [Enable]
 _L 0xE00308D5 0x0021D1D8 // check, 1/4 (2/4 skipped for perf)
 _L 0xE0029414 0x0021D1E0 // check, 3/4 (4/4 skipped for perf)
 _L 0x2021D1D8 0x3C0408D6 // new, 1/2
 _L 0x2021D1E0 0x248422AC // new, 2/2
 //
-_C0 Teleport to marker (new) [Disable]
+_C0 TP to marker - main [Disable]
 _L 0xE00308D6 0x0021D1D8 // check, 1/4 (2/4 skipped for perf)
 _L 0xE00222AC 0x0021D1E0 // check, 3/4 (4/4 skipped for perf)
 _L 0x2021D1D8 0x3C0408D5 // old, 1/2
 _L 0x2021D1E0 0x24849414 // old, 2/2
+//
+// lets you put the marker anywhere (even in the no-go areas), 
+// though the game still "approximates" to the appropriate marker pos
+// this hack brings teleportation anywhere one step closer
+// assert 08A1F0D0 == 0E28A437
+// modify 08A1F0D8 thereafter ( 305100FF -->  34110001 ) 
+_C0 TP to marker - Disobey land-marking blacklist [Enable]
+_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
+_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
+_L 0xE00200FF 0x0021F0D8 // check, 3/4, "andi s1,v0,0xFF"
+_L 0xE0013051 0x0021F0DA // check, 4/4, "andi s1,v0,0xFF"
+_L 0x2021F0D8 0x34110001 // new opcode
+//
+_C0 TP to marker - Disobey land-marking blacklist [Disable]
+_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
+_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
+_L 0xE0020001 0x0021F0D8 // check, 3/4, modded opcode
+_L 0xE0013411 0x0021F0DA // check, 4/4, modded opcode
+_L 0x2021F0D8 0x305100FF // orig opcode
 //
