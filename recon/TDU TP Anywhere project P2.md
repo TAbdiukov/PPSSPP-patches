@@ -10,14 +10,14 @@ Trying to
 #### Attempt 1
 Hooking on Marker X write ( 000008D62400)
 
-![a4ea9dbe4fdeef005392fc4aca353560.png](./_resources/f96c39634c2044eaaefbe9cfb5e65cff.png)
+![a4ea9dbe4fdeef005392fc4aca353560.png](../_resources/f96c39634c2044eaaefbe9cfb5e65cff.png)
 
 * Write at 089F158C (seemingly always only here) 
 * Also hook on 089F1498 (routine begin)
 
 
 
-![a5f32c147e8427c62ab43f3897ab6285.png](./_resources/bd131cd3bd1d440e903e62ae44b62d91.png)
+![a5f32c147e8427c62ab43f3897ab6285.png](../_resources/bd131cd3bd1d440e903e62ae44b62d91.png)
 
 
 
@@ -66,7 +66,7 @@ going up the stack, since always the same caller
 Note: parameters shuffled around for my own convenience
 
 Address | Farthest Water  | Outback with existing closest point | Road with crosshair  |  Far outback w/o approximation |  Presumed Meaning |
----- | ---- | ---- | ---- | ---- | ---- 
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
 08A1F750 | S | S | S | **N** | Goto function end `	b	pos_08A1F880`
 08A1F778 | + | + | + | N | JAL = call sub-function 
 08A1F788 | + | + | + | N | JAL = call sub-function 
@@ -89,6 +89,8 @@ Found some interesting things in the process
 * If I try to put a marker on a u-island, and have a breakpoint in the beginning of a function, the breakpoint is hit. So we establish where to begin searching in depth!
 
 So what I'll try to is follow the steps of attempting to set a marker on a u-isaland, and try to follow assembly from the beginning of the function. Then check how the behaviour is different to non-abnormal cases. That's assuming execution isnt hijacked (by an exception or something)
+
+***NOTE***: The number (for example, 2 in "  Outback w/ closest point 2  " - means the consecutive call number occurs within one frame
 
 Address | U-island 1 | U-island 2 | Outback w/ closest point 1|  Outback w/ closest point 2 | 
 ---- | ---- | ---- | ---- | ---- |
@@ -205,3 +207,29 @@ Type | Address | old HEX | new HEX
 ---- | ---- | ---- | ----
 before chk | 08A1F0D0 | 0E28A437 | -
 main | 08A1F0D8 | 305100FF | 34110001
+
+
+Swcheat
+====
+
+```
+// lets you put the marker anywhere (even in the no-go areas), 
+// though it still "approximates" to the appropriate marker pos
+// this hack brings teleportation anywhere one step closer
+// assert 08A1F0D0 == 0E28A437
+// modify 08A1F0D8 thereafter ( 305100FF -->  34110001 ) 
+_C0 TP hack - Disobey land-marking blacklist [Enable]
+_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
+_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
+_L 0xE00200FF 0x0021F0D8 // check, 3/4, "andi s1,v0,0xFF"
+_L 0xE0013051 0x0021F0DA // check, 4/4, "andi s1,v0,0xFF"
+_L 0x2021F0D8 0x34110001 // new opcode
+//
+_C0 TP hack - Disobey land-marking blacklist [Disable]
+_L 0xE004A437 0x0021F0D0 // check, 1/4, characteristic "jal" call 
+_L 0xE0030E28 0x0021F0D2 // check, 2/4, characteristic "jal" call 
+_L 0xE0020001 0x0021F0D8 // check, 3/4, modded opcode
+_L 0xE0013411 0x0021F0DA // check, 4/4, modded opcode
+_L 0x2021F0D8 0x305100FF // orig opcode
+//
+```
