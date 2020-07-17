@@ -1,5 +1,7 @@
 _S UCUS98618
 _G Daxter [USA]
+// BIG thanks to Theboy181 for managing to hunt this down
+// Done in coalition of Anuskuss, GRAVES, theboy181
 _C0 Correct Analog Controls [theboy181]
 _L 0x2022A094 0x3C043F80
 _L 0x2022A09C 0x00000000
