@@ -44,7 +44,7 @@ Ok, as I suspected, seems this parameter alone doesnt make the character lean to
 
 Ok, let's try reading/writing to the parameter
 
-![499a355362e76dbeb23840de390621b6.png](../_resources/8593b6f69c254c409b124b9cf00d5f7f.png)
+![499a355362e76dbeb23840de390621b6.png](./_resources/8593b6f69c254c409b124b9cf00d5f7f.png)
 
 
 
@@ -101,7 +101,7 @@ Interesting: 08A28D2C (f12 = 1 - f12,f12 = 0.0255...)
 
 Analog: 1-f12 = 0.255
 
-![ca5cd8e998c0939e8210d13e185d3262.png](../_resources/20ccb39c3f1e47f58bafc5f16be65f27.png)
+![ca5cd8e998c0939e8210d13e185d3262.png](./_resources/20ccb39c3f1e47f58bafc5f16be65f27.png)
 
 1-f12 = 0.03
 
@@ -205,7 +205,7 @@ _L 0x2022A09C 0x00000000
 ```
 
 
-![828cfd9059efd6c3d49df343b9ab3445.png](../_resources/980cc38997474490948312642305660a.png)
+![828cfd9059efd6c3d49df343b9ab3445.png](./_resources/980cc38997474490948312642305660a.png)
 
 
 

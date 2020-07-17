@@ -3,21 +3,18 @@ TDU TP Anywhere project P2
 # TDU TP Anywhere project P2
 ## Part II
 
-Trying to
-
-
 ### Process
 #### Attempt 1
 Hooking on Marker X write ( 000008D62400)
 
-![a4ea9dbe4fdeef005392fc4aca353560.png](../_resources/f96c39634c2044eaaefbe9cfb5e65cff.png)
+![a4ea9dbe4fdeef005392fc4aca353560.png](./_resources/f96c39634c2044eaaefbe9cfb5e65cff.png)
 
 * Write at 089F158C (seemingly always only here) 
 * Also hook on 089F1498 (routine begin)
 
 
 
-![a5f32c147e8427c62ab43f3897ab6285.png](../_resources/bd131cd3bd1d440e903e62ae44b62d91.png)
+![a5f32c147e8427c62ab43f3897ab6285.png](./_resources/bd131cd3bd1d440e903e62ae44b62d91.png)
 
 
 
@@ -66,7 +63,7 @@ going up the stack, since always the same caller
 Note: parameters shuffled around for my own convenience
 
 Address | Farthest Water  | Outback with existing closest point | Road with crosshair  |  Far outback w/o approximation |  Presumed Meaning |
----- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+---- | ---- | ---- | ---- | ---- | ---- |
 08A1F750 | S | S | S | **N** | Goto function end `	b	pos_08A1F880`
 08A1F778 | + | + | + | N | JAL = call sub-function 
 08A1F788 | + | + | + | N | JAL = call sub-function 
