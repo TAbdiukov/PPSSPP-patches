@@ -1,0 +1,21 @@
+_S UCKS45025
+_G Daxter [KOR]
+// BIG thanks to Theboy181 for managing to hunt this logic down!!
+// Done in coalition of Anuskuss, GRAVES, theboy181
+_C1 Fix Analog Controls [Enable]
+_L 0xE0053BA3 0x00229EC4 // check, 1/4,
+_L 0xE0043C04 0x00229EC6 // check, 2/4, (not really necessary but good)
+_L 0xE003D70A 0x00229ECC // check, 3/4,
+_L 0xE0023484 0x00229ECE // check, 4/4, 
+_L 0x20229EC4 0x3C043F80
+_L 0x20229ECC 0x00000000
+//
+_C0 Fix Analog Controls [Disable]
+_L 0xE0043F80 0x00229EC4 // check, 1/4,
+_L 0xE0033C04 0x00229EC6 // check, 2/4, (not really necessary but good)
+_L 0xE0020000 0x00229ECE // check, 4/4, (3/4 skipped for perf, lo bytes skipped for nop)
+_L 0x20229EC4 0x3C043BA3
+_L 0x20229ECC 0x3484D70A
+//
+
+Message Anuskuss, theboy181
