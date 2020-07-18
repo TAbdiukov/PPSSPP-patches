@@ -2,7 +2,6 @@ _S UCES00044
 _G Daxter [EUR]
 // BIG thanks to Theboy181 for managing to hunt this logic down!!
 // Done in coalition of Anuskuss, GRAVES, theboy181
-// Might work on other regions, give it a try
 _C1 Fix Analog Controls [Enable]
 _L 0xE0053BA3 0x00229F18 // check, 1/4,
 _L 0xE0043C04 0x00229F1A // check, 2/4, (not really necessary but good)
