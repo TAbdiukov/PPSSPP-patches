@@ -5,7 +5,8 @@ _C1 Fix Analog Controls
 _L 0x20229C8C 0x3C043F80
 _L 0x20229C94 0x00000000
 //----
-// TDU
+_S ULUS10249
+_G Test Drive Unlimited [USA]
 _C0 60FPS "Remove Interpolation" (OC needed)
 _L 0x204F5FA8 0x00000000 // 08CF5FA8 (bit location)
 _C0 60FPS "Remove Interpolation" (OC needed) ASM
@@ -19,5 +20,8 @@ _L 0x2009A210 0x10000017 // Car Level of Detail Max
 //----
 // 60 FPS patch by theboy181
 // For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+_S ULUS10490
+_G GTA: CW [USA]
 _C0 60 FPS (beta)
 _L 0x2010D694 0x00000000 //60FPS
+//----
