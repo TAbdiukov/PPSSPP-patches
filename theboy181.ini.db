@@ -1,0 +1,17 @@
+// NPUG-80329
+_S NPUG-80329
+_G Daxter
+_C1 Fix Analog Controls
+_L 0x20229C8C 0x3C043F80
+_L 0x20229C94 0x00000000
+// TDU
+_C0 60FPS "Remove Interpolation" (OC needed)
+_L 0x204F5FA8 0x00000000 // 08CF5FA8 (bit location)
+_C0 60FPS "Remove Interpolation" (OC needed) ASM
+_L 0x203DAAA8 0x00000000 // 08BDAABC jr ra
+_C0 Car LOD Hack
+//_L 0x20353C74 0x00000000 // 08B53C74 nop
+_L 0x2009A210 0x10000017_S UCUS-98632
+_C1 Enhanced GFX v1.1 (OC 666mhz)
+_L 0x203DAAA8 0x00000000 // Remove Interpolation
+_L 0x2009A210 0x10000017 // Car Level of Detail Max
