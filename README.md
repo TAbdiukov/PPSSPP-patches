@@ -42,7 +42,7 @@ Also do I need to clear the ~~fake~~ offset register after use? Apparently not.
 
 ## Safety checks
 
-Taken from the Fired Up, but you'd get the idea
+Taken from Fired Up (the game), but you'd get the idea
 ```
 _C0 Infinite ammo [Enable]
 _L 0xE00200A0 0x000BDFE4 // check, 1/2
