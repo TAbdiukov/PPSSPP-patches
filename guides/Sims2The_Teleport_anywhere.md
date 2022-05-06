@@ -60,11 +60,11 @@ What does optimal mean?
 1) Available
 2) Contains a TP point (exit) to the lengthiest possible level
 
-Q: Why "available"?
-A: So it can be used. For example, Division47 is not available in the early game (beyond the gate that is, where the TP locations are)
+**Q**: Why "available"?
+**A**: So it can be used. For example, Division47 is not available in the early game (beyond the gate that is, where the TP locations are)
 
-Q: Why "Contains a TP point (exit) to the lengthiest possible level"
-A: The answer is pretty complex. If you intend to teleport to a lengthy location (such as `levels/division_47/secret_sublevel`) through a shorter location (such as `levels/deadtree/kine`), some part of the memory gets corrupted. In this example
+**Q**: Why "Contains a TP point (exit) to the lengthiest possible level"
+**A**: The answer is pretty complex. If you intend to teleport to a lengthy location (such as `levels/division_47/secret_sublevel`) through a shorter location (such as `levels/deadtree/kine`), some part of the memory gets corrupted. In this example
 
 ```
 BYTES: 1234567890123456789012345678901234
@@ -110,9 +110,11 @@ For example, for the TP point of `levels/gas_station/curio_shop`, get to the gas
 Or for `levels/paradise_place/newlow`, get to Paradise Place outdoors
 
 ![Getting to the location](./img/Sims2The/ULUS10031_00000.jpg)
+
 *Getting to the location*
 
 ![There](./img/Sims2The/ULUS10031_00004.jpg)
+
 *There!*
 
 ### Step 2: Find the level THRU string in the memory
@@ -120,19 +122,23 @@ Or for `levels/paradise_place/newlow`, get to Paradise Place outdoors
 Helpful note: The string will always NULL-delimited.
 
 ![art1](./img/Sims2The/art1.PNG)
+
 *Searching for level THRU in the memory*
 
 ![art2](./img/Sims2The/art2.PNG)
+
 *Found 3 candidates*
 
 3 Candidates? Interesting. But remember, our string needs to be NULL-delimited. Let's enforce that.
 
 ![art3](./img/Sims2The/art3.PNG)
+
 *Clearly, we are after "Value 3" (addr 0x01E9A7C5A640)*
 
 ### Step 3: Edit level THRU string to the desired one
 
 ![art3](./img/Sims2The/art3.PNG)
+
 *Let's go to the now-inaccessible garade, because why not?*
 
 ### Step 4: Walk away, and back to the TP point
@@ -140,17 +146,23 @@ Helpful note: The string will always NULL-delimited.
 The game gets slightly confused, so you need to reload the action. Just walk away from that door, and then walk back to it.
 
 ![Walk away](./img/Sims2The/ULUS10031_00005.jpg)
+
 *Walking away from it. Notice that the "action" is no longer at the accessible distance.*
 
 ![Back](./img/Sims2The/ULUS10031_00004.jpg)
+
 *Now walking back to it*
 
 ### Step 5: Action the level change
 
 ![Action](./img/Sims2The/ULUS10031_00007.jpg)
+
 *It's time to go*
 
 Now assuming we provided with a valid "level TO", Sim should teleport there.
 
 ![Far away](./img/Sims2The/ULUS10031_00006.jpg)
+
+*Hmm*
+
 Voala.
