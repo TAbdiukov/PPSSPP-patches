@@ -61,9 +61,11 @@ What does optimal mean?
 2) Contains a TP point (exit) to the lengthiest possible level
 
 **Q**: Why "available"?
+
 **A**: So it can be used. For example, Division47 is not available in the early game (beyond the gate that is, where the TP locations are)
 
 **Q**: Why "Contains a TP point (exit) to the lengthiest possible level"
+
 **A**: The answer is pretty complex. If you intend to teleport to a lengthy location (such as `levels/division_47/secret_sublevel`) through a shorter location (such as `levels/deadtree/kine`), some part of the memory gets corrupted. In this example
 
 ```
@@ -99,14 +101,17 @@ Below are the best possible levels to teleport THRU
 ##### Q&A about the solutions
 
 **Q**: What about `levels/paradise_place/espiritu` (len=30)
+
 **A**: `levels/paradise_place/espiritu` is over-referenced in the memory, it's too cumbersome to use this level.
 
 **Q**: I noticed there is other information related to level THRU struct, should these be modified.
+
 **A**: Practically, there is no effect when those are modified, even if they are modified to the broken values.
 
 ### Step 1: Get to location that compains that optimal TP point.
 
 For example, for the TP point of `levels/gas_station/curio_shop`, get to the gas station
+
 Or for `levels/paradise_place/newlow`, get to Paradise Place outdoors
 
 ![Getting to the location](./img/Sims2The/ULUS10031_00000.jpg)
@@ -118,6 +123,8 @@ Or for `levels/paradise_place/newlow`, get to Paradise Place outdoors
 *There!*
 
 ### Step 2: Find the level THRU string in the memory
+
+ArtMoney software is used in this guide
 
 Helpful note: The string will always NULL-delimited.
 
@@ -131,7 +138,7 @@ Helpful note: The string will always NULL-delimited.
 
 3 Candidates? Interesting. But remember, our string needs to be NULL-delimited. Let's enforce that.
 
-![art3](./img/Sims2The/art3.PNG)
+![art4](./img/Sims2The/art4.PNG)
 
 *Clearly, we are after "Value 3" (addr 0x01E9A7C5A640)*
 
