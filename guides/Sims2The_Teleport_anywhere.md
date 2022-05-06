@@ -109,48 +109,48 @@ Below are the best possible levels to teleport THRU
 For example, for the TP point of `levels/gas_station/curio_shop`, get to the gas station
 Or for `levels/paradise_place/newlow`, get to Paradise Place outdoors
 
-[!.\guides\img\Sims2The\ULUS10031_00000.jpg Getting to the location]
+![Getting to the location](.\img\Sims2The\ULUS10031_00000.jpg)
 *Getting to the location*
 
-[!.\guides\img\Sims2The\ULUS10031_00004.jpg There]
+![There](.\img\Sims2The\ULUS10031_00004.jpg)
 *There!*
 
 ### Step 2: Find the level THRU string in the memory
 
 Helpful note: The string will always NULL-delimited.
 
-[!.\guides\img\Sims2The\art1.PNG art1]
+![art1](.\img\Sims2The\art1.PNG)
 *Searching for level THRU in the memory*
 
-[!.\guides\img\Sims2The\art2.PNG art2]
+![art2](.\img\Sims2The\art2.PNG)
 *Found 3 candidates*
 
 3 Candidates? Interesting. But remember, our string needs to be NULL-delimited. Let's enforce that.
 
-[!.\guides\img\Sims2The\art3.PNG art3]
+![art3](.\img\Sims2The\art3.PNG)
 *Clearly, we are after "Value 3" (addr 0x01E9A7C5A640)*
 
 ### Step 3: Edit level THRU string to the desired one
 
-[!.\guides\img\Sims2The\art4.PNG art4]
+![art3](.\img\Sims2The\art3.PNG)
 *Let's go to the now-inaccessible garade, because why not?*
 
 ### Step 4: Walk away, and back to the TP point
 
 The game gets slightly confused, so you need to reload the action. Just walk away from that door, and then walk back to it.
 
-[!.\guides\img\Sims2The\ULUS10031_00005.jpg Walk away]
+![Walk away](.\img\Sims2The\ULUS10031_00005.jpg)
 *Walking away from it. Notice that the "action" is no longer at the accessible distance.*
 
-[!.\guides\img\Sims2The\ULUS10031_00004.jpg Back]
+![Back](.\img\Sims2The\ULUS10031_00004.jpg)
 *Now walking back to it*
 
 ### Step 5: Action the level change
 
-[!.\guides\img\Sims2The\ULUS10031_00007.jpg Action]
+![Action](.\img\Sims2The\ULUS10031_00007.jpg)
 *It's time to go*
 
 Now assuming we provided with a valid "level TO", Sim should teleport there.
 
-[!.\guides\img\Sims2The\ULUS10031_00006.jpg Far away]
+![Far away](.\img\Sims2The\ULUS10031_00006.jpg)
 Voala.
