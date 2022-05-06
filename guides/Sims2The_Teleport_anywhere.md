@@ -138,13 +138,13 @@ Helpful note: The string will always NULL-delimited.
 
 3 Candidates? Interesting. But remember, our string needs to be NULL-delimited. Let's enforce that.
 
-![art4](./img/Sims2The/art4.PNG)
+![art3](./img/Sims2The/art3.PNG)
 
 *Clearly, we are after "Value 3" (addr 0x01E9A7C5A640)*
 
 ### Step 3: Edit level THRU string to the desired one
 
-![art3](./img/Sims2The/art3.PNG)
+![art4](./img/Sims2The/art4.PNG)
 
 *Let's go to the now-inaccessible garage, because why not?*
 
