@@ -139,7 +139,7 @@ Helpful note: The string will always NULL-delimited.
 
 ![art3](./img/Sims2The/art3.PNG)
 
-*Let's go to the now-inaccessible garade, because why not?*
+*Let's go to the now-inaccessible garage, because why not?*
 
 ### Step 4: Walk away, and back to the TP point
 
@@ -163,6 +163,4 @@ Now assuming we provided with a valid "level TO", Sim should teleport there.
 
 ![Far away](./img/Sims2The/ULUS10031_00006.jpg)
 
-*Hmm*
-
-Voala.
+*Voala.*
