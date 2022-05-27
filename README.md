@@ -1,6 +1,6 @@
 # PPSSPP-patches
 
-My cheats, fixes and workarounds. Happy to collab!
+My cheats, fixes and workarounds. Happy to collaborate!
 
 # Friendly repos
 * [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) - gotten inspired by this repo
@@ -15,6 +15,12 @@ My cheats, fixes and workarounds. Happy to collab!
 **Additional resources**
 
 * [How to use "Condition" in debugger](https://forums.ppsspp.org/showthread.php?tid=22400&page=2)
+
+## Local guides (new)
+*(not something readily achievable with CWCheat functionality)*
+
+
+* [Sims 2 The - Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md) 
 
 # Notes
 * CWCheat indeed doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, take away ```0x08800000``` HEX from it. Or 
