@@ -44,7 +44,7 @@ VVVVVVVV = value to write
 Y = 3 for byte write, 4 for halfword and 5 for word) 
 ```
 
-Also do I need to clear the ~~fake~~ offset register after use? Apparently not.  
+Must I clear the (fake) offset register after use - No.  
 
 ## Safety checks
 
