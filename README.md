@@ -44,11 +44,11 @@ VVVVVVVV = value to write
 Y = 3 for byte write, 4 for halfword and 5 for word) 
 ```
 
-Must I clear the (fake) offset register after use - No.  
+Must I clear the (fake) offset register after use — No.  
 
 ## Safety checks
 
-Taken from Fired Up (the game), but you'd get the idea
+Taken from Fired Up (the game), but you'll get the idea
 ```
 _C0 Infinite ammo [Enable]
 _L 0xE00200A0 0x000BDFE4 // check, 1/2
