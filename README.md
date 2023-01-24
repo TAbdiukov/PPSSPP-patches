@@ -9,8 +9,8 @@ My cheats, fixes and workarounds. Happy to collaborate!
 
 **Extemely useful** (although contradictory)
 
-* [Some Wiki](https://datacrystal.romhacking.net/wiki/CwCheat)
-* [Human explanation on some forum](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
+* [Data Crystal Wiki](https://datacrystal.romhacking.net/wiki/CwCheat)
+* [Informal explanation on GBATemp](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
 
 **Additional resources**
 
@@ -23,7 +23,7 @@ My cheats, fixes and workarounds. Happy to collaborate!
 * [Sims 2 The - Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md) 
 
 # Notes
-* CWCheat indeed doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, take away ```0x08800000``` HEX from it. Or 
+* CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
 ```
 python3 helpy.py
 ```
@@ -32,7 +32,7 @@ python3 helpy.py
 
 ## Pointer
 
-Surprisingly, this crazy syntax is correct?
+Surprisingly, this syntax is correct
 
 ```
 _L 0x6AAAAAAA 0xVVVVVVVV
