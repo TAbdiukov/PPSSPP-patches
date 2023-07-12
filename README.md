@@ -67,7 +67,7 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 
 ## Update 2023 - Note about some cheats
 
-In recent PPSSPP builds (for example, PPSSPP 1.13.4) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example
+In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example
 * Test Drive Unlimited [US] - remove GBA-like pixelization.
 
 If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
