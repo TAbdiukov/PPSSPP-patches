@@ -16,7 +16,7 @@ My cheats, fixes and workarounds. Happy to collaborate!
 
 * [How to use "Condition" in debugger](https://forums.ppsspp.org/showthread.php?tid=22400&page=2)
 
-## Local guides (new)
+## Local guides
 *(not something readily achievable with CWCheat functionality)*
 
 
