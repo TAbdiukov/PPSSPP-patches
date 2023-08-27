@@ -1,13 +1,15 @@
+# Changes
+
 * Skip intro videos
 * Disable slow VSync
-* Enable weather. The weather was already sometimes functional.
+* Enable weather. The weather was already sometimes functional
 * Enable PostFX
 
 # How to install
 
 ## Prerequisites
-1. Get a ISO editor, such as UltraISO or UMDGen
-2. Make sure emulator is not on
+* Get a ISO editor, such as UltraISO or UMDGen
+* Make sure emulator is not on
 
 ## Installation
 1. Open your TDU ISO file with a ISO editor
