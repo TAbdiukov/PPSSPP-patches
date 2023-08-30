@@ -3,7 +3,7 @@
 
 ## Changes
 
-* Disable unusable video recording to massively improve perforance
+* Disable unusable video recording to massively improve performance
 * Skip intro videos
 * Disable slow VSync
 * Enable weather. The weather was already sometimes functional
