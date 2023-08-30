@@ -9,7 +9,7 @@
 
 ## Prerequisites
 * Get a ISO editor, such as UltraISO or UMDGen
-* Make sure emulator is not on
+* Make sure emulator is off
 
 ## Installation
 1. Open your TDU ISO file with a ISO editor
