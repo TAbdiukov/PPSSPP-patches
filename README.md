@@ -21,6 +21,7 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 
 * [Sims 2 The – Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md)
 * [TDU – repack game to improve graphics and performance](./guides/TDU-hard-improvements.md) *(complementary to the CWCheat patches)*
+* [TDU – (other) interesting parameters](./guides/TDU-interesting-params.md) *(if you feel adventurous)*
 
 # Notes
 * CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
