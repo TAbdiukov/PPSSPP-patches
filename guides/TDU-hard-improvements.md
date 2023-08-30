@@ -23,3 +23,6 @@
 4. Save
 5. Start the game
  
+---------------------------------
+
+***[Tim Abdiukov](https://github.com/TAbdiukov)***
