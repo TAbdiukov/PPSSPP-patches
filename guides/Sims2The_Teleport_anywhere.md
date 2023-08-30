@@ -1,4 +1,4 @@
-# Sims 2, The - Teleport Anywhere
+# Sims 2, The – Teleport Anywhere
 
 ## Trivia
 
@@ -9,7 +9,7 @@ The game is segregated across the locations/levels. Teleporting is only possible
 Term | Meaning
 ---- | ----
 Location | same as level
-TP point | TP point - teleport point. All doors, roads, exits etc - that get you to another location (level)
+TP point | TP point – teleport point. All doors, roads, exits etc – that get you to another location (level)
 Teleport FROM level | Where you are
 Teleport THRU level | Which TP point is used
 Teleport   TO level | Target location
@@ -171,3 +171,7 @@ Now assuming we provided with a valid "level TO", Sim should teleport there.
 ![Far away](./img/Sims2The/ULUS10031_00006.jpg)
 
 *Voala.*
+
+---------------------------------
+
+***[Tim Abdiukov](https://github.com/TAbdiukov)***
