@@ -1,5 +1,8 @@
 #!python3
 
+# Before use, run:
+# pip install pyperclip
+
 import pyperclip
 import time
 
