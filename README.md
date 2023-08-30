@@ -3,7 +3,7 @@
 My cheats, fixes and workarounds for PPSSPP games and apps.
 
 # Friendly repos
-* [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) - gotten inspired by this repo
+* [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) – gotten inspired by this repo
 
 # Docs
 
@@ -20,7 +20,7 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 *(not something readily achievable with CWCheat functionality)*
 
 
-* [Sims 2 The - Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md) 
+* [Sims 2 The – Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md) 
 
 # Notes
 * CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
@@ -65,10 +65,10 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 //
 ```
 
-## Update 2023+ - Note about some patches
+## Update 2023+ – Note about some patches
 
 In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
 
-* Test Drive Unlimited [US] - remove GBA-like pixelization.
+* Test Drive Unlimited [US] – remove GBA-like pixelization.
 
 If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
