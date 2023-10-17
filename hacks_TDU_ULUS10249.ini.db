@@ -37,7 +37,7 @@ _L 0x20154AAC 0x10A30011 // original boring instruction
 // For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
 // Cheers!
 //
-// game reads the return pos 2 times for actually returning AND both times TP occurs (sausage code?) when exiting map:
+// game reads the return pos 2 times for actually returning AND both times TP occurs (spaghetti code?) when exiting map:
 // in 08A1D250 and 08A87B74
 // The patch below modifies the 08A1D250 reading, since:
 // * it seems to be less glitchy (in game map works correctly)

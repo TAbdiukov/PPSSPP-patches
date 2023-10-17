@@ -4,7 +4,7 @@ _G Test Drive Unlimited [USA]
 // Get a "remove ugly effect" hack from, https://github.com/LunaMoo/PPSSPP_workarounds/
 // Which improves both graphics & performance **dramatically** (thrice both!)
 //
-// game reads the return pos 2 times for actually returning AND both times TP occurs (sausage code?) when exiting map:
+// game reads the return pos 2 times for actually returning AND both times TP occurs (spaghetti code?) when exiting map:
 // in 08A1D250 and 08A87B74
 // The patch below modifies the 08A87B74 reading, since it seems to be faster in game
 // AND it's safer (if teleport in water, the game doesn't crash)
