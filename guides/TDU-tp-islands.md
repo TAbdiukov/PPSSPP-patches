@@ -200,5 +200,6 @@ However, it's only **practical** to teleport with patch **`TP to marker - main [
 1. Import addresses to a memory editor (CheatEngine or ArtMoney)
 2. Go to map mode, ensure the marker is set somewhere.
 3. Adjust the marker, until you reach the desired location. For example, `64646,50,45120`
+4. Exit the map mode
 	![ULUS10249_00001.jpg](img/TDU-tp-islands/ULUS10249_00001.jpg)  
-4. Enjoy the result!
+5. Enjoy the result!
