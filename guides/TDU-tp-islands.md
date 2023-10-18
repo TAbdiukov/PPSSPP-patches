@@ -11,7 +11,7 @@ The guide was put together, as I reverse-engineered my own patch.
 * TDU (Test Drive Unlimited) ISO. U.S. ROM (ULUS10249) is used in this guide.
 * Memory editor such as CheatEngine or ArtMoney
 	* Windows is highly recommended here, external memory editing is limited on other OSs
-* Notepad++ for PPSSPP-patches under-the-hood analysis.
+* [Notepad++](https://notepad-plus-plus.org) for PPSSPP-patches under-the-hood analysis.
 * Human brain's analytical, aggregation and inference functionality.
 
 # Main guide
@@ -153,19 +153,19 @@ Let's set up 2 breakpoints and try to see what is happening here.
 
 ![f9eec2722e1703805fb5342d5904514e.png](img/TDU-tp-islands/f9eec2722e1703805fb5342d5904514e.png) |
 ---- | 
-2 breakpoints
+Two breakpoints
 
 What do we see?
 
-* **`08A1D1D8`**: **`v0`** is set to some random small value. Here, CPU executes **`lui`** –  **L**oad **U**pper (top of the register) **I**mmediate (<ins>constant</ins> value) to **`a0`**. Hence, **`a0`** is set to **`08D60000`**
+* **`08A1D1D8`**: **`v0`** is set to some random small value. Here, CPU executes **`lui`** –  **L**oad **U**pper (top of the register) **I**mmediate (<ins>constant</ins> value) to **`a0`**. Hence, **`a0`** is set to **`08D60000`**  
 	![5b51c07ab870ca6d67c58157ffb5c7d0.png](img/TDU-tp-islands/5b51c07ab870ca6d67c58157ffb5c7d0.png)  
 * **`08A1D1DC`**: **`jal`** – MIPS equivalent to x86's **CALL** (unfortunately, you have to either guess or know this) to some location. 
-* **`08A1D1E0`**: However, before the jump, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. What happens here? **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **`a0`** is guaranteed to be set to  **`a0+0x22AC=08D622AC`**
+* **`08A1D1E0`**: However, before the jump, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. What happens here? **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **`a0`** is guaranteed to be set to  **`a0+0x22AC=08D622AC`**  
  	![6e724134ad6c6a8e817d321613c45897.png](img/TDU-tp-islands/6e724134ad6c6a8e817d321613c45897.png)  
 	![e6df898f0434c009234c663c0c2d8f7b.png](img/TDU-tp-islands/e6df898f0434c009234c663c0c2d8f7b.png)  
-* **`0894D464`**: Luckily, it's a very small function! **`ra`** – return away (equivalent to **`ret`** in other architectures)
+* **`0894D464`**: Luckily, it's a very small function! **`ra`** – return away (equivalent to **`ret`** in other architectures)  
 	![2c801f04d0b86d77d4918a1119d77fb7.png](img/TDU-tp-islands/2c801f04d0b86d77d4918a1119d77fb7.png)  
-* **`0894D468`**: However, before the ret, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **v**0 is guaranteed to be set (overwritten) to  **`a0+0x124=08D623D0`** 
+* **`0894D468`**: However, before the ret, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **v**0 is guaranteed to be set (overwritten) to  **`a0+0x124=08D623D0`**  
 	![92cba61d970eb6df3f648da4f85eba25.png](img/TDU-tp-islands/92cba61d970eb6df3f648da4f85eba25.png)  
 * **`08A1D1E4`**: And we are already at the variable-copying routine, **`v0`** is already set to a value **`0x30`** bytes away from marker position addresses! Backtracking is complete!
 
