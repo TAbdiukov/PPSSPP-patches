@@ -187,17 +187,16 @@ Patch disabled | Patch enabled
 You'll need the following addresses,
 
 **TP to marker - main [Disable]**:
-X | Y | Z |
----- | ---- | ---- |
-08D49568 | 08D4956C | 08D49570 |
+	X | Y | Z |
+	---- | ---- | ---- |
+	08D49568 | 08D4956C | 08D49570 |
 
 **TP to marker - main [Enable]**:
-X | Y | Z |
----- | ---- | ---- |
-08D62400 | 08D62404 | 08D62408 |
+	X | Y | Z |
+	---- | ---- | ---- |
+	08D62400 | 08D62404 | 08D62408 |
 
-However, it's only **practical** to teleport with patch **`TP to marker - main [Enable]`** on and marker set.
-
+However, it's only **practical** to teleport with patch **`TP to marker - main [Enable]`** on and marker set. Therefore,
 1. Import addresses to a memory editor (CheatEngine or ArtMoney)
 2. Go to map mode, ensure the marker is set somewhere.
 3. Adjust the marker, until you reach the desired location. For example, `64646,50,45120`
