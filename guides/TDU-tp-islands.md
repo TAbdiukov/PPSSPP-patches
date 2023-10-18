@@ -187,11 +187,13 @@ Patch disabled | Patch enabled
 You'll need the following addresses,
 
 **TP to marker - main [Disable]**:
+
 	X | Y | Z |
 	---- | ---- | ---- |
 	08D49568 | 08D4956C | 08D49570 |
 
 **TP to marker - main [Enable]**:
+
 	X | Y | Z |
 	---- | ---- | ---- |
 	08D62400 | 08D62404 | 08D62408 |
