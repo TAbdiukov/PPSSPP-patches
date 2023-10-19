@@ -203,3 +203,7 @@ However, it's only **practical** to teleport with patch **`TP to marker - main [
 4. Exit the map mode  
 	![ULUS10249_00001.jpg](img/TDU-tp-islands/ULUS10249_00001.jpg)  
 5. Enjoy the result!
+
+---------------------------------
+
+***[Tim Abdiukov](https://github.com/TAbdiukov)***
