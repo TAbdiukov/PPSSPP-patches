@@ -133,7 +133,7 @@ For that, let's check out the patch file again,
 ---- | 
 Patch file in Notepad++
 
-For both **`[enable`** and **`[disable]`** patches, we perform 2 checks, and (as indicated by first digit **`2`** in the CWCheat instructions) 
+For both **`[enable]`** and **`[disable]`** patches, we perform 2 checks, and (as indicated by first digit **`2`** in the CWCheat instructions) 
 
 We modify (in CWCheat's language, quote-unquote) **`0x2021D1D8`** and **`0x2021D1E0`**. These are not really addresses, but CWCheat instructions!
 
