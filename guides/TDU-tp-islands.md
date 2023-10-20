@@ -198,9 +198,9 @@ You'll need the following addresses,
 
 However, it's only **practical** to teleport with patch **`TP to marker - main [Enable]`** on and marker set, so it can be tracked. 
 
-*Technical note*: There's an in-game animation on the marker. From this we can infer that the marker position has to be read, and hence re-drawn every frame, as opposed to being read upon its manipulation. Alternatively, it is possible to set a breakpoint on marker position axis at observing it/them being read at least once every frame (as a tiny bit of sound is played by the game at the frame processing end).
+*Optional technical note*: There's an in-game animation on the marker. From this we can infer that the marker position has to be read, and hence re-drawn every frame, as opposed to being read upon its manipulation. Alternatively, it is possible to set a breakpoint on marker position axis at observing it/them being read at least once every frame (as a tiny bit of sound is played by the game at the frame processing end).
 
-Therefore,
+Therefore, **the procedure is,**
 1. Import addresses to a memory editor (CheatEngine or ArtMoney)
 2. Go to map mode, ensure the marker is set somewhere.
 3. Adjust the marker, until you reach the desired location. For example, `64646,50,45120`
