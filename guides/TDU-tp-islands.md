@@ -7,10 +7,10 @@ The guide was put together, as I reverse-engineered my own patch.
 
 # Prerequisites
 
-* PPSSPP for Windows (recommended, as it exclusively includes Debugger)
+* PPSSPP for Windows (recommended, as it exclusively includes Debugger).
 * TDU (Test Drive Unlimited) ISO. U.S. ROM (ULUS10249) is used in this guide.
-* Memory editor such as CheatEngine or ArtMoney
-	* Windows is highly recommended here, external memory editing is limited on other OSs
+* Memory editor such as CheatEngine or ArtMoney.
+	* Windows is highly recommended here, external memory editing is limited on other OSs.
 * [Notepad++](https://notepad-plus-plus.org) for PPSSPP-patches under-the-hood analysis.
 * Human brain's analytical, aggregation and inference functionality.
 
@@ -18,7 +18,7 @@ The guide was put together, as I reverse-engineered my own patch.
 
 ## Step 1: Install TDU cheats
 
-This guide uses U.S. ROM (ULUS10249). Hence, **`hacks_TDU_ULUS10249.ini.db`** is used
+This guide uses U.S. ROM (ULUS10249). Hence, **`hacks_TDU_ULUS10249.ini.db`** is used.
 
 ![4e9c375ca6cadc40165cc5198a117b16.png](img/TDU-tp-islands/4e9c375ca6cadc40165cc5198a117b16.png)  
 
@@ -44,7 +44,7 @@ Let's have a closer look at the **`TP to marker - main`** pair of patches,
 Patch file in Notepad++
 
 We can already investigate 2 leads, in any order,
-* Investigate the patch itself
+* Investigate the patch itself.
 * Since I was courteous to make long and useful comments, we can investigate "the 08A1D250 reading". **[We will start here]**
 
 ### The 08A1D250 reading
@@ -78,9 +78,9 @@ Alternatively, you can Google **`lwc1`** and **`swc1`**. PSP CPU is MIPS-compati
 0x08A1D250 in Debugger
 
 Again, we can notice sequences of:
-1. Consecutive values at offsets off **`v0`** being loaded into CPU/FPU registers f3, f2, f1 and f0 
+1. Consecutive values at offsets off **`v0`** being loaded into CPU/FPU registers f3, f2, f1 and `f0` 
 	* Note: Assembly order positioning is generally that: the first argument is the affected subject by the operation, as opposed to traditional programming and human language
-3. Registers being written into another offset of **sp** (**S**tack **P**ointer)
+3. Registers being written into another offset of **sp** (**S**tack **P**ointer).
 
 Sequences run in sets of 4, which implies that the bytecode is compiled, and likely this is some sort of data structure instance copy routine.
 
@@ -94,7 +94,7 @@ Afterwards, let's try to teleport to the marker by editing map. The game executi
 
 ![8dc4bf6673fa63a0af0bb4673594dc85.png](img/TDU-tp-islands/8dc4bf6673fa63a0af0bb4673594dc85.png)  
 
-Since the bytecode at the address stands for 
+Since the bytecode at the address stands for, 
 ```
 lwc1	f3,0x30(v0)
 ```
@@ -107,11 +107,11 @@ close-up
 
 v0 is set to **`08D623D0`**. **`0x08D623D0 + 30h = 0x08D62400`**.
 
-Since it must be interesting there, let's re-load the game state and examine data at that address with ArtMoney, with data presentation, as discussed in the inference section, being **`float 4 bytes`** .
+Since it must be interesting there, let's re-load the game state and examine data at that address with ArtMoney, with data presentation, as discussed in the inference section, being **`float 4 bytes`**.  
 
 ![74248f7b1ad7dc3e6151d89cfd6494a9.png](img/TDU-tp-islands/74248f7b1ad7dc3e6151d89cfd6494a9.png)  
 
-And indeed, it looks like the game stores map marker position in 4x3=12 bytes starting from **`0x08D62400`** .
+And indeed, it looks like the game stores map marker position in 4x3=12 bytes starting from **`0x08D62400`**.  
 
 ![47edb7286b57b644772fe4cda3ccedb8.png](img/TDU-tp-islands/47edb7286b57b644772fe4cda3ccedb8.png) |
 ---- |
@@ -133,7 +133,7 @@ For that, let's check out the patch file again,
 ---- | 
 Patch file in Notepad++
 
-For both **`[enable]`** and **`[disable]`** patches, we perform 2 checks, and (as indicated by first digit **`2`** in the CWCheat instructions) 
+For both **`[enable]`** and **`[disable]`** patches, we perform 2 checks, and (as indicated by first digit **`2`** in the CWCheat instructions.) 
 
 We modify (in CWCheat's language, quote-unquote) **`0x2021D1D8`** and **`0x2021D1E0`**. These are not really addresses, but CWCheat instructions!
 
@@ -163,7 +163,7 @@ What do we see?
 * **`08A1D1E0`**: However, before the jump, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. What happens here? **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **`a0`** is guaranteed to be set to **`a0+0x22AC=08D622AC`**  
  	![6e724134ad6c6a8e817d321613c45897.png](img/TDU-tp-islands/6e724134ad6c6a8e817d321613c45897.png)  
 	![e6df898f0434c009234c663c0c2d8f7b.png](img/TDU-tp-islands/e6df898f0434c009234c663c0c2d8f7b.png)  
-* **`0894D464`**: Luckily, it's a very small function! `jr ra` "jump register  (to) return address" (equivalent to **`ret`** in other architectures)  
+* **`0894D464`**: Luckily, it's a very small function! `jr ra` "jump register  (to) return address" (equivalent to **`ret`** in other architectures.)  
 	![2c801f04d0b86d77d4918a1119d77fb7.png](img/TDU-tp-islands/2c801f04d0b86d77d4918a1119d77fb7.png)  
 * **`0894D468`**: However, before ret, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **v**0 is guaranteed to be set (overwritten) to **`a0+0x124=08D623D0`**  
 	![92cba61d970eb6df3f648da4f85eba25.png](img/TDU-tp-islands/92cba61d970eb6df3f648da4f85eba25.png)  
@@ -201,10 +201,10 @@ However, it's only **practical** to teleport with patch **`TP to marker - main [
 *Optional technical note*: There's an in-game animation on the marker. From this we can infer that the marker position has to be read, and hence re-drawn every frame, as opposed to being read upon its manipulation. Alternatively, it is possible to set a breakpoint on marker position axis at observing it/them being read at least once every frame (as a tiny bit of sound is played by the game at the frame processing end).
 
 Therefore, **the procedure is,**
-1. Import addresses to a memory editor (CheatEngine or ArtMoney)
+1. Import addresses to a memory editor (CheatEngine or ArtMoney).
 2. Go to map mode, ensure the marker is set somewhere.
-3. Adjust the marker, until you reach the desired location. For example, `64646,50,45120`
-4. Exit map mode  
+3. Adjust the marker, until you reach the desired location. For example, `64646,50,45120`.
+4. Exit map mode.  
 	![ULUS10249_00001.jpg](img/TDU-tp-islands/ULUS10249_00001.jpg)  
 5. Enjoy the result!
 
