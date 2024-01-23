@@ -3,9 +3,16 @@
 # Before use, run:
 # pip install pyperclip
 
-import pyperclip
 import time
 
+try:
+	import pyperclip
+except ModuleNotFoundError:
+	print("Please install prerequisite,")
+	print("```")
+	print("pip install pyperclip")
+	print("```")
+	exit()
 
 """
 it is a simple as subtracting 0x08800000 are you sure you have the correct base address
