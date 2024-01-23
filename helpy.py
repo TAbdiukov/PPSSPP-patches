@@ -62,8 +62,6 @@ def main():
 				pay = gen_pay(paste)
 				print("*Out: "+pay)
 				pyperclip.copy(pay+chr(10))
-			#else:
-				#print("*Inv: "+paste)
 			time.sleep(0.1)
 	except KeyboardInterrupt:
 		print('cya!')
