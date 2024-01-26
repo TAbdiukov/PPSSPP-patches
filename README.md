@@ -2,8 +2,16 @@
 
 My cheats, fixes and workarounds for PPSSPP games and apps.
 
-# Friendly repos
-* [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) – gotten inspired by this repo
+# See also
+
+* [LunaMoo/PPSSPP_workarounds](https://github.com/LunaMoo/PPSSPP_workarounds/) – gotten inspired by this repo.
+
+--------------------
+
+* <ins>**TAbdiukov/PPSSPP-patches</ins>** – My cheats, fixes and workarounds for PPSSPP games and apps.
+* [TAbdiukov/Ikejime](https://github.com/TAbdiukov/Ikejime) – Various patches for Windows OS and apps.
+* [TAbdiukov/Ikejime-Private](https://github.com/TAbdiukov/Ikejime-Private) – <ins>Private</ins> patches.
+* [TAbdiukov/WinRegistry](https://github.com/TAbdiukov/WinRegistry) – Windows Registry tweaks.
 
 # Docs
 
@@ -29,6 +37,14 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 ```
 python3 helpy.py
 ```
+
+## Update 2023+ – Note about some patches
+
+In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
+
+* Test Drive Unlimited [US] – remove GBA-like pixelization.
+
+If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
 
 # Templates
 
@@ -66,11 +82,3 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 // 088BDFE4:00000000 //mod
 //
 ```
-
-## Update 2023+ – Note about some patches
-
-In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
-
-* Test Drive Unlimited [US] – remove GBA-like pixelization.
-
-If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.

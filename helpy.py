@@ -34,13 +34,12 @@ def gen_pay(s):
 	si = int(s, 16)
 	assert si > 0
 	
-	si = si - MAGIC
+	si = si + MAGIC
 	
 	# https://stackoverflow.com/a/28650911
-	pay = "_L "
+	pay = "O:"
 	pay += toaddr32(si)
 	pay += " "
-	pay += toaddr32(VAL)
 	return pay
 
 
@@ -60,8 +59,8 @@ def main():
 				print("*Valid in: "+paste)
 				# gen pay
 				pay = gen_pay(paste)
-				print("*Out: "+pay)
-				pyperclip.copy(pay+chr(10))
+				print("*Output: "+pay)
+				pyperclip.copy(pay)
 			time.sleep(0.1)
 	except KeyboardInterrupt:
 		print('cya!')
