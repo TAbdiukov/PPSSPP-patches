@@ -32,20 +32,6 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 * [TDU – (other) interesting parameters](./guides/TDU-interesting-params.md) *(if you feel adventurous)*
 * [TDU – Teleport anywhere, including secret islands](./guides/TDU-tp-islands.md) *(or "assembly for beginners")*
 
-# Notes
-* CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
-```
-python3 helpy.py
-```
-
-## Update 2023+ – Note about some patches
-
-In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
-
-* Test Drive Unlimited [US] – remove GBA-like pixelization.
-
-If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
-
 # Templates
 
 ## Pointer
@@ -82,3 +68,18 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 // 088BDFE4:00000000 //mod
 //
 ```
+
+# Other notes
+* CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
+```
+python3 helpy.py
+```
+
+## Update 2023+ – Note about some patches
+
+In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
+
+* Test Drive Unlimited [US] – remove GBA-like pixelization.
+
+If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
+
