@@ -10,8 +10,6 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 
 * <ins>**TAbdiukov/PPSSPP-patches</ins>** – My cheats, fixes and workarounds for PPSSPP games and apps.
 * [TAbdiukov/Ikejime](https://github.com/TAbdiukov/Ikejime) – Various patches for Windows OS and apps.
-* [TAbdiukov/Ikejime-Private](https://github.com/TAbdiukov/Ikejime-Private) – <ins>Private</ins> patches.
-* [TAbdiukov/WinRegistry](https://github.com/TAbdiukov/WinRegistry) – Windows Registry tweaks.
 
 ## Docs
 
