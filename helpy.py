@@ -45,7 +45,7 @@ def gen_pay(s):
 
 
 def main():
-	HOW_TO = """Just copy stuff to clipboard!"""
+	HOW_TO = """Just copy standard address to clipboard!"""
 	
 	print(PROGRAM_NAME+" "+"greets you!")
 	print("How to: "+HOW_TO)
@@ -63,7 +63,7 @@ def main():
 				pyperclip.copy(pay)
 			time.sleep(0.1)
 	except KeyboardInterrupt:
-		print('cya!')
+		print('Exiting...')
 
 
 if __name__ == '__main__':
