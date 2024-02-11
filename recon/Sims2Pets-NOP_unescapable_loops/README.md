@@ -194,7 +194,7 @@ As such, Sims2Pets - Find and NOP unescapable loops action is not required.
 
 ## Extras
 
-ArtMoney table for testing aws uploaded, please see: [PPSSPP v1.17.1 - ULUS10130 - The Sims™ 2 Pets.amt](./PPSSPP v1.17.1 - ULUS10130 - The Sims™ 2 Pets.amt)
+ArtMoney table for testing aws uploaded, please see: [ULUS10130.amt](./ULUS10130.amt)
 
 ---------------------------------
 
