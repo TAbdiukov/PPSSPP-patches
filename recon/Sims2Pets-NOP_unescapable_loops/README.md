@@ -194,7 +194,7 @@ As such, Sims2Pets - Find and NOP unescapable loops action is not required.
 
 ## Extras
 
-ArtMoney table for testing aws uploaded, please see: [ULUS10130.amt](./ULUS10130.amt)
+ArtMoney table for testing was uploaded, discover: [ULUS10130.amt](./ULUS10130.amt)
 
 ---------------------------------
 
