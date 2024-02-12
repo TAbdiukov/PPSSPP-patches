@@ -1,6 +1,46 @@
 # Sims2Pets - Find and NOP unescapable loops
 
-## One-line loops
+## Prelude - Sims 2 Castaway loops
+
+### Loop №1
+
+```
+460D703E
+00000000
+4502FFFD
+
+460C703E
+00000000
+4503FFFD
+```
+
+### Loop №2
+
+```
+4616A03E
+00000000
+4502FFFD
+```
+
+### Loop №3
+
+```
+460F603E
+00000000
+4502FFFD
+```
+
+### Loop №4
+
+```
+0482FFFF
+```
+
+![1](./img/1.png) | ![2](./img/2.png) 
+---- | ----
+![3](./img/3.png) | ![4](./img/4.png)
+
+## Sims2Pets: One-line loops
 
 ### Hypothetical
 *Register: Instruction::HEX*
@@ -39,7 +79,7 @@ a3: 5CE0FFFF
 088FDAA4: bltzl a1, 0x088FDAA4  (04A2FFFF)
 ```
 
-## Multi-line Loops 
+## Sims2Pets: Multi-line Loops 
 *(starting addresses)*
 
 ```
@@ -166,10 +206,11 @@ a3: 5CE0FFFF
 
 ## Results
 
-* NOP one-line loops - no apparent change to the gameplay.
-* NOP multi-line semi-explored loops - no apparent change to the gameplay.
-* NOP multi-line explored loops - no apparent change to the gameplay.
+* NOP one-line loops - no remarkable gameplay improvement, no apparent change to the gameplay.
+* NOP multi-line semi-explored loops - no remarkable gameplay improvement, no apparent change to the gameplay.
+* NOP multi-line explored loops - no remarkable gameplay improvement, no apparent change to the gameplay.
 * NOP all multi-line loops (including unexplored) - multiple changes, 
+	* No remarkable gameplay improvement.
 	* Body bones begin glitching out of sight.
 	* Pets fall slightly through ground.
 	* Side movement occasionally disrupted/disrupted at some places.
@@ -182,15 +223,17 @@ a3: 5CE0FFFF
 
 ## Trivia
 
+According to the online reports, escaping 'unescapable' loops in Sims2Castaway remarkably improves gameplay (by allowing Sims and Chimps to spawn without forcing player to wait). Similar effect was not observed in Sims2Pets.
+
 Calling these loops unescapable is somewhat incorrect, as 'unescapable' may imply that the CPU is stuck at their execution. To be fair, this was the behavoior during the period of incorrect PPSSPP emulation of certain gameplay artifacts. As such, is more correct to call these loops `wait()` loops, `await` loops, or `wait-state` loops, as these loops wait for another asyncronous thread.
 
 Here is somewhat similar Python code: https://docs.python.org/3/library/asyncio-task.html#awaitables
 
 ## Conclusion
 
-When it comes to unescapable (await) loops, Sims2Pets loops are do not detriment gameplay as much as Sims2Castaway loops may do. Furthermore, PPSSPP emulation is at a better state in 2024 than it was previously, and Sims2Castaway (and similar) thread artifacts do not cause any emulation problems that require unescapable (await) loops patching out with NOP.
+When it comes to unescapable (await) loops, Sims2Pets loops are do not detriment gameplay as much as Sims2Castaway loops may do. Escaping unescapable (await) loops in Sims2Pets does not remarkably improve gameplay. Furthermore, PPSSPP emulation is at a better state in 2024 than it was previously, and Sims2Castaway (and similar) thread artifacts do not cause any emulation problems that require unescapable (await) loops patching out with NOP.
 
-As such, Sims2Pets - Find and NOP unescapable loops action is not required.
+As such, for Sims2Pets - Find and NOP unescapable loops action is not helpful nor required.
 
 ## Extras
 
