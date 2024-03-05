@@ -41,13 +41,11 @@ def gen_pay(s):
 	test = si & 0xFFFFFFFFF0000000
 	if(test > 0):
 		print("(Warning) Invalid PSP address")
-	
-	
+		
 	si = si & 0x0FFFFFFF
 	si = si + OP_EDIT_4BYTES
 	arg1 = toaddr32(si)
 	
-	# https://stackoverflow.com/a/28650911
 	pay = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
 	return pay
 
