@@ -20,7 +20,7 @@ From that struct, I found a chain of structs connected to the functioning of the
 -> 08F3502E (Object name)
 ```
 
-The addresses are static already at this point. Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
+The addresses are static already at this point. Through trial and error when descending down the pointer chain, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
 
 It is worth mentioning that the game mixes execution and control flow, a normally very unsafe coding practice. As a result of it, there are buymenu bugs: computers and lights turn on in the buy menu. As such, it is possible to get the game to execute code from just getting the game to interpret an object's buymenu address through committing to buy it in the buy menu!
 
