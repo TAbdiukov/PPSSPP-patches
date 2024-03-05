@@ -80,7 +80,7 @@ s3 is PtrValue
 
 ## Chairs
 
-Note: ID numbers are decimal.
+Note: ID numbers are decimal. `f` for "fixed".
 
 ```
 ID	Containr	PtrValue
@@ -96,6 +96,7 @@ ID	Containr	PtrValue
 10	09B6ADEC	09B6AD70
 11	09B6AEB4	09B6AE38
 12	09B6D68C	09B6D548
+12f	09B6D5C4	09B6D548
 13	09B6AACC	09B6AA50
 14	09B6A554	09B6A4D8
 15	09B6AB94	09B6AB18
@@ -109,3 +110,4 @@ ID	Containr	PtrValue
 23	09B6E564	09B6E420
 24	09B6A7AC	09B6A730
 ```
+
