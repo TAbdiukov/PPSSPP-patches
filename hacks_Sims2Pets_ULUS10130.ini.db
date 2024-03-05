@@ -8,7 +8,8 @@ _C0 Re-enable "FIRE CODE" [default]
 _L 0x20013A64 0x6855B5C6
 //
 _C1 Replace buy-menu chairs with overpowered park assets [mod]
-_L 0xE01909B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
+_L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
+_L 0xE01909B6 0x0136AACE // Check, Chair13 expected header (Little-Endian)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian)
 _L 0xE017BB00 0x0134BB7C // Check, Chair01 expected tail
 _L 0xE016A668 0x0136A6E4 // Check, Chair02 expected tail
@@ -36,7 +37,8 @@ _L 0x2136AEB4 0x09B54160 // Write, Chair11 buymenu container
 _L 0x2136AACC 0x09B652D0 // Write, Chair13 buymenu container
 //
 _C0 Revert back to buy-menu cheap chairs [default]
-_L 0xE01909B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
+_L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
+_L 0xE01909B6 0x0136AACE // Check, Chair13 expected header (Little-Endian) (mod)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian) (mod)
 _L 0xE0177AF0 0x0134BB7C // Check, Chair01 expected tail (mod)
 _L 0xE0169328 0x0136A6E4 // Check, Chair02 expected tail (mod)
