@@ -1,5 +1,12 @@
-## Generic
+## Legend 
 
+```
+{Entity}: {Action Address} {Execution Address} {Other}
+```
+
+### Generic
+
+```
 Green bed: 09B45E08
 Trash: 09B79960 09B79960
 Newspaper: 09B57D88
@@ -13,9 +20,11 @@ Linda: 09B1C140 09B1C140
 
 DeBingo  chair (1): 09B4BB00 09B4BB00
 Computer chair (2): 09B6A668 09B6A668
+```
 
-## Park
+### Park
 
+```
 Pet bakery:       09B47D48 09B47AF0
 Pet Kennel:       09B49580 09B49328
 Pet Emporium:     09B49BC0 09B49968
@@ -27,7 +36,6 @@ Park phone: 09B53418 09B53418
 ATM:       09B61518 09B61518
 Fountain:  09B61770 09B615E0 164995840
 
-
 Coffee Cart:         09B482C0 09B481F8
 
 
@@ -35,13 +43,15 @@ Drink Water machine: 09B54160 09B54160
 HotDog Vending Mach: 09B54228 09B54228
 
 Go to town square:   09B652D0 09B652D0
+```
 
-# Lamps
+## Lamps
 
-Breakpoint at address: 08A3F294
+Breakpoint at address **execution**: `08A3F294`
+
 s3 is PtrValue
 
-# Chairs
+## Chairs
 
 Note: ID numbers are decimal.
 
