@@ -39,7 +39,7 @@ def gen_pay(s):
 	arg1 = toaddr32(si)
 	
 	# https://stackoverflow.com/a/28650911
-	pay = f"O:{arg1}"
+	pay = f"_L 0xE0FF1234 {arg1} // Check, ChairXX expected tail"
 	return pay
 
 
