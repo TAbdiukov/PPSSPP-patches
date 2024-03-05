@@ -78,7 +78,7 @@ Go to town square:   09B652D0 09B652D0
 
 Breakpoint at address **execution**: `08A3F294`
 
-s3 is PtrValue
+s3 is **PtrValue** (at least during ~70% of hit breakpoints)
 
 ## Chairs
 
