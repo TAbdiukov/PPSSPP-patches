@@ -34,7 +34,7 @@ def gen_pay(s):
 	si = int(s, 16)
 	assert si > 0
 	
-	si = si + MAGIC
+	si = si - MAGIC
 	
 	# https://stackoverflow.com/a/28650911
 	pay = "O:"
