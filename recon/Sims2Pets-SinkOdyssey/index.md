@@ -1,3 +1,29 @@
+
+## How gold was found
+
+The same stores the current entity title (printed in the action menu) at a static address
+
+Through some debugger hell, I found where the same fetches the struct that stores the said entity name.
+
+From that struct, I found a chain of structs connected to the functioning of the said entity. Interestingly, it's possible to turn Sims into trash or dust. It's just that the game engine really doesn't like it.
+
+I didn't go up all the way in the chain, but I went up to,
+
+```
+{{more global pointers}}
+-> 09B9EA1C (Object behavior in RAM) + 00E4 
+-> 09C4F6BC (Obj type actions) + 007C 
+-> ** 09B6534C (Obj type buymenu) ** + 009C 
+-> 09B6536C (???) + 000C
+-> 09C6383C (???) + 0000
+-> 08EA54B4 (???) + 0000
+-> 08F3502E (Object name)
+```
+
+Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the entity/object functioning in the buymenu.
+
+It is worth mentioning that the game mixes execution and control flow, a normally very unsafe coding practice. As a result of it, there are buymenu bugs: computers and lights turn on in the buy menu. As such, it is possible to get the game to execute code from just getting the game to interpret an object's buymenu address through committing to buy it in the buy menu!
+
 ## Legend 
 
 ```
