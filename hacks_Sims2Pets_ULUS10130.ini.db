@@ -1,15 +1,14 @@
 _S ULUS10130
 _G Sims 2 Pets
 //
-_C0 Disable "FIRE CODE"
+_C1 Disable "FIRE CODE"
 _L 0x20013A64 0x00000000
 //
 _C0 Re-enable "FIRE CODE" [default]
 _L 0x20013A64 0x6855B5C6
 //
-_C0 (Prototype) Replace buy-menu chairs with overpowered park assets [mod]
-_L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
-_L 0xE01909B6 0x0136D68E // Check, Chair12 expected header (Little-Endian)
+_C1 Replace buy-menu chairs with overpowered park assets [mod]
+_L 0xE01909B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian)
 _L 0xE017BB00 0x0134BB7C // Check, Chair01 expected tail
 _L 0xE016A668 0x0136A6E4 // Check, Chair02 expected tail
@@ -20,9 +19,9 @@ _L 0xE012BA38 0x0134BAB4 // Check, Chair06 expected tail
 _L 0xE011ACA8 0x0136AD24 // Check, Chair07 expected tail
 _L 0xE010B970 0x0134B9EC // Check, Chair08 expected tail
 _L 0xE00FA410 0x0136A48C // Check, Chair09 expected tail
-_L 0xE00EAD70 0x0139EA1C // Check, Chair10 expected tail
+_L 0xE00EAD70 0x0136ADEC // Check, Chair10 expected tail
 _L 0xE00DAE38 0x0136AEB4 // Check, Chair11 expected tail
-_L 0xE00CD548 0x0136D68C // Check, Chair12 expected tail
+_L 0xE00CAA50 0x0136AACC // Check, Chair13 expected tail
 _L 0x2134BB7C 0x09B47AF0 // Write, Chair01 buymenu container
 _L 0x2136A6E4 0x09B49328 // Write, Chair02 buymenu container
 _L 0x2134B924 0x09B49968 // Write, Chair03 buymenu container
@@ -32,13 +31,12 @@ _L 0x2134BAB4 0x09B4ADB8 // Write, Chair06 buymenu container
 _L 0x2136AD24 0x09B53418 // Write, Chair07 buymenu container
 _L 0x2134B9EC 0x09B61518 // Write, Chair08 buymenu container
 _L 0x2136A48C 0x09B615E0 // Write, Chair09 buymenu container
-_L 0x2139EA1C 0x09B481F8 // Write, Chair10 buymenu container
+_L 0x2136ADEC 0x09B481F8 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B54160 // Write, Chair11 buymenu container
-_L 0x2136D68C 0x09B652D0 // Write, Chair12 buymenu container
+_L 0x2136AACC 0x09B652D0 // Write, Chair13 buymenu container
 //
-_C0 (Prototype) Revert back buy-menu chairs [default]
-_L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
-_L 0xE01909B6 0x0136D68E // Check, Chair12 expected header (Little-Endian) (mod)
+_C0 Revert back to buy-menu cheap chairs [default]
+_L 0xE01909B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian) (mod)
 _L 0xE0177AF0 0x0134BB7C // Check, Chair01 expected tail (mod)
 _L 0xE0169328 0x0136A6E4 // Check, Chair02 expected tail (mod)
@@ -49,9 +47,9 @@ _L 0xE012ADB8 0x0134BAB4 // Check, Chair06 expected tail (mod)
 _L 0xE0113418 0x0136AD24 // Check, Chair07 expected tail (mod)
 _L 0xE0101518 0x0134B9EC // Check, Chair08 expected tail (mod)
 _L 0xE00F15E0 0x0136A48C // Check, Chair09 expected tail (mod)
-_L 0xE00E81F8 0x0139EA1C // Check, Chair10 expected tail (mod)
+_L 0xE00E81F8 0x0136ADEC // Check, Chair10 expected tail (mod)
 _L 0xE00D4160 0x0136AEB4 // Check, Chair11 expected tail (mod)
-_L 0xE00C52D0 0x0136D68C // Check, Chair12 expected tail (mod)
+_L 0xE00C52D0 0x0136AACC // Check, Chair13 expected tail (mod)
 _L 0x2134BB7C 0x09B4BB00 // Write, Chair01 buymenu container
 _L 0x2136A6E4 0x09B6A668 // Write, Chair02 buymenu container
 _L 0x2134B924 0x09B4B8A8 // Write, Chair03 buymenu container
@@ -61,7 +59,7 @@ _L 0x2134BAB4 0x09B4BA38 // Write, Chair06 buymenu container
 _L 0x2136AD24 0x09B6ACA8 // Write, Chair07 buymenu container
 _L 0x2134B9EC 0x09B4B970 // Write, Chair08 buymenu container
 _L 0x2136A48C 0x09B6A410 // Write, Chair09 buymenu container
-_L 0x2139EA1C 0x09B6AD70 // Write, Chair10 buymenu container
+_L 0x2136ADEC 0x09B6AD70 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B6AE38 // Write, Chair11 buymenu container
-_L 0x2136D68C 0x09B6D548 // Write, Chair12 buymenu container
+_L 0x2136AACC 0x09B6AA50 // Write, Chair13 buymenu container
 //
