@@ -41,7 +41,7 @@ _L 0x2134B9EC 0x09B61518 // Write, Chair08 buymenu container
 _L 0x2136A48C 0x09B615E0 // Write, Chair09 buymenu container
 _L 0x2136ADEC 0x09B481F8 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B54160 // Write, Chair11 buymenu container
-_L 0x2156D5C4 0x09B652D0 // Write, Chair12 buymenu container
+_L 0x2136D5C4 0x09B652D0 // Write, Chair12 buymenu container
 //
 _C0 Revert back to buy-menu seats [default]
 _L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
@@ -70,5 +70,5 @@ _L 0x2134B9EC 0x09B4B970 // Write, Chair08 buymenu container
 _L 0x2136A48C 0x09B6A410 // Write, Chair09 buymenu container
 _L 0x2136ADEC 0x09B6AD70 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B6AE38 // Write, Chair11 buymenu container
-_L 0x2156D5C4 0x09B6D548 // Write, Chair12 buymenu container
+_L 0x2136D5C4 0x09B6D548 // Write, Chair12 buymenu container
 //
