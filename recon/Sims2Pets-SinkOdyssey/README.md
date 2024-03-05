@@ -1,4 +1,6 @@
 
+![img](./img/ULUS10130_00000.jpg)
+
 ## How this rare-earth element was found
 
 I previusly tried to analyze and research the operation of in-game entities through Actions. The game stores action data / logic (all the same) all over its RAM, and everything is dynamic, so it is difficult to follow. However, the same stores the current object title (printed in the action menu) at a static address!
