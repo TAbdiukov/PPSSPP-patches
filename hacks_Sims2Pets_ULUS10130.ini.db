@@ -9,7 +9,12 @@ _L 0x20013A64 0x6855B5C6
 //
 // You may read more about this (impossible) hack here,
 // https://github.com/TAbdiukov/PPSSPP-patches/tree/master/recon/Sims2Pets-SinkOdyssey
-_C1 Replace buy-menu chairs with overpowered park assets [mod]
+// Usage:
+// 1) Activate
+// 2) Pause -> Buy Menu -> Sort Objects by Type
+// 3) Select "Seating"
+// 4) Observe replaced items
+_C1 Replace buy-menu seats with overpowered park assets [mod]
 _L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
 _L 0xE01909B6 0x0136AACE // Check, Chair13 expected header (Little-Endian)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian)
@@ -38,7 +43,7 @@ _L 0x2136ADEC 0x09B481F8 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B54160 // Write, Chair11 buymenu container
 _L 0x2136AACC 0x09B652D0 // Write, Chair13 buymenu container
 //
-_C0 Revert back to buy-menu cheap chairs [default]
+_C0 Revert back to buy-menu seats [default]
 _L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian) (mod)
 _L 0xE01909B6 0x0136AACE // Check, Chair13 expected header (Little-Endian) (mod)
 _L 0xE01809B6 0x0136A7AE // Check, Chair24 expected header (Little-Endian) (mod)
