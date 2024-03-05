@@ -12,7 +12,7 @@ _L 0x20013A64 0x6855B5C6
 // Usage:
 // 1) Activate
 // 2) Pause -> Buy Menu -> Sort Objects by Type
-// 3) Select "Seating"
+// 3) Select "Seating" (leftmost category in the menu)
 // 4) Observe replaced items
 _C1 Replace buy-menu seats with overpowered park assets [mod]
 _L 0xE01A09B4 0x0134BB7E // Check, Chair01 expected header (Little-Endian)
