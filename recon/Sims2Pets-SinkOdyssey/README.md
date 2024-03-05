@@ -1,13 +1,11 @@
 
-## How it was found
+## How this diamond was found
 
 The same stores the current object title (printed in the action menu) at a static address
 
 Through some PPSSPP debugger purgatory, I found where the same fetches the struct that stores the said object name.
 
-From that struct, I found a chain of structs connected to the functioning of the said object. Interestingly, it's possible to turn Sims into trash or dust. It's just that the game engine really doesn't like it.
-
-I didn't go up all the way in the chain, but I went up to,
+From that struct, I found a chain of structs connected to the functioning of the said object. I didn't go up all the way in the chain where mathematical computations of pointer address(es) occur, but I went up to,
 
 ```
 {{more global pointers}}
@@ -20,11 +18,11 @@ I didn't go up all the way in the chain, but I went up to,
 -> 08F3502E (Object name)
 ```
 
-Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
+The addresses are static already at this point. Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
 
 It is worth mentioning that the game mixes execution and control flow, a normally very unsafe coding practice. As a result of it, there are buymenu bugs: computers and lights turn on in the buy menu. As such, it is possible to get the game to execute code from just getting the game to interpret an object's buymenu address through committing to buy it in the buy menu!
 
-You may be able to discover more using the following ArtMoney (AMT) table: [SinkOdyssey.amt](./SinkOdyssey.amt)  
+Interestingly, it's possible to turn Sims into trash or dust, or into a dog. It's just that the game engine really doesn't like it (the game crashes once you go to park). You may be able to discover more using the following ArtMoney (AMT) table: [SinkOdyssey.amt](./SinkOdyssey.amt)  
 
 
 ## Legend 
