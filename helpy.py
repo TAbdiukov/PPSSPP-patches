@@ -21,6 +21,7 @@ _L 0x203B3B58 0x3F800000
 
 PROGRAM_NAME = "Helpy"
 MAGIC = 0x08800000
+OP_EDIT_4BYTES = 0x0200000
 VAL = 1
 
 def is_input_valid(s):
@@ -30,19 +31,25 @@ def is_input_valid(s):
 
 def toaddr32(num): return '0x{0:08X}'.format(num)
 
+
 def gen_pay(s):
 	si = int(s, 16)
 	assert si > 0
 	
 	si = si - MAGIC
 	
+	test = si & 0xFFFFFFFFF0000000
+	if(test > 0):
+		print("(Warning) Invalid PSP address")
+	
+	
+	si = si & 0x0FFFFFFF
+	si = si + OP_EDIT_4BYTES
 	arg1 = toaddr32(si)
 	
 	# https://stackoverflow.com/a/28650911
-	pay = f"_L 0xE0FF1234 {arg1} // Check, ChairXX expected tail"
+	pay = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
 	return pay
-
-
 
 def main():
 	HOW_TO = """Just copy standard address to clipboard!"""
