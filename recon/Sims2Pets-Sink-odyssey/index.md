@@ -101,7 +101,7 @@ _L 0x2134BAB4 0x09B4ADB8 // Write, Chair06 buymenu container
 _L 0x2136AD24 0x09B53418 // Write, Chair07 buymenu container
 _L 0x2134B9EC 0x09B61518 // Write, Chair08 buymenu container
 _L 0x2136A48C 0x09B615E0 // Write, Chair09 buymenu container
-_L 0x2139EA1C 0x09B481F8 // Write, Chair10 buymenu container
+_L 0x2139EA1C 0x09B482C0 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B54160 // Write, Chair11 buymenu container
 _L 0x2136D68C 0x09B652D0 // Write, Chair12 buymenu container
 //
