@@ -1,11 +1,11 @@
 
-## How gold was found
+## How it was found
 
-The same stores the current entity title (printed in the action menu) at a static address
+The same stores the current object title (printed in the action menu) at a static address
 
-Through some debugger hell, I found where the same fetches the struct that stores the said entity name.
+Through some PPSSPP debugger purgatory, I found where the same fetches the struct that stores the said object name.
 
-From that struct, I found a chain of structs connected to the functioning of the said entity. Interestingly, it's possible to turn Sims into trash or dust. It's just that the game engine really doesn't like it.
+From that struct, I found a chain of structs connected to the functioning of the said object. Interestingly, it's possible to turn Sims into trash or dust. It's just that the game engine really doesn't like it.
 
 I didn't go up all the way in the chain, but I went up to,
 
@@ -20,14 +20,17 @@ I didn't go up all the way in the chain, but I went up to,
 -> 08F3502E (Object name)
 ```
 
-Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the entity/object functioning in the buymenu.
+Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
 
 It is worth mentioning that the game mixes execution and control flow, a normally very unsafe coding practice. As a result of it, there are buymenu bugs: computers and lights turn on in the buy menu. As such, it is possible to get the game to execute code from just getting the game to interpret an object's buymenu address through committing to buy it in the buy menu!
+
+You may be able to discover more using the following ArtMoney (AMT) table: [SinkOdyssey.amt](./SinkOdyssey.amt)  
+
 
 ## Legend 
 
 ```
-{Entity}: {Action Address} {Execution Address} {Other}
+{Object}: {Action Address} {Execution Address} {Other}
 ```
 
 ### Generic
@@ -60,7 +63,7 @@ Pet Toy Store:    09B4B010 09B4ADB8
 
 Park phone: 09B53418 09B53418
 ATM:       09B61518 09B61518
-Fountain:  09B61770 09B615E0 164995840
+Fountain:  09B61770 09B615E0 9D5A300
 
 Coffee Cart:         09B482C0 09B481F8
 
