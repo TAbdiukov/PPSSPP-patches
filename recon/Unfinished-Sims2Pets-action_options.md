@@ -220,6 +220,10 @@ Addresses for change to next list node ptr: 08AF7CB8 and 08AF7CBC
 
 **`088F6544...`** - function of list entry generation
 
+## Misc
+
+* It is possible to *reduce* the number of actions to 1, by NOPping conditional goto commands at 088503D8 and 088503EC (causing executions of `088502A0`). However, since the game uses linked-lists to store commands (more accurately, sausage code of bucketed listed-lists linking linked-lists), this action just cripples in-game logic slightly.
+
 ## Overall Conclusion
 
 Useful calls for debugging action list entries,
