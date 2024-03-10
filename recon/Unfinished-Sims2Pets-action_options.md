@@ -58,17 +58,20 @@ Breakpoint on read. One byte is enough for the task
 
 ## another breakpoint
 
-At execution of 0x08AE0FEC , condition: a0==08F0F9BC
+At execution of 0x08AE0FEC , condition: **`a0==08F0F9BC`**
 
+```
 0882DDCC -> 0885014C (forces game to reload logic!) -> 088D5634 (3 calls, fetches names for Object actions) -> 0897AA40
+```
 
 
-3 calls are defined between
-0885014C and  088D5634
+3 calls are defined between: `0885014C` and `088D5634`,
 
+```
 Call 1 at: 08850150
 Call 2 at: 088502A0
 Call 3 at: 088502A0
+```
 
 # New functions to check
 
@@ -147,13 +150,16 @@ occurred in
 
 ## Finding golden address
 
-Only 1 call
+golden address = Only 1 call,
 
+```
 08809F48 - per X press
 0893EB64 - per X press
 088F6904 - per X press
 088F6534 - per action count + 1
+```
 
+None found...
 
 # Watching 1+4
 
