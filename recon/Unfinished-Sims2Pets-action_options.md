@@ -226,4 +226,4 @@ Call 3 at: 088502A0
 
 088F6534 (action+1, ) and 088F654C (№1+0x4) [maybe 088F6900 (Xpress lite)]
 
-Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD delays. Whta was meant to be a fun little project become a time sink.
+Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD delays. What was meant to be a fun little project become a time sink.
