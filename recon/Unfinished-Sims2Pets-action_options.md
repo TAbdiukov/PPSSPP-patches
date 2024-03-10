@@ -169,21 +169,21 @@ So, I speculate this is a 'streaming function', waiting for the other thread
 ```
 09D1AAF0: 09D16818
 09D1AAF4: 09D5C4D8
-09D5C4D8 (quick: 0x08BE7F18) : 08C01920
+09D5C4D8: 08C01920
 09D5C4DC: 09D5B890
 09D5B890: 08C01920
 09D5B894: 00000000
 ```
 
-Address for change: 08AF7CB8 and 08AF7CBC
+Addresses for change to next list node ptr: 08AF7CB8 and 08AF7CBC
 
 ### 08AF7CB8 (StepOut+)
 
 ```
 -> 08ADF174 (NOP=crash)
 -> 08ADEF64 (NOP=crash)
--> 08ADECFC
--> 08AA45A8
+-> 08ADECFC (NOP=crash)
+-> 08AA45A8 (NOP=crash)
 -> 08AA3BD8
 -> 08835D48
 -> 088113C8
@@ -216,6 +216,13 @@ Address for change: 08AF7CB8 and 08AF7CBC
 **`088F6544...`** - function of list entry generation
 
 ## Overall Conclusion
+
+Useful calls,
+```
+Call 1 at: 08850150
+Call 2 at: 088502A0
+Call 3 at: 088502A0
+```
 
 088F6534 (action+1, ) and 088F654C (№1+0x4) [maybe 088F6900 (Xpress lite)]
 
