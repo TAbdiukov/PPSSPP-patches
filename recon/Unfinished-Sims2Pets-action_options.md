@@ -217,13 +217,18 @@ Addresses for change to next list node ptr: 08AF7CB8 and 08AF7CBC
 
 ## Overall Conclusion
 
-Useful calls,
+Useful calls for debugging action list entries,
 ```
 Call 1 at: 08850150
 Call 2 at: 088502A0
 Call 3 at: 088502A0
 ```
 
-088F6534 (action+1, ) and 088F654C (№1+0x4) [maybe 088F6900 (Xpress lite)]
+Useful calls for debugging action list *overall*,
+```
+088F6534 (action+1)
+088F654C (№1+0x4)
+088F6900 (Xpress lite)
+```
 
-Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD delays. What was meant to be a fun little project become a time sink.
+Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting&correcting for UMD delays. What was meant to be a fun little project become a time sink.
