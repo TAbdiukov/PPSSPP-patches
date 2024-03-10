@@ -130,7 +130,7 @@ golden address = Only 1 call,
 ```
 08809F48 - per X press
 0893EB64 - per X press
-088F6904 - per X press
+088F6900 - per action count + 1
 088F6534 - per action count + 1
 ```
 
