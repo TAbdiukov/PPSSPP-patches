@@ -153,8 +153,13 @@ NONE
 ### Partial Conclusion
 
 
-between,
-* 088F6534 (action+1, ) and 088F654C (№1+0x4) [maybe 088F6900 (Xpress lite)]
+along the lines of,
+```
+088F6534 (action+1)
+088F654C (№1+0x4)
+088F6900 (Xpress lite)
+```
+
 
 The following detections occur,
 ```
@@ -231,4 +236,4 @@ Useful calls for debugging action list *overall*,
 088F6900 (Xpress lite)
 ```
 
-Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting&correcting for UMD delays. What was meant to be a fun little project become a time sink.
+Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and correcting for UMD r/w errors. What was meant to be a fun little project become a time sink.
