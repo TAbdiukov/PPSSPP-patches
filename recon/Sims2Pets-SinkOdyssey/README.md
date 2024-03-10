@@ -1,4 +1,6 @@
 
+![img](./img/ULUS10130_00000.jpg)
+
 ## How this rare-earth element was found
 
 I previusly tried to analyze and research the operation of in-game entities through Actions. The game stores action data / logic (all the same) all over its RAM, and everything is dynamic, so it is difficult to follow. However, the same stores the current object title (printed in the action menu) at a static address!
@@ -18,7 +20,7 @@ From that struct, I found a chain of structs connected to the functioning of the
 -> 08F3502E (Object name)
 ```
 
-The addresses are static already at this point. Through trial and error, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
+The addresses are static already at this point. Through trial and error when descending down the pointer chain, I discovered that the pointer of `-> ** 09B6534C (Obj type buymenu) ** + 009C ` (in the example above) corresponds to the object functioning in the buymenu.
 
 It is worth mentioning that the game mixes execution and control flow, a normally very unsafe coding practice. As a result of it, there are buymenu bugs: computers and lights turn on in the buy menu. As such, it is possible to get the game to execute code from just getting the game to interpret an object's buymenu address through committing to buy it in the buy menu!
 
@@ -76,7 +78,7 @@ Go to town square:   09B652D0 09B652D0
 
 Breakpoint at address **execution**: `08A3F294`
 
-s3 is PtrValue
+s3 is **PtrValue** (at least during ~70% of hit breakpoints)
 
 ## Chairs
 
