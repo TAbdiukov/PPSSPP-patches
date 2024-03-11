@@ -220,6 +220,20 @@ Addresses for change to next list node ptr: 08AF7CB8 and 08AF7CBC
 
 **`088F6544...`** - function of list entry generation
 
+# Other - researching POI in 088F6904
+
+```
+> 088F652C
+> 088F64F0
+> 088D5410
+
+
+Interesting jal: 0897A414: 	jal	z_un_089797d4
+
+> 088F6514
+> 08ADECF4
+```
+
 ## Misc
 
 * It is possible to *reduce* the number of actions to 1, by NOPping conditional goto commands at `088503D8` and `088503EC` (causing executions of `088502A0`). However, since the game uses linked-lists to store commands (more accurately, sausage code of bucketed listed-lists linking linked-lists), this action just cripples in-game logic slightly.
@@ -240,4 +254,5 @@ Useful calls for debugging action list *overall*,
 088F6900 (Xpress lite)
 ```
 
-Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and correcting for UMD r/w errors. What was meant to be a fun little project become a time sink.
+Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and containing IO redundancies. What was meant to be a fun little project become a time sink.
+
