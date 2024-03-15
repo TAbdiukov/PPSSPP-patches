@@ -255,3 +255,223 @@ Useful calls for debugging action list *overall*,
 ```
 
 Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and containing IO redundancies. What was meant to be a fun little project become a time sink.
+
+## Tries
+
+### park
+
+0893F294 - 0xC - x1
+088B872C - 0x4 - x4
+0893F294 - 0xC - x1
+088B872C - 0x4 - x4
+
+0893F294 - 0xC - x1
+088B872C - 0x4 - x3
+0893F294 - 0xC - x1
+088B872C - 0x4 - x3
+
+088B8728 - not 
+
+### Home
+
+0893F294 - 0xC - x1
+088B872C - 0x4 - x3
+
+> 088B872C > 088B82C8 > 089012B0 > 08901B8C > 0893F2B0 > 088F68C4 > 0893EB64 
+
+(x3 runs)
+--> 08809F48 > 08809C70 > 
+
+(x2 runs)
+--> 0881C344 > 08890174 > 
+
+(x1 run)
+0888FC14 > 0887DF34 > 0888F85C > 08890D40 > 0887EA64  -> 0894AE04 ....
+
+0893F294 - 0xC - x1
+
+#### At home
+
+0888FC38 (False) -> 0888FC54 (b) -> 0888FC8C (false) -> 0888FCBC (false) -> 0888FD00 (true)
+-> 0888FDF4 (true) -> 0888FD00 (true again) -> 
+> 0888FDF4 (true) -> 0888FD00 (true again) > 
+> 0888FDF4 (true) -> 0888FD00 (true again) > 0888FDF4 (false)
+
+#### park
+
+0888FC38 (False) > 0888FC54 (b) -> 0888FC8C (false) -> 0888FCBC (false) -> 0888FD00 (true)
+> 0888FD00 (true) > 0888FDF4 (true) > 
+> 0888FD00 (true) > 0888FDF4 (true) > 
+> 0888FD00 (true) > 0888FDF4 (true) > 
+> 0888FD00 (true) > 0888FDF4 (true) > 
+> 0888FD00 (true) > 0888FDF4 (false) > 
+
+088B872C - 0x4 - x3
+
+> 088B872C -> 088B7A08 -> 088B6CA0 -> 08901AD8 -> 
+> 088B82C8 -> 
+> 088B7A08 > 
+> 088B83E4 > 089012B0 > 08901B8C > 0893F2B0 > 088F68C4 > 0893EB64 > 
+
+0893F294 - 0xC - x1
+088B872C - 0x4 - x4
+
+0893F294 - 0xC - x1
+088B872C - 0x4 - x3
+0893F294 - 0xC - x1
+088B872C - 0x4 - x3
+
+
+## Try 0888F85C 
+
+Previous: 0888F858
+Beginning: 0888F4C4
+
+### Home/park
+
+0888F854 (above) >  0888F860 (false) > 0888F868 (common call) > 0888F874 (false) > 0888F8F8 (false)
+
+
+## Try 0887DF34 ( 0887DF30)
+
+
+Beginning: 0887DE18
+
+### home
+
+0887DE44 (false) > 0887DE4C (JAL1) 
+
+#### Home JAL1
+
+0895EF5C (jal)
+> 0895D07C (true)
+
+> 0895EF68 (false) > 0895EF84 (false) > 0895EF8C (jal) >
+
+> 0895F424 > 0895F444 (false) > 0895F458 (false) > 0895F464 (false) > 
+> 0895F474 (false) > 0895F480 (true) > 0895F49C (true) > 
+> 0895F4B0 (jal 4 instructions) > 0895F4B8 (false) > 0895F4C4 (false) > 
+> 0895F4D0 (false) > 0895F4DC (false) > 0895F4E8 (false)
+
+ 0895EF94 (false)
+
+#### Back
+
+> 0887DE54 (false) > 0887DE60 (false) > 0887DE74 (true) > 0887DF24 (JAL2) 
+
+#### JAL23
+
+##### Jal 2
+0887BD28 (false) > 0887BD30 (jal 3 instructions) > 0887BD3C (false)  
+
+##### JAL 3
+0887DF2C > 0888FBAC (jal 3.1) 
+
+###### jal 3.1
+
+0882A764 > 0882A768 (false) > 0882A770 (false) > 0882A778 (b) 
+> 0882A794 (false) > 0882A7B4 (loop 10+)
+
+###### Back to jal 3
+
+0888FBE0 (false) > 0888FBF0 (false) > 0888FC0C (jal skip) 
+> 0888FC14 (false) > 0888FC2C (jal) >
+> 0888FC38 (false) > 0888FC48 (jal) > 0888FC54 (b) 
+> 0888FC7C (jalr) > 0888FC8C (back false)
+> 0888FCBC (false) > 0888FCF8 (jal) 
+> 0888FD00 (TRUE)
+> 0888FDF4 (known location)
+
+
+###### investigating JAL 3.2 .. 3.4
+
+
+
+#### Back
+
+> 0887DF34 (Known "having already started" cutoff point)
+> 0887DF38 (JAL4, out of scope)
+> 0887DF44 (JAL5, out of scope) 
+
+> 0887DF50 (false) > 0887DF5C (true) > 
+> 0887DFF4 (true) > 0887E058 (false) > 0887E064 (JAL6) 
+> 0887E06C (false) > 0887E078 (true) > 
+
+### Park
+
+0887DE44 (false) > 0887DE4C (JAL1) 
+
+#### Park JAL1
+
+0895EF5C (jal)
+> 0895D07C (true)
+
+> 0895EF68 (false) > 0895EF84 (false) > 0895EF8C (jal) >
+
+> 0895F424 > 0895F444 (false) > 0895F458 (false) > 0895F464 (false) > 
+> 0895F474 (false) > 0895F480 (true) > 0895F49C (true) > 
+> 0895F4B0 (jal 4 instructions) > 0895F4B8 (false) > 0895F4C4 (false) > 
+> 0895F4D0 (false) > 0895F4DC (false) > 0895F4E8 (false)
+
+ 0895EF94 (false)
+
+
+#### Back (old)
+
+0887DF50 (false) > 0887DF5C (true) > 
+0887DFF4 (true) > 0887E058 (false) > 0887E06C (false) > 0887E078 (true)
+
+#### Back (home)
+
+> 0887DE54 (false) > 0887DE60 (false) > 0887DE74 (true) > 0887DF24 (JAL2) 
+
+
+#### JAL23
+
+##### Jal 2
+0887BD28 (false) > 0887BD30 (jal 3 instructions) > 0887BD3C (false)  
+
+##### JAL 3
+0887DF2C > 0888FBAC (jal 3.1) 
+
+###### jal 3.1
+
+0882A764 > 0882A768 (false) > 0882A770 (false) > 0882A778 (b) 
+> 0882A794 (false) > 0882A7B4 (loop 10+)
+
+###### Back to jal 3
+
+0888FBD4 (jal 3.2)
+
+(skip jals 3.x)
+...
+
+
+0888FBE0 (false) > 0888FBF0 (false) > 0888FC0C (jal skip) 
+> 0888FC14 (false) > 0888FC2C (jal) >
+> 0888FC38 (false) > 0888FC48 (jal) > 0888FC54 (b) 
+> 0888FC7C (jalr) > 0888FC8C (back false)
+> 0888FCBC (false) > 0888FCF8 (jal) 
+> 0888FD00 (TRUE)
+> 0888FDF4 (known location)
+
+
+#### Back
+
+> 0887DF34 (Known "having already started" cutoff point)
+> 0887DF38 (JAL4, out of scope)
+> 0887DF44 (JAL5, out of scope) 
+
+> 0887DF50 (false) > 0887DF5C (true) > 
+> 0887DFF4 (true) > 0887E058 (false) > 0887E064 (JAL6) 
+> 0887E06C (false) > 0887E078 (true) > 
+
+## Listing jals 3.x
+
+See: **[Sims2Pets-action-JALs-3.x.md](./Sims2Pets-action-JALs-3.x.md)**
+
+* 0888FBAC (3.1, investigated)
+* 0888FBD4 (3.2)
+* 0888FC0C (3.3)
+* 0888FC2C (3.4, jalr)
+* 0887DF34 (Known "having already started" cutoff point)
