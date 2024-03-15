@@ -34,7 +34,7 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 
 ### Pointer
 
-Surprisingly, this syntax is correct
+Below is correct syntax,
 
 ```
 _L 0x6AAAAAAA 0xVVVVVVVV
@@ -46,7 +46,7 @@ VVVVVVVV = value to write
 Y = 3 for byte write, 4 for halfword and 5 for word) 
 ```
 
-Must I clear the (fake) offset register after use — No.  
+Must one clear the (fake) offset register after use — No.  
 
 ### Safety checks
 
