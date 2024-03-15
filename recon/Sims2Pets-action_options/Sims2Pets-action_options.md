@@ -238,23 +238,6 @@ Interesting jal: 0897A414: 	jal	z_un_089797d4
   
 * It is possible to *reduce* the number of actions to 1, by NOPping conditional goto commands at `088503D8` and `088503EC` (causing executions of `088502A0`). However, since the game uses linked-lists to store commands (more accurately, sausage code of bucketed listed-lists linking linked-lists), this action just cripples in-game logic slightly.  
   
-## Overall Conclusion  
-  
-Useful calls for debugging action list entries,  
-```  
-Call 1 at: 08850150  
-Call 2 at: 088502A0  
-Call 3 at: 088502A0  
-```  
-  
-Useful calls for debugging action list *overall*,  
-```  
-088F6534 (action+1)  
-088F654C (№1+0x4)  
-088F6900 (Xpress lite)  
-```  
-  
-Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and containing IO redundancies. What was meant to be a fun little project become a time sink.  
   
 ## Tries  
   
@@ -475,3 +458,21 @@ See: **[Sims2Pets-action-JALs-3.x.md](./Sims2Pets-action-JALs-3.x.md)**
 * 0888FC0C (3.3)  
 * 0888FC2C (3.4, jalr)  
 * 0887DF34 (Known "having already started" cutoff point)  
+
+## Overall Conclusion  
+  
+Useful calls for debugging action list entries,  
+```  
+Call 1 at: 08850150  
+Call 2 at: 088502A0  
+Call 3 at: 088502A0  
+```  
+  
+Useful calls for debugging action list *overall*,  
+```  
+088F6534 (action+1)  
+088F654C (№1+0x4)  
+088F6900 (Xpress lite)  
+```  
+  
+Don't feel like dealing with incredible spaghetti code that's multithreaded and accounting for UMD streaming delays and containing IO redundancies. What was meant to be a fun little project become a time sink.  
