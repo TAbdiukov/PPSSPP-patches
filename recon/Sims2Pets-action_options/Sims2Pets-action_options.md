@@ -1,3 +1,11 @@
+# Significance
+
+![ULUS10130_00002.jpg](./ULUS10130_00002.jpg)  
+
+Sims2Pets blocks some ATM actions when at Home and not in Park.
+
+Unfortunately, this hack is unfinished, because (while expecting it to be an easy and fun project) it turned out to be too difficult to navigate, asyncronous spaghetti code with too many I/O redundancies. This hack ended up being simply not worth it.
+
 # Utilized addresses  
   
 Utilized addresses found, and they are static  
