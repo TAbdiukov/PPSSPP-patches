@@ -4,7 +4,7 @@ _G Sims 2 Pets
 _C0 Max money, points, aspiration
 // Part 1: Money & Pet Points
 // (source: 0898C2D0)
-_L 0xD03FDB74 0x003007FF
+_L 0xD03FDB76 0x003007FF
 _L 0x603FDB74 0x000F423F
 _L 0x00020001 0x00000078
 _L 0x603FDB74 0x000F423F
