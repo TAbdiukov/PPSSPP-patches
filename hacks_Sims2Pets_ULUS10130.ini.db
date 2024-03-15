@@ -1,7 +1,7 @@
 _S ULUS10130
 _G Sims 2 Pets
 // 
-_C0 Max money, points, inspiration
+_C0 Max money, points, aspiration
 // Part 1: Money & Pet Points
 // (source: 0898C2D0)
 _L 0xD03FDB74 0x003007FF
