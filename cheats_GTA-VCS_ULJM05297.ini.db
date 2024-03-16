@@ -33,12 +33,12 @@ _L 0xD03C7430 0x00300000 // check
 _L 0x603C7430 0x00000000
 _L 0x00020001 0x000004E4 // hp
 //
-_C0 Partial invincibility
+_C0 Ghost mode
 _L 0xD03C7430 0x00300000 // check
 _L 0x603C7430 0x00002010 // 32 16
 _L 0x00010001 0x0000004C
 //
-_C0 Partial invincibility [disable]
+_C0 Ghost mode [disable]
 _L 0xD03C7430 0x00300000 // check
 _L 0x603C7430 0x00000000
 _L 0x00010001 0x0000004C
