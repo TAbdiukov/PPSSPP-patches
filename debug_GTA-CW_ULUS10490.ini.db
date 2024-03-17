@@ -26,3 +26,4 @@ _C0 Dbg - Cinematic mode - Freeze
 _L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
 _L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
 _L 0x10F836F4 0x0000012C
+//
