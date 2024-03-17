@@ -1,7 +1,6 @@
 #!python3
 
 # Python 3.6+ required.
-
 # Before use, run:
 # pip install pyperclip
 
