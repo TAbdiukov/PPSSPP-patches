@@ -69,7 +69,7 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 
 #### Safety checks – pointers
 
-For PSP game pointers safety checks, there is a CWCheat lifehack discovered in 2024. Since,
+For PSP game pointers safety checks, there is a CWCheat lifehack discovered/invented in 2024. Since,
 * PSP main RAM addressing starts from `0x08000000`.
 * PSP uses MIPS Little-Endian addressing.
 
