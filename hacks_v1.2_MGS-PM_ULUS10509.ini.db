@@ -5,14 +5,12 @@ _G MGS PM [USA]
 // Consider getting the last version at https://github.com/TAbdiukov/PPSSPP-patches
 //
 _C0 Higher server lim (9)
-_L 0xD14A6490 0x00300000 // check struct ptr, 1/2
-_L 0xD14A6492 0x00300000 // check struct ptr, 2/2
+_L 0xD14A6492 0x003007FF // check struct ptr head, LE
 _L 0x614A6490 0x00000009 // max = 9
 _L 0x00000001 0x0000003C // 3C is max in the struct
 //
 _C0 Even higher server lim (255)
-_L 0xD14A6490 0x00300000 // check struct ptr, 1/2
-_L 0xD14A6492 0x00300000 // check struct ptr, 2/2
+_L 0xD14A6492 0x003007FF // check struct ptr head, LE
 _L 0x614A6490 0x000000FF // max = 255
 _L 0x00000001 0x0000003C // 3C is max in the struct
 
