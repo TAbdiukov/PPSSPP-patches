@@ -74,7 +74,7 @@ For PSP game pointers safety checks, there is a CWCheat lifehack discovered in 2
 * PSP uses MIPS Little-Endian addressing.
 
 [Reference for both points](http://daifukkat.su/docs/psptek/). It is possible to check pointer validity (with very high probability) by,
-1. Adding `+0x02` to the pointer address, to position to pointer head (in Little-Endian scenario)
+1. Adding `+0x02` to the pointer address, to position to pointer head (in Little-Endian scenario).
 2. Checking if pointer head (halfword value) is greater than `0x07FF`, i.e. `0x0800xxxx` or greater.
 
 Example,
