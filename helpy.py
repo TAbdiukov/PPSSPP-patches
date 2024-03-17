@@ -1,5 +1,7 @@
 #!python3
 
+# Python 3.6+ required.
+
 # Before use, run:
 # pip install pyperclip
 
@@ -46,8 +48,8 @@ def gen_pay(s):
 	si = si + OP_EDIT_4BYTES
 	arg1 = toaddr32(si)
 	
-	pay = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
-	return pay
+	payload = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
+	return payload
 
 def main():
 	HOW_TO = """Just copy standard address to clipboard!"""
@@ -62,7 +64,7 @@ def main():
 			# check for valid input 
 			if(is_input_valid(paste)):
 				print("*Valid in: "+paste)
-				# gen pay
+				# gen payload
 				pay = gen_pay(paste)
 				print("*Output: \n"+pay)
 				pyperclip.copy(pay)
