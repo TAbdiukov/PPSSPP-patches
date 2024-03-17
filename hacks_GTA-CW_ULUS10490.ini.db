@@ -67,20 +67,17 @@ _L 0x200559D8 0x860401FE // 2
 //
 //since address unused, hack commented out until further need
 //_C0 UnSet patched cam angle value [Default]
-//_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-//_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+//_L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 //_L 0x60F836E8 0x00000000 // value
 //_L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
 _C0 Set patched cam angle value
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+_L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x60F836E8 0x0000E890 // value
 _L 0x00010001 0x000001FE // +510 - new. 512 - 2
 //
 _C0 UnPatch cam Z [Default]
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+_L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 //
 _L 0x20054D60 0xAC850108 // Map Load
 _L 0x200CC370 0xAE240108 // Camera switching - 1
@@ -138,8 +135,7 @@ _L 0x2006F600 0x682F7B4A
 //
 //
 _C0 Patch cam Z
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+_L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 //
 _L 0x20054D60 0x00000000 // Map Load
 _L 0x200CC370 0x00000000 // Camera switching - 1
@@ -195,8 +191,7 @@ _L 0xE0017B4A 0x0006F602 // check,
 _L 0x2006F600 0x00000000
 //
 _C0 Set Z to arbitrary value
-_L 0xD0F836E8 0x00300000 // check cam2 ptr, 1/2
-_L 0xD0F836EA 0x00300000 // check cam2 ptr, 2/2
+_L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x60F836E8 0x0000EA60 // value. I pick 60,000
 _L 0x00020001 0x00000108 // 264
 //
@@ -230,7 +225,6 @@ _C0 Unlock undocumented cars at car dealership
 //mod
 //08B8B120:00000000
 //can shellcode at least 08B8B114 .. 08B8B120
-_L 0xE0030000 0x30556950 // check, merchant ptr, 1/2
-_L 0xE0020000 0x30556952 // check, merchant ptr, 2/2
+_L 0xE00207FF 0x30556952 // check, merchant ptr head (LE)
 _L 0xE00114E6 0x0038B11A // check, chk before correction, 2/2 (1/2 skipped for perf)
 _L 0x2038B120 0x20000000 // patch
