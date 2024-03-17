@@ -22,3 +22,10 @@ _C0 Dbg - Cinematic mode - Freeze
 _L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x10F836F4 0x0000012C
 //
+// The bug was present in v0.9.9.1 and seemingly was fixed in v1.0
+// Almost 10 years ago.
+_C1 Teleport FAR - old PPSSPP will crash
+_L 0x20F828F0 0x007A22CC
+_L 0x20F828F4 0xFFC091E9
+_L 0x20F828F8 0xFFFF8B3A
+//

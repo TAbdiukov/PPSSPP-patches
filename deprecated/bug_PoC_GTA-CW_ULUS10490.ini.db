@@ -1,8 +1,0 @@
-_S ULUS10490
-_G GTA: CW [USA]
-// The bug was present in v0.9.9.1 and seemingly was fixed in v1.0
-// Almost 10 years ago.
-_C1 Teleport FAR - old PPSSPP will crash
-_L 0x20F828F0 0x007A22CC
-_L 0x20F828F4 0xFFC091E9
-_L 0x20F828F8 0xFFFF8B3A
