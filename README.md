@@ -50,7 +50,7 @@ Must one clear the (fake) offset register after use — No.
 
 ### Safety checks
 
-Taken from Fired Up (the game), but you'll get the idea
+Taken from Fired Up (the game),
 ```
 _C0 Infinite ammo [Enable]
 _L 0xE00200A0 0x000BDFE4 // check, 1/2
@@ -65,6 +65,24 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 // 088BDFE4:AE0500A0 // orig
 // 088BDFE4:00000000 //mod
 //
+```
+
+#### Safety checks – pointers
+
+For PSP game pointers safety checks, there is a CWCheat lifehack discovered in 2024. Since,
+* PSP main RAM addressing starts from `0x08000000`.
+* PSP uses MIPS Little-Endian addressing.
+
+[Reference for both points](http://daifukkat.su/docs/psptek/). It is possible to check pointer validity (with very high probability) by,
+1. Adding `+0x02` to the pointer address, to position to pointer head (in Little-Endian scenario)
+2. Checking if pointer head (halfword value) is greater than `0x07FF`
+
+Example,
+```
+_C1 Vehicle - Max HP
+_L 0xD16A6B66 0x003007FF // check, vehicle ptr head (LE)
+_L 0x616A6B64 0x000000FF // set byte to 0xFF.
+_L 0x00000001 0x000003E1 // vehicle hp (993)
 ```
 
 ## Other notes
