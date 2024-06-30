@@ -53,7 +53,7 @@ _C0 Disable undocumented DS bars [Default;S.Restart]
 _L 0x00554A14 0x00000000
 //
 // 60 FPS patch by theboy181
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
 _C0 60 FPS (beta)
 _L 0x2010D694 0x00000000 //60FPS
 //
@@ -127,8 +127,8 @@ _L 0x200442C0 0xAE260108 // Arrested - 3
 _L 0x200988A8 0xAE040108 // Wasted - 1
 _L 0x200988C0 0xAE040108 // Wasted - 2
 // nightly
-_L 0xE0020000 0x0006F600 // check, 
-_L 0xE0010000 0x0006F602 // check, 
+_L 0xE0020000 0x0006F600 // check,
+_L 0xE0010000 0x0006F602 // check,
 _L 0x2006F600 0x682F7B4A
 
 // 00000886F600 - Entering car/mission - can cause crashes if NOPed
@@ -186,8 +186,8 @@ _L 0x200988A8 0x00000000 // Wasted - 1
 _L 0x200988C0 0x00000000 // Wasted - 2
 //
 _C0 Patch cam Z (Nightly)
-_L 0xE002682F 0x0006F600 // check, 
-_L 0xE0017B4A 0x0006F602 // check, 
+_L 0xE002682F 0x0006F600 // check,
+_L 0xE0017B4A 0x0006F602 // check,
 _L 0x2006F600 0x00000000
 //
 _C0 Set Z to arbitrary value

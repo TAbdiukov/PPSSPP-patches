@@ -36,31 +36,31 @@ def toaddr32(num): return '0x{0:08X}'.format(num)
 def gen_pay(s):
 	si = int(s, 16)
 	assert si > 0
-	
+
 	si = si - MAGIC
-	
+
 	test = si & 0xFFFFFFFFF0000000
 	if(test > 0):
 		print("(Warning) Invalid PSP address")
-		
+
 	si = si & 0x0FFFFFFF
 	si = si + OP_EDIT_4BYTES
 	arg1 = toaddr32(si)
-	
+
 	payload = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
 	return payload
 
 def main():
 	HOW_TO = """Just copy standard address to clipboard!"""
-	
+
 	print(PROGRAM_NAME+" "+"greets you!")
 	print("How to: "+HOW_TO)
-	
+
 	try:
 		while True:
 			paste = pyperclip.paste().strip()
-			
-			# check for valid input 
+
+			# check for valid input
 			if(is_input_valid(paste)):
 				print("*Valid in: "+paste)
 				# gen payload

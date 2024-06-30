@@ -23,9 +23,9 @@ _L 0x207C53FC 0x34040009 // li ?, 9
 // 08FC53FC: 9204003C -> 34040009 // li ?, 9
 // ## Known, **allegedly** working pointer chains to "max players" variable in the "server selection" struct
 // (in traditional virtual memory allocation standard, not the CWCheat one)
-// 
-//	
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+//
+//
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
 // Cheers!
 //
 //

@@ -21,7 +21,7 @@ _L 0x202DC28C 0x34C60002
 // 3. Paint with any colour (the same colour should be OK)
 // 4. Enjoy the amazing (or sometimes boring) secret colour called "DESIGNO MOCHA BLACK"
 // 5. (Optional) Go back to the paint shop, ensure you get the secret colour of "DESIGNO MOCHA BLACK"
-// 
+//
 _C0 Paint in secret colour [Enable]
 _L 0xE0020011 0x00154B10 // check, 1/2
 _L 0xE00110A3 0x00154B12 // check, 2/2
@@ -46,6 +46,6 @@ _L 0x20154B10 0x10A30011 // original boring instruction
 // Direct port from the ULUS game release
 // "DESIGNO MOCHA BLACK" - the textbox seems to be malfunctioning
 // Pointer to the currently driven vehicle doesn't (seem to) exist. The functions (seem to) look up the currently driven vehicle every time, among all owned vehicles. Hence, and also from the realism perspectve, the hack is implemented at the paint shop
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
 // Cheers!
 //

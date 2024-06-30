@@ -52,11 +52,11 @@ _L 0xD03DE4B2 0x003007FF // check
 _L 0x603DE4B0 0x00000000
 _L 0x00000001 0x00000550
 //
-_C0 Kill with aim 
+_C0 Kill with aim
 _L 0xD03A1D72 0x003007FF // check
 _L 0x603A1D70 0x00000000
 _L 0x00020001 0x000004E4
-// 4E8 - armour 
+// 4E8 - armour
 //
 _C0 Indestructible driven vehicles
 _L 0x603C85F0 0x49742400
@@ -67,7 +67,7 @@ _C0 Max ammo
 // throwable
 _L 0xD03DE4B2 0x003007FF // check
 _L 0x603DE4B0 0x00002580
-_L 0x00020001 0x000005BC 
+_L 0x00020001 0x000005BC
 // pistol
 _L 0xD03DE4B2 0x003007FF // check
 _L 0x603DE4B0 0x00002580

@@ -32,8 +32,8 @@ _L 0x00000001 0x0000003C // 3C is max in the struct
 // 9. 000009CA6414 + 0192 -> 000009CA6490 + 60 // [!]Small offset;
 // A. 000009CA64E4 + 0208 -> 000009CA6490 + 60 // [!]Small offset; [B]Odd anomaly in MotherBase
 // B. 000009CA6490 -> 60 // [!]Nice and elegant; [!]No anomalies anywhere. // <-Used here
-//	
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+//
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
 // Cheers!
 //
 //

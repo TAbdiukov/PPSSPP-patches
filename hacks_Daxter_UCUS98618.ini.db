@@ -6,7 +6,7 @@ _C1 Fix Analog Controls [Enable]
 _L 0xE0053BA3 0x0022A094 // check, 1/4,
 _L 0xE0043C04 0x0022A096 // check, 2/4, (not really necessary but good)
 _L 0xE003D70A 0x0022A09C // check, 3/4,
-_L 0xE0023484 0x0022A09E // check, 4/4, 
+_L 0xE0023484 0x0022A09E // check, 4/4,
 _L 0x2022A094 0x3C043F80
 _L 0x2022A09C 0x00000000
 //

@@ -22,9 +22,9 @@ _L 0x207C51AC 0x34070004 // li a3, 4
 // 08FC3E38: 9042003C -> 34020005 // li v0, 5 // mpeg
 // 08FC51AC: 9067003C -> 34070004 // li a3, 4
 //
-// 
-//	
-// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods 
+//
+//
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
 // Cheers!
 //
 //
