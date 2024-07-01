@@ -84,7 +84,8 @@ class Helpy:
 					self.output_pay()
 				time.sleep(0.1)
 		except KeyboardInterrupt:
-			print('\nExiting...')
+			print("\nExiting...", end="")
+
 
 if __name__ == '__main__':
 	helpy = Helpy()
