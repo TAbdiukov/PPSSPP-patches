@@ -16,6 +16,7 @@ class Helpy:
 		self.OP_EDIT_4BYTES = 0x20000000
 		self.VAL = 1
 
+		self.initialization_ok = None
 		self.si = None
 		self.paste = None
 		self.payload = None
@@ -23,9 +24,6 @@ class Helpy:
 	@staticmethod
 	def clear_buffer():
 		pyperclip.copy(' ')
-
-	def gen_si(self, s):
-		self.si = int(s, 16)
 
 	def toaddr32(self, num): return '0x{0:08X}'.format(num)
 
@@ -48,17 +46,23 @@ class Helpy:
 		print("▒Output: \n"+pay)
 		pyperclip.copy(pay)
 
-	def is_input_valid(self, s):
+	def initialize_variables(self):
+		s = self.paste
+
 		if(s[:1].isdigit() and (len(s) > 6) and (int(s, 16) > 0)):
-			self.gen_si(s)
-			test = self.si & 0xFFFFFFFFF0000000
-			if(test > 0):
+			self.si = int(s, 16)
+			extended_test = self.si & 0xFFFFFFFFF0000000
+			if(extended_test > 0):
+				# Generate custom payload
 				self.payload = "*Invalid PSP address: "+s
+				
+				# Output payload
 				self.output_pay()
 				
-				return False
-			return True
-		return False
+				self.initialization_ok = False
+			self.initialization_ok = True
+		else:
+			self.initialization_ok = False
 
 	def main(self):
 		HOW_TO = """Just copy standard address to clipboard!"""
@@ -69,9 +73,10 @@ class Helpy:
 		try:
 			while True:
 				self.paste = pyperclip.paste().strip()
+				self.initialize_variables()
 
 				# check for valid input
-				if(self.is_input_valid(self.paste)):
+				if(self.initialization_ok):
 					print("*Valid PSP address: "+self.paste)
 					# generate payload
 					self.gen_std_pay()
