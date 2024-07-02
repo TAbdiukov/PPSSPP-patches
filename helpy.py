@@ -82,7 +82,7 @@ class Helpy:
 					self.gen_std_pay()
 					# print payload
 					self.output_pay()
-				time.sleep(0.1)
+				time.sleep(1)
 		except KeyboardInterrupt:
 			print("\nExiting...", end="")
 
