@@ -17,7 +17,7 @@ class Helpy:
 		self.VAL = 1
 
 		self.initialization_ok = None
-		self.si = None
+		self.hex_integer = None
 		self.paste = None
 		self.payload = None
 
@@ -28,15 +28,15 @@ class Helpy:
 	def toaddr32(self, num): return '0x{0:08X}'.format(num)
 
 	def gen_std_pay(self):
-		assert self.si > 0
+		assert self.hex_integer > 0
 
-		tmp = self.si
+		tmp = self.hex_integer
 		tmp = tmp - self.MAGIC
 
 		tmp = tmp & 0x0FFFFFFF
 		tmp = tmp + self.OP_EDIT_4BYTES
 
-		arg1 = self.toaddr32(self.si)
+		arg1 = self.toaddr32(tmp)
 
 		payload = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
 		self.payload = payload
@@ -47,14 +47,14 @@ class Helpy:
 		pyperclip.copy(pay)
 
 	def initialize_variables(self):
-		s = self.paste
+		hex_string = self.paste
 
-		if(s[:1].isdigit() and (len(s) > 6) and (int(s, 16) > 0)):
-			self.si = int(s, 16)
-			extended_test = self.si & 0xFFFFFFFFF0000000
+		if(hex_string[:1].isdigit() and (len(hex_string) > 6) and (int(hex_string, 16) > 0)):
+			self.hex_integer = int(hex_string, 16)
+			extended_test = self.hex_integer & 0xFFFFFFFFF0000000
 			if(extended_test > 0):
 				# Generate custom payload
-				self.payload = "*Invalid PSP address: "+s
+				self.payload = "*Invalid PSP address: "+hex_string
 				
 				# Output payload
 				self.output_pay()
