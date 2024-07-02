@@ -55,10 +55,10 @@ class Helpy:
 			if(extended_test > 0):
 				# Generate custom payload
 				self.payload = "*Invalid PSP address: "+hex_string
-				
+
 				# Output payload
 				self.output_pay()
-				
+
 				self.initialization_ok = False
 			self.initialization_ok = True
 		else:
