@@ -82,7 +82,7 @@ s3 is **PtrValue** (at least during ~70% of hit breakpoints)
 
 ## Chairs
 
-Note: ID numbers are decimal. `f` for "fixed".
+Note: ID numbers are decimal. `f` for "fixed" ("corrected").
 
 ```
 ID	Containr	PtrValue
