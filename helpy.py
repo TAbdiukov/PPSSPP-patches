@@ -30,7 +30,7 @@ class Helpy:
 
 	def toaddr32(self, num): return '0x{0:08X}'.format(num)
 
-	def gen_std_pay(self):
+	def generate_std_payload(self):
 		assert self.hex_integer > 0
 
 		tmp = self.hex_integer
@@ -44,7 +44,7 @@ class Helpy:
 		payload = f"_L {arg1} 0x01234567 // Helpy-automated: set address to 0x01234567"
 		self.payload = payload
 
-	def output_pay(self):
+	def output_payload(self):
 		pay = self.payload
 		print("▒Output: \n"+pay)
 		pyperclip.copy(pay)
@@ -60,12 +60,15 @@ class Helpy:
 				self.payload = "*Invalid PSP address: "+hex_string
 
 				# Output payload
-				self.output_pay()
+				self.output_payload()
 
 				self.initialization_ok = False
+				return ;
 			self.initialization_ok = True
+			return ;
 		else:
 			self.initialization_ok = False
+			return ;
 
 	def main(self):
 		HOW_TO = """Just copy standard address to clipboard!"""
@@ -82,13 +85,12 @@ class Helpy:
 				if(self.initialization_ok):
 					print("*Valid PSP address: "+self.paste)
 					# generate payload
-					self.gen_std_pay()
+					self.generate_std_payload()
 					# print payload
-					self.output_pay()
-				time.sleep(1)
+					self.output_payload()
+				time.sleep(0.1)
 		except KeyboardInterrupt:
 			print("\nExiting...", end="")
-
 
 if __name__ == '__main__':
 	helpy = Helpy()
