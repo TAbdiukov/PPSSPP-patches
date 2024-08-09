@@ -9,7 +9,7 @@ _C0 All missions are available for multiplayer with 8 players max
 // 2. Ensure game itself is ready: data is installed
 // 3. load game
 // 4. L -> Mission Selector -> X
-// 5. Select any mission with max players higher than 1
+// 5. Select any mission (singleplayer or multiplayer)
 // 6. Skip dialogue (Start) -> Host
 // 7. Select any channel
 // 8. Start that multiplayer mission session, observe max player value of 8
