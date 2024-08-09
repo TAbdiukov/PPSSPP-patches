@@ -1,6 +1,6 @@
 # PPSSPP-patches
 
-My cheats, fixes and workarounds for PPSSPP games and apps.
+My romhacks, fixes and workarounds for PPSSPP games and apps.
 
 ## See also
 
@@ -8,7 +8,7 @@ My cheats, fixes and workarounds for PPSSPP games and apps.
 
 --------------------
 
-* <ins>**TAbdiukov/PPSSPP-patches</ins>** – My cheats, fixes and workarounds for PPSSPP games and apps.
+* <ins>**TAbdiukov/PPSSPP-patches</ins>** – My romhacks, fixes and workarounds for PPSSPP games and apps.
 * [TAbdiukov/Ikejime](https://github.com/TAbdiukov/Ikejime) – Various patches for Windows OS and apps.
 
 ## Docs
