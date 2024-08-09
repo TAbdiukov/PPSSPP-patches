@@ -1,0 +1,31 @@
+_S ULUS10509
+_G Metal Gear Solid: Peace Walker [USA]
+//
+_C0 Higher max players limit
+// Note: in the game code, 'max players' is set to 8 by, so it seems to be a safe value
+// high values (e.g., 0x7F) cause the game to softlock 
+// Usage: 
+// 1. enable cheat at any time
+// 2. Ensure game itself is ready: data is installed
+// 3. load game
+// 4. L -> Mission Selector -> X
+// 5. Select any mission with max players higher than 1
+// 6. Skip dialogue (Start) -> Host
+// 7. Select any channel
+// 8. Start that multiplayer mission session, observe max player value of 8
+// Patch begin:
+// 	1. First, we check if the game is in "Mission Selector" mode
+_L 0xE00C003C 0x007C5310 // 08FC5310:9204003C (possible but never executed max multiplayer modifier), 1/2
+_L 0xE00B9204 0x007C5312 // 08FC5310:9204003C (possible but never executed max multiplayer modifier), 2/2
+_L 0xE00A0000 0x007C5314 // 08FC5314:92060000 (a0 will always be max multiplayer here), 1/2
+_L 0xE0099206 0x007C5316 // 08FC5314:92060000 (a0 will always be max multiplayer here), 2/2
+_L 0xE008003C 0x007C53FC // 08FC53FC:9204003C (a0 real modifier), 1/2
+_L 0xE0079204 0x007C53FE // 08FC53FC:9204003C (a0 real modifier), 2/2
+_L 0xE006B63A 0x007C5400 // 08FC5400:0E40B63A (characteristic jal), 1/2
+_L 0xE0050E40 0x007C5402 // 08FC5400:0E40B63A (characteristic jal), 2/2
+// 	2. then we check current Mission Selector "mission" pointer and modify maxplayers if needed
+_L 0xD15B1C92 0x003007FF // check, current mode struct head (LE)
+_L 0x615B1C90 0x00000801 // set 2 bytes: to 0x08 (max players), 0x01 (0x01 for multiplayer, 0x03 for singleplayer).
+_L 0x00010001 0x00000018 // max players affecting single-player missions only (+0x18,0x19)
+_L 0x615B1C90 0x00000008 // set byte to 0x08.
+_L 0x00000001 0x0000003C // max players (+0x3C)
