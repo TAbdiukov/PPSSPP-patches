@@ -1,0 +1,31 @@
+_S ULUS10509
+_G MGS PM [USA]
+//
+// Patch is at VERY pre-alpha state! Version 2
+// Consider getting the last version at https://github.com/TAbdiukov/PPSSPP-patches
+//
+_C0 Higher server lim(9)
+_L 0xE008003C 0x007C3744 // check, 1/3, 1/2 // all checks first
+_L 0xE00792D7 0x007C3746 // check, 1/3, 2/2
+_L 0xE006003C 0x007C7FC8 // check, 2/3, 1/2
+_L 0xE0059225 0x007C7FCA // check, 2/3, 2/2
+_L 0xE004003C 0x007C53FC // check, 3/3, 1/2
+_L 0xE0039204 0x007C53FE // check, 3/3, 2/2
+_L 0x207C3744 0x34170009 // li ?, 9 // then patch
+_L 0x207C7FC8 0x34050009 // li ?, 9
+_L 0x207C53FC 0x34040009 // li ?, 9
+//
+//
+//
+// For developers
+// 08FC3744: 92D7003C -> 34170009 // li ?, 9
+// 08FC7FC8: 9225003C -> 34050009 // li ?, 9
+// 08FC53FC: 9204003C -> 34040009 // li ?, 9
+// ## Known, **allegedly** working pointer chains to "max players" variable in the "server selection" struct
+// (in traditional virtual memory allocation standard, not the CWCheat one)
+//
+//
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
+// Cheers!
+//
+//

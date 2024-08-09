@@ -1,0 +1,30 @@
+_S ULUS10509
+_G MGS PM [USA]
+//
+// Patch is at VERY pre-alpha state! Version 4
+// Consider getting the last version at https://github.com/TAbdiukov/PPSSPP-patches
+//
+_C0 Higher server lim(9)
+_L 0x207C3744 0x34170009 // li ?, 9 // then patch. Problematic line
+_L 0x207C7FC8 0x34050008 // li ?, 8
+_L 0x207C53FC 0x34040007 // li ?, 7
+_L 0x207C8284 0x34050006 // li a1, 6
+_L 0x207C3E38 0x34020005 // li v0, 5 // mpeg
+_L 0x207C51AC 0x34070004 // li a3, 4
+//
+//
+//
+// For developers
+// 08FC3744: 92D7003C -> 34170009 // li ?, 9
+// 08FC7FC8: 9225003C -> 34050008 // li ?, 8
+// 08FC53FC: 9204003C -> 34040007 // li ?, 7
+// 08FC8284: 92A5003C -> 34050006 // li a1, 6
+// 08FC3E38: 9042003C -> 34020005 // li v0, 5 // mpeg
+// 08FC51AC: 9067003C -> 34070004 // li a3, 4
+//
+//
+//
+// For further discussion, feel free to contact at PPSSPP Discord -> patches-textures-mods
+// Cheers!
+//
+//
