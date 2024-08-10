@@ -1,7 +1,7 @@
 _S ULUS10509
 _G Metal Gear Solid: Peace Walker [USA]
 //
-_C0 All missions are available for multiplayer with 8 players max (attempt 2)
+_C0 All missions are available for multiplayer with 8 players max (canary, attempt 2)
 // Note: in the game code, 'max players' is set to 8 by default, so it seems to be a safe value
 // high values (e.g., 0x7F) cause the game to softlock 
 // Usage: 
