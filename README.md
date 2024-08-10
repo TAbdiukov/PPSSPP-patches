@@ -15,7 +15,7 @@ My romhacks, fixes and workarounds for PPSSPP games and apps.
 
 **Extemely useful** (though contradictory)
 
-* [Data Crystal Wiki](https://datacrystal.romhacking.net/wiki/CwCheat)
+* [Data Crystal](https://datacrystal.tcrf.net/wiki/CwCheat)
 * [Informal explanation on GBATemp](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
 
 **Additional resources**
