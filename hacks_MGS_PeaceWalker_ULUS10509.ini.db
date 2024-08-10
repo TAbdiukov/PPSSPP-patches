@@ -2,6 +2,14 @@ _S ULUS10509
 _G Metal Gear Solid: Peace Walker [USA]
 //
 _C0 All missions are available for multiplayer with 8 players max
+// [YES] The cheat successfully makes changes only when the game is at the right state (without this factor, the cheat will crash the game often)
+// [YES] The cheat successfully makes singleplayer missions multiplayer
+// [YES] The cheat successfully modifies max players value 
+// BUT
+// [NO] If more players join than the game originally allows, things break (however, when the right number of people join, nothing breaks, so at least the cheat doesn't break multiplayer)
+// CURRENT BELIEF: The cheat works, but more of MGS:PW game needs to be modded.
+//
+//
 // Note: in the game code, 'max players' is set to 8 by default, so it seems to be a safe value
 // high values (e.g., 0x7F) cause the game to softlock 
 // Usage: 
