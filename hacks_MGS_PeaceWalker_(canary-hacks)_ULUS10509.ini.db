@@ -5,20 +5,20 @@ _C0 All missions are available for multiplayer with 8 players max (canary)
 //
 // [YES] The romhack successfully makes changes only when the game is at the right state (without this factor, the romhack will crash the game often)
 // [YES] The romhack successfully makes singleplayer missions multiplayer
-// [YES] The romhack successfully modifies max players value 
+// [YES] The romhack successfully modifies max players value
 // BUT
 // [NO] If more players join than the game originally allows, things break (however, when the right number of people join, nothing breaks, so at least the romhack doesn't break multiplayer)
 // CURRENT BELIEF: The romhack works, but more of MGS:PW game needs to be modded.
 //
 //
 // [*] Note: in the game code, 'max players' is set to 8 by default, so it seems to be a safe value
-// high values (e.g., 0x7F) cause the game to softlock. 
+// high values (e.g., 0x7F) cause the game to softlock.
 //
 // [*] Note: Even higher values than 8, such as 9 (or higher, if more of the game is modified) are possible,
 // but the game defaults to 8 players in its code, and let's get 8 players working first!
 // (in the spirit of Agile - small incremental changes)
 //
-// Usage: 
+// Usage:
 // 1. Enable romhack at any time
 // 2. Ensure game itself is ready: data is installed, the savefile progression grants multiplayer
 // 3. Load game
