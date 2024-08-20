@@ -6,8 +6,12 @@ _C0 All missions are available for multiplayer with 8 players max (canary)
 // [YES] The romhack successfully makes changes only when the game is at the right state (without this factor, the romhack will crash the game often)
 // [YES] The romhack successfully makes singleplayer missions multiplayer
 // [YES] The romhack successfully modifies max players value
-// BUT
+// BUT:
 // [NO] If more players join than the game originally allows, things break (however, when the right number of people join, nothing breaks, so at least the romhack doesn't break multiplayer)
+// However, previously singleplayer missions were reported to allow 2 players!
+// Which confirms the functionality of the base romhack! It means something else (asset/some 'knowledge') is missing for extra players.
+// Reference: recon\MGS-PW-Multiplayer\2players.png
+// Reference: https://discord.com/channels/163360378200260619/163360378200260619/1275373422515458083
 // CURRENT BELIEF: The romhack works, but more of MGS:PW game needs to be modded.
 //
 //
