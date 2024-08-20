@@ -13,7 +13,7 @@ My romhacks, fixes and workarounds for PPSSPP games and apps.
 
 ## Docs
 
-**Extemely useful** (though contradictory)
+**Extremely useful** (though contradictory)
 
 * [Data Crystal](https://datacrystal.tcrf.net/wiki/CwCheat)
 * [Informal explanation on GBATemp](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
@@ -75,7 +75,7 @@ For PSP game pointers safety checks, there is a CWCheat lifehack discovered/inve
 
 [Reference for both points](http://daifukkat.su/docs/psptek/). It is possible to check pointer validity (with very high probability) by,
 1. Adding `+0x02` to the pointer address, to position to pointer head (in Little-Endian scenario).
-2. Checking if pointer head (halfword value) is greater than `0x07FF`, i.e. `0x0800xxxx` or greater.
+2. Checking if pointer head (halfword value) is greater than `0x07FF`, i.e., `0x0800xxxx` or greater.
 
 Example,
 ```
@@ -86,14 +86,14 @@ _L 0x00000001 0x000003E1 // vehicle hp (993)
 ```
 
 ## Other notes
-* CWCheat doesn't obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
+* CWCheat does not obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
 ```
 python3 helpy.py
 ```
 
 ### Update 2023+ – Note about some patches
 
-In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance and experience for general players. For example,  
+In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance, and experience for general players. For example,  
 
 * Test Drive Unlimited [US] – remove GBA-like pixelization.
 

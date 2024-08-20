@@ -9,7 +9,7 @@ The game is segregated across the locations/levels. Teleporting is only possible
 Term | Meaning
 ---- | ----
 Location | same as level
-TP point | TP point – teleport point. All doors, roads, exits etc – that get you to another location (level)
+TP point | TP point – teleport point. All doors, roads, exits, etc. – that get you to another location (level)
 Teleport FROM level | Where you are
 Teleport THRU level | Which TP point is used
 Teleport   TO level | Target location
@@ -51,7 +51,7 @@ levels/the_monument/cutscene/cinfinale
 
 ## Guide
 
-### Preparationary Step 0: Find optimal TP point.
+### Preparatory Step 0: Find optimal TP point.
 
 This is a technical step. **If confused, go straight to the "Solutions" section.**
 
@@ -62,11 +62,11 @@ What does optimal mean?
 
 **Q**: Why "available"?
 
-**A**: So it can be used. For example, Division47 is not available in the early game (beyond the gate that is, where the TP locations are)
+**A**: To ensure it can be used. For example, Division47 is not available in the early game (beyond the gate that is, where the TP locations are)
 
 **Q**: Why "Contains a TP point (exit) to the lengthiest possible level"
 
-**A**: The answer is pretty complex. If you intend to teleport to a lengthy location (such as `levels/division_47/secret_sublevel`) through a shorter location (such as `levels/deadtree/kine`), some part of the memory gets corrupted. In this example
+**A**: The answer is not simple. If you intend to teleport to a lengthy location (such as `levels/division_47/secret_sublevel`) through a shorter location (such as `levels/deadtree/kine`), some part of the memory gets corrupted. In this example
 
 ```
 BYTES: 1234567890123456789012345678901234
@@ -77,7 +77,7 @@ _DIFF: 34 - 20 = 14 bytes (get corrupted)
 ```
 Conversely, if one teleports to the shorter location ("DIFF" is less than or equal to 0), memory is not corrupted.
 
-Therefore, to reduce the corruption, it's best to teleport through the lengthiest possible level.
+To reduce memory corruption, it is best to teleport through the lengthiest possible level.
 
 #### Solutions
 
@@ -108,7 +108,7 @@ Below are the best possible levels to teleport THRU
 
 **A**: Practically, there is no effect when those are modified, even if they are modified to the broken values.
 
-### Step 1: Get to location that compains that optimal TP point.
+### Step 1: Get to location that complains that optimal TP point.
 
 For example, for the TP point of `levels/gas_station/curio_shop`, get to the gas station
 
@@ -170,7 +170,7 @@ Now assuming we provided with a valid "level TO", Sim should teleport there.
 
 ![Far away](./img/Sims2The/ULUS10031_00006.jpg)
 
-*Voala.*
+*Voila.*
 
 ---------------------------------
 
