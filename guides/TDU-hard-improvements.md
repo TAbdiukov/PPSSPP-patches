@@ -14,7 +14,7 @@
 ### Prerequisites
 
 * Set of game files, either in **this repo** ([original](./TDU-original) | [patched v1.01](./TDU-patched-v1.01)) or **in this repo's releases** ([original](https://github.com/TAbdiukov/PPSSPP-patches/releases/tag/TDU-original) | [patched v1.01](https://github.com/TAbdiukov/PPSSPP-patches/releases/tag/TDU-patched-v1.01)).
-* Get a ISO editor, such as UltraISO or UMDGen
+* Get an ISO editor, such as UltraISO or UMDGen
 * Make sure emulator is off
 
 ### Installation

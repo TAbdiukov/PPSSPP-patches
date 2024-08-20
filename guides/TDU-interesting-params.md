@@ -37,7 +37,7 @@ SetCurGameMode 			= 0			// GAME_MODE_BOOTMENU 			= 0
 
 * Some modes are not functional
 * Some modes may generate broken savefiles. Proceed with caution.
-* `GAME_MODE_MAP` – starts the game with heaps money and EXP, in a Dodge, with heaps of other vehicles. However, the game start in the map at the invalid location. To escape it without crashing, zoom in to a road and select a road to teleport to. Then, make sure to buy a house (or multiple houses) to store your vehicles. If you do not, you are guaranteed to generate a broken savefile.
+* `GAME_MODE_MAP` – starts the game with heaps of money and EXP, in a Dodge, with heaps of other vehicles. However, the game starts in the map at the invalid location. To escape it without crashing, zoom in to a road and select a road to teleport to. Then, make sure to buy a house (or multiple houses) to store your vehicles. If you do not, you are guaranteed to generate a broken savefile.
 
 ### Select map – `AddLevel`
 
@@ -86,7 +86,7 @@ It is all in the comments
 OpponentDifficulty		=	1.0			// between 0.0f & 1.0f
 ```
 
-normally, the game runs at max difficulty.
+Normally, the game runs at max difficulty.
 
 ### Enable debugging – `RemoteDebugger`
 
