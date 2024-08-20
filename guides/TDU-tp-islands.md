@@ -10,9 +10,9 @@ The guide was put together, as I reverse-engineered my own patch.
 * PPSSPP for Windows (recommended, as it exclusively includes Debugger).
 * TDU (Test Drive Unlimited) ISO. U.S. ROM (ULUS10249) is used in this guide.
 * Memory editor such as CheatEngine or ArtMoney.
-	* Windows is highly recommended here, external memory editing is limited on other OSs.
+	* Windows is highly recommended, external memory editing is limited on other OSs.
 * [Notepad++](https://notepad-plus-plus.org) for PPSSPP-patches under-the-hood analysis.
-* Human brain's analytical, aggregation and inference functionality.
+* The human brain's analytical, aggregation and inference functionality.
 
 # Main guide
 
@@ -35,7 +35,7 @@ Now, if the player opens a map and places a marker, then once the map is closed,
 
 **[I'm bored! Warp me to Teleporting Anywhere part!](#step-4-teleporting-anywhere)**
 
-### Having a look at cheat file.
+### Analyzing cheat file.
 
 Let's have a closer look at the **`TP to marker - main`** pair of patches,
 
@@ -65,7 +65,7 @@ If we use brain's inference capabilities, we can easily guess:
 4) Since we see that delta between offsets in the instructions is equal to 0x4, **`lwc1`** and therefore **`swc1`** manipulate 4 bytes at a time presented in float format. See picture below,  
 	![21df0b57a8352802afcf36bb9ef93f11.png](img/TDU-tp-islands/21df0b57a8352802afcf36bb9ef93f11.png)  
 	
-Therefore, **`lwc1`** and **`swc1`** should read and write 4 bytes of float at per instruction.
+Therefore, **`lwc1`** and **`swc1`** should read and write 4 bytes of float per instruction.
 
 #### Easier route
 
@@ -79,7 +79,7 @@ Alternatively, you can Google **`lwc1`** and **`swc1`**. PSP CPU is MIPS-compati
 
 Again, we can notice sequences of:
 1. Consecutive values at offsets off **`v0`** being loaded into CPU/FPU registers f3, f2, f1 and `f0` 
-	* Note: Assembly order positioning is generally that: the first argument is the affected subject by the operation, as opposed to traditional programming and human language
+	* Note: In Assembly in general, the order is: the first argument is the affected subject by the operation, as opposed to traditional programming and human language
 3. Registers being written into another offset of **sp** (**S**tack **P**ointer).
 
 Sequences run in sets of 4, which implies that the bytecode is compiled, and likely this is some sort of data structure instance copy routine.
@@ -107,7 +107,7 @@ close-up
 
 v0 is set to **`08D623D0`**. **`0x08D623D0 + 30h = 0x08D62400`**.
 
-Since it must be interesting there, let's re-load the game state and examine data at that address with ArtMoney, with data presentation, as discussed in the inference section, being **`float 4 bytes`**.  
+Since this section must be interesting, let's re-load the game state and examine data at that address with ArtMoney, with data presentation, as discussed in the inference section, set as **`float 4 bytes`**.  
 
 ![74248f7b1ad7dc3e6151d89cfd6494a9.png](img/TDU-tp-islands/74248f7b1ad7dc3e6151d89cfd6494a9.png)  
 
@@ -117,7 +117,7 @@ And indeed, it looks like the game stores map marker position in 4x3=12 bytes st
 ---- |
 Parameters
 
-Let's partially confirm this by moving marker elsewhere with ArtMoney. For example, to the normally-impossible location of: **`40000,0,50000`**
+Let's partially confirm this observation by moving the marker elsewhere with ArtMoney. For example, to the normally-impossible location of: **`40000,0,50000`**
 
 ![da633471cbaa313137be91d01b6623e3.png](img/TDU-tp-islands/da633471cbaa313137be91d01b6623e3.png) |
 ---- | 
@@ -125,7 +125,7 @@ Marker at an impossible location
 
 ### Gaining persistence
 
-We are almost there! Now, all that's left is to ensure that we can find the marker address across game sessions/reloads etc.
+We are almost there! Now, all that is left is to ensure that we can find the marker address across game sessions/reloads etc.
 
 For that, let's check out the patch file again,
 
@@ -147,7 +147,7 @@ Assembly
 
 Mathematics! The patch modifies mathematics (calculations) behind the address used for the player to use the pointer!
 
-*Sidenote*: An alternative way to get here (without examining CWCheat patch instructions) was to examine the closest *jump-to* location (as detected by pretty smart Debugger, and outlined green in the screenshot) and guess that the calculations occur here.
+*Sidenote*: An alternative way to get here (without examining CWCheat patch instructions) was to examine the closest *jump-to* location (as detected by pretty smart Debugger, outlined green in the screenshot) and guess that the calculations occur here.
 
 Let's set up 2 breakpoints and try to see what is happening here.
 
@@ -160,12 +160,12 @@ What do we see?
 * **`08A1D1D8`**: **`v0`** is set to some random small value. Here, CPU executes **`lui`** –  **L**oad **U**pper (top of the register) **I**mmediate (<ins>constant</ins> value) to **`a0`**. Hence, **`a0`** is set to **`08D60000`**  
 	![5b51c07ab870ca6d67c58157ffb5c7d0.png](img/TDU-tp-islands/5b51c07ab870ca6d67c58157ffb5c7d0.png)  
 * **`08A1D1DC`**: **`jal`** – MIPS equivalent to x86's **CALL** (unfortunately, you have to either guess or know this) to some location. 
-* **`08A1D1E0`**: However, before the jump, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. What happens here? **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **`a0`** is guaranteed to be set to **`a0+0x22AC=08D622AC`**  
+* **`08A1D1E0`**: However, before the jump, we execute one more instruction. This is quite a common behavior with some processor architectures, such as **6502**. What happens here? **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **`a0`** is guaranteed to be set to **`a0+0x22AC=08D622AC`**  
  	![6e724134ad6c6a8e817d321613c45897.png](img/TDU-tp-islands/6e724134ad6c6a8e817d321613c45897.png)  
 	![e6df898f0434c009234c663c0c2d8f7b.png](img/TDU-tp-islands/e6df898f0434c009234c663c0c2d8f7b.png)  
 * **`0894D464`**: Luckily, it's a very small function! `jr ra` "jump register  (to) return address" (equivalent to **`ret`** in other architectures.)  
 	![2c801f04d0b86d77d4918a1119d77fb7.png](img/TDU-tp-islands/2c801f04d0b86d77d4918a1119d77fb7.png)  
-* **`0894D468`**: However, before ret, we execute one more instruction. This is a quite common behavior with some processor architectures, such as **6502**. **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **v**0 is guaranteed to be set (overwritten) to **`a0+0x124=08D623D0`**  
+* **`0894D468`**: However, before ret, we execute one more instruction. This is quite a common behavior with some processor architectures, such as **6502**. **`addiu`** – **Add** **I**mmediate... (<ins>constant</ins> value) something. As a result, **v**0 is guaranteed to be set (overwritten) to **`a0+0x124=08D623D0`**  
 	![92cba61d970eb6df3f648da4f85eba25.png](img/TDU-tp-islands/92cba61d970eb6df3f648da4f85eba25.png)  
 * **`08A1D1E4`**: And we are already at the variable-copying routine, **`v0`** is already set to a value **`0x30`** bytes away from marker position addresses! Backtracking is complete!
 
@@ -174,7 +174,7 @@ What did we learn? We learned that the marker position is calculated by game as 
 0x08D60000+0x22AC+0x124+0x30
 ```
 
-All of these addends are constant and no pointers are involved. we don't need to worry about memory allocation, pointers, etc.! This means that, if the same code is executed again (as it does, as determined empirically by the patch functionality over the years), the variable positioning in the memory is **constant**!
+All add offsets are constant, and no pointers are involved. We do not need to worry about memory allocation, pointers, etc.! This means that, if the same code is executed again (as it does, as determined empirically by the patch functionality over the years), the variable positioning in the memory is **constant**!
 
 Furthermore, if we disable the patch, we can see that only the constant values used in the calculation are modified. Elegant!
 
@@ -198,7 +198,7 @@ You'll need the following addresses,
 
 However, it's only **practical** to teleport with patch **`TP to marker - main [Enable]`** on and marker set, so it can be tracked. 
 
-*Optional technical note*: There's an in-game animation on the marker. From this we can infer that the marker position has to be read, and hence re-drawn every frame, as opposed to being read upon its manipulation. Alternatively, it is possible to set a breakpoint on marker position axis at observing it/them being read at least once every frame (as a tiny bit of sound is played by the game at the frame processing end).
+*Optional technical note*: There is an in-game animation on the marker. From this, we can infer that the marker position must be read, and hence re-drawn every frame, as opposed to being read upon its manipulation. Alternatively, it is possible to set a breakpoint on marker position axis at observing it/them being read at least once every frame (as a tiny bit of sound is played by the game at the frame processing end).
 
 Therefore, **the procedure is,**
 1. Import addresses to a memory editor (CheatEngine or ArtMoney).
