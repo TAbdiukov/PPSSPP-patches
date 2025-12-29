@@ -95,6 +95,7 @@ python3 helpy.py
 
 In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance, and experience for general players. For example,  
 
-* Test Drive Unlimited [US] – remove GBA-like pixelization.
+* Test Drive Unlimited [US] – remove GBA-like pixelation.
 
 If you observe that the patch was already applied, then there is no need to apply it again. Just enjoy it.
+
