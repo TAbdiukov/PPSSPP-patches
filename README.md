@@ -1,5 +1,7 @@
 # PPSSPP-patches
 
+[![buymeacoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/tabdiukov)
+
 My romhacks, fixes and workarounds for PPSSPP games and apps.
 
 ## See also
@@ -11,14 +13,14 @@ My romhacks, fixes and workarounds for PPSSPP games and apps.
 * <ins>**TAbdiukov/PPSSPP-patches</ins>** – My romhacks, fixes and workarounds for PPSSPP games and apps.
 * [TAbdiukov/Ikejime](https://github.com/TAbdiukov/Ikejime) – Various patches for Windows OS and apps.
 
-## Docs
+## Documentation
 
-**Extremely useful** (though contradictory)
+Highly valuable, though somewhat contradictory.
 
 * [Data Crystal](https://datacrystal.tcrf.net/wiki/CwCheat)
 * [Informal explanation on GBATemp](https://gbatemp.net/threads/guide-how-to-create-gateway-cheat-codes.410926/)
 
-**Additional resources**
+### Additional resource
 
 * [How to use "Condition" in debugger](https://forums.ppsspp.org/showthread.php?tid=22400&page=2)
 
@@ -46,7 +48,7 @@ VVVVVVVV = value to write
 Y = 3 for byte write, 4 for halfword and 5 for word) 
 ```
 
-Must one clear the (fake) offset register after use — No.  
+Is it necessary to clear the fake offset register after use? No.
 
 ### Safety checks
 
@@ -69,7 +71,7 @@ _L 0x200BDFE4 0xAE0500A0 // orig
 
 #### Safety checks – pointers
 
-For PSP game pointers safety checks, there is a CWCheat lifehack discovered/invented in 2024. Since,
+For PSP game pointers safety checks, there is a CWCheat shortcut discovered/invented in 2024. Since,
 * PSP main RAM addressing starts from `0x08000000`.
 * PSP uses MIPS Little-Endian addressing.
 
