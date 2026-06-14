@@ -88,21 +88,21 @@ _L 0x00000001 0x000003E1 // vehicle hp (993)
 ```
 
 ## ppsspp-cwcheat-clippy
-* CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from it.
+CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from the address.
 
 To automate this process, use [`ppsspp-cwcheat-clippy`](https://github.com/TAbdiukov/ppsspp-cwcheat-clippy). It watches your clipboard for PSP virtual addresses, converts them to CWCheat's 28-bit offset format, and copies back a finished `_L ...` line.
 
   Install:
-  ```sh
+  ```
   pip install ppsspp-cwcheat-clippy
   ```
 
   Run:
-  ```sh
+  ```
   ppsspp-cwcheat-clippy
   ```
 
-### Update 2023+ – Note about some patches
+### Some patches are included with PPSSPP
 
 In more modern PPSSPP builds (for example, PPSSPP 1.13.2) it was observed that some patches are being applied automatically, thus increasing playability, performance, and experience for general players. For example,  
 
