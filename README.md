@@ -32,6 +32,21 @@ Highly valuable, though somewhat contradictory.
 * [TDU – (other) interesting parameters](./guides/TDU-interesting-params.md) *(if you feel adventurous)*
 * [TDU – Teleport anywhere, including secret islands](./guides/TDU-tp-islands.md) *(or "assembly for beginners")*
 
+## ppsspp-cwcheat-clippy
+CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from the address.
+
+To automate this process, use [`ppsspp-cwcheat-clippy`](https://github.com/TAbdiukov/ppsspp-cwcheat-clippy). It watches your clipboard for PSP virtual addresses, converts them to CWCheat's 28-bit offset format, and copies back a finished `_L ...` line.
+
+  Install:
+  ```
+  pip install ppsspp-cwcheat-clippy
+  ```
+
+  Run:
+  ```
+  ppsspp-cwcheat-clippy
+  ```
+
 ## Templates
 
 ### Pointer
@@ -86,21 +101,6 @@ _L 0xD16A6B66 0x003007FF // check, vehicle ptr head (LE)
 _L 0x616A6B64 0x000000FF // set byte to 0xFF.
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 ```
-
-## ppsspp-cwcheat-clippy
-CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from the address.
-
-To automate this process, use [`ppsspp-cwcheat-clippy`](https://github.com/TAbdiukov/ppsspp-cwcheat-clippy). It watches your clipboard for PSP virtual addresses, converts them to CWCheat's 28-bit offset format, and copies back a finished `_L ...` line.
-
-  Install:
-  ```
-  pip install ppsspp-cwcheat-clippy
-  ```
-
-  Run:
-  ```
-  ppsspp-cwcheat-clippy
-  ```
 
 ### Some patches are included with PPSSPP
 
