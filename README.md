@@ -87,11 +87,20 @@ _L 0x616A6B64 0x000000FF // set byte to 0xFF.
 _L 0x00000001 0x000003E1 // vehicle hp (993)
 ```
 
-## Other notes
-* CWCheat does not obey the  traditional virtual memory mapping scheme, so to convert from the traditional address to the CWCheat one, subtract ```0x08800000``` HEX from it. Or use the following tool,
-```
-python3 helpy.py
-```
+## ppsspp-cwcheat-clippy
+* CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from it.
+
+To automate this process, use [`ppsspp-cwcheat-clippy`](https://github.com/TAbdiukov/ppsspp-cwcheat-clippy). It watches your clipboard for PSP virtual addresses, converts them to CWCheat's 28-bit offset format, and copies back a finished `_L ...` line.
+
+  Install:
+  ```sh
+  pip install ppsspp-cwcheat-clippy
+  ```
+
+  Run:
+  ```sh
+  ppsspp-cwcheat-clippy
+  ```
 
 ### Update 2023+ – Note about some patches
 
