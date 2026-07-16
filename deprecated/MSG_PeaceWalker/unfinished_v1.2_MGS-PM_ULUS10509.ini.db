@@ -1,6 +1,9 @@
 _S ULUS10509
 _G MGS PM [USA]
 //
+_C0 _________[>>Hacks<<]_________
+//
+//
 // Patch is at VERY pre-alpha state! Version 1.2
 // Consider getting the last version at https://github.com/TAbdiukov/PPSSPP-patches
 //
@@ -38,4 +41,4 @@ _L 0x00000001 0x0000003C // 3C is max in the struct
 //
 //
 // Max reads at: { 08FC3744 08FC7FC8 08FC53FC 08FC02BC 08FC8284 08FC3E38 }
-
+//
