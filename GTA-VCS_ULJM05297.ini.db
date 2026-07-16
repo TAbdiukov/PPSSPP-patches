@@ -1,6 +1,9 @@
 _S ULJM05297
 _G GTA: VCS [JAP]
 //
+_C0 _________[>>Cheats<<]_________
+//
+//
 _C0 Game speed 100% (default)
 // Float 4 byte variable
 _L 0x203B3D68 0x3F800000
@@ -145,3 +148,4 @@ _L 0x003B1204 0x00000001
 // pplayer - 000008BC7430 + 0
 // pobj - 000008BC7D50 + 0
 // pped - 000008BC7430 + 1104 -> 0000098B4E90 + 0
+//

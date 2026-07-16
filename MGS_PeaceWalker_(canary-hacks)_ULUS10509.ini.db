@@ -1,6 +1,9 @@
 _S ULUS10509
 _G Metal Gear Solid: Peace Walker [USA]
 //
+_C0 _________[>>Hacks<<]_________
+//
+//
 _C0 All missions are available for multiplayer with 8 players max (canary)
 //
 // [YES] The romhack successfully makes changes only when the game is at the right state (without this factor, the romhack will crash the game often)
@@ -47,3 +50,4 @@ _L 0x615B1C90 0x32090801 // set 4 bytes: 0x32 (unknown variable that tends to be
 _L 0x00020001 0x00000018 // max players struct (+0x18, 5 bytes)
 _L 0x615B1C90 0x00000008 // set byte to 0x08.
 _L 0x00000001 0x0000003C // max players (+0x3C)
+//

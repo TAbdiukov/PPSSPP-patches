@@ -1,6 +1,9 @@
 _S ULUS10041
 _G GTA: LCS [USA; v1-2]
 //
+_C0 _________[>>Cheats<<]_________
+//
+//
 _C0 Game speed 100% (default)
 // Float 4 byte variable
 _L 0x2035E040 0x3F800000

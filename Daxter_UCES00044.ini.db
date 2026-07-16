@@ -1,5 +1,8 @@
 _S UCES00044
 _G Daxter [EUR]
+//
+_C0 _________[>>Hacks<<]_________
+//
 // BIG thanks to Theboy181 for managing to hunt this logic down!!
 // Done in coalition
 _C1 Fix Analog Controls [Enable]
@@ -17,4 +20,3 @@ _L 0xE0020000 0x00229F22 // check, 4/4, (3/4 skipped for perf, lo bytes skipped 
 _L 0x20229F18 0x3C043BA3
 _L 0x20229F20 0x3484D70A
 //
-

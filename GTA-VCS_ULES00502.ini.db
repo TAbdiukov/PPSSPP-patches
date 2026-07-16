@@ -1,6 +1,9 @@
 _S ULES00502
 _G GTA: VCS [EU]
 //
+_C0 _________[>>Cheats<<]_________
+//
+//
 _C0 Game speed 100% (default)
 // Float 4 byte variable
 _L 0x203B3F38 0x3F800000
@@ -147,3 +150,4 @@ _L 0x003ABD4C 0x00000001
 // pplayer - 000108BDE870 + 0
 // pobj - 000008BC89B0 + 0
 // pped (2)	000008BC89B0 + 1104 -> 0000098B4E90 + 0
+//

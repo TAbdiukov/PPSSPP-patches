@@ -1,6 +1,9 @@
 _S ULJM05255
 _G GTA: LCS [JAP; v1]
 //
+_C0 _________[>>Cheats<<]_________
+//
+//
 _C0 Game speed 100% (default)
 // Float 4 byte variable
 _L 0x203677B8 0x3F800000

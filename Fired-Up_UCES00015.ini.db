@@ -1,6 +1,9 @@
 _S UCES00015
 _G Fired Up
 //
+_C0 _________[>>Cheats<<]_________
+//
+//
 _C0 Infinite ammo [Enable]
 _L 0xE00200A0 0x000BDFE4 // check, 1/2
 _L 0xE001AE05 0x000BDFE6 // check, 2/2
