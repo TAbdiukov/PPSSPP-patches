@@ -2,6 +2,7 @@ _S UCUS98618
 _G Daxter [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 // BIG thanks to Theboy181 for managing to hunt this logic down!!
 // Done in coalition

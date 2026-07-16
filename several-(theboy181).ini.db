@@ -2,6 +2,7 @@ _S NPUG-80329
 _G Daxter
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 // NPUG-80329
 _C1 Fix Analog Controls
@@ -14,6 +15,7 @@ _S ULUS10249
 _G Test Drive Unlimited [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 _C0 60FPS "Remove Interpolation" (OC needed)
 _L 0x204F5FA8 0x00000000 // 08CF5FA8 (bit location)
@@ -28,6 +30,7 @@ _S UCUS-98632
 _G UCUS-98632
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 _C1 Enhanced GFX v1.1 (OC 666mhz)
 _L 0x203DAAA8 0x00000000 // Remove Interpolation
@@ -41,6 +44,7 @@ _S ULUS10490
 _G GTA: CW [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 _C0 60 FPS (beta)
 _L 0x2010D694 0x00000000 //60FPS

@@ -2,6 +2,7 @@ _S ULUS10130
 _G Sims 2 Pets
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 //
 _C1 Disable "FIRE CODE"
@@ -76,6 +77,7 @@ _L 0x2136AEB4 0x09B6AE38 // Write, Chair11 buymenu container
 _L 0x2136D5C4 0x09B6D548 // Write, Chair12 buymenu container
 //
 _C0 _________[>>Cheats<<]_________
+_L 0x00000000 0x00000000
 //
 //
 _C0 Max money, points, aspiration

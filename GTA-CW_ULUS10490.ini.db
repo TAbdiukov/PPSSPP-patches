@@ -2,6 +2,7 @@ _S ULUS10490
 _G GTA: CW [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 //
 _C1 Speedup apps
@@ -255,6 +256,7 @@ _L 0x101C9910 0x00000000 // Set radius value for release func
 _L 0x101C9930 0x00000000 // Set radius value for acquire func
 //
 _C0 _________[>>Debug<<]_________
+_L 0x00000000 0x00000000
 //
 //
 //
@@ -285,6 +287,7 @@ _L 0x20F828F4 0xFFC091E9
 _L 0x20F828F8 0xFFFF8B3A
 //
 _C0 _________[>>Cheats<<]_________
+_L 0x00000000 0x00000000
 //
 //
 // no known "is game loaded" ptr

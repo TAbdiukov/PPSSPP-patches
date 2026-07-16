@@ -2,6 +2,7 @@ _S ULUS10249
 _G Test Drive Unlimited [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 // # HIGHLY RECOMMENDED
 // Get a "remove ugly effect" hack from, https://github.com/LunaMoo/PPSSPP_workarounds/

@@ -2,6 +2,7 @@ _S ULUS10509
 _G MGS PM [USA]
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 //
 _C0 Even Higher Server Limit 255P (v1.1)

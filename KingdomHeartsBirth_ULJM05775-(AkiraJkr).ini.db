@@ -2,6 +2,7 @@ _S ULJM-05775
 _G Kingdom Hearts Birth by Sleep Final Mix
 //
 _C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
 //
 // Add KH BBS Final Mix workarounds for enabling native 60 FPS and Japanese Voices(Cutscenes and in-game)
 // by [ AkiraJkr ]( https://github.com/AkiraJkr )
