@@ -270,7 +270,7 @@ _C0 Dbg - Cinematic mode [Enable]
 _L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x00F836F3 0x00000001
 //
-_C0 Dbg - Cinematic mode - Freeze
+_C0 Dbg - Cinematic mode - Persist
 _L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x10F836F4 0x0000012C
 //
