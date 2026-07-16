@@ -206,6 +206,12 @@ _C0 Set Z to arbitrary value
 _L 0xD0F836EA 0x003007FF // check cam2 ptr head (LE)
 _L 0x60F836E8 0x0000EA60 // value. I pick 60,000
 _L 0x00020001 0x00000108 // 264
+// 
+_C0 [Misc] Higher object cell window (cannot work within PSP 1000 limitations; requires immediate restart)
+_L 0xE0033405 0x001C9912 // Check release func argument instruction header (LE)
+_L 0xE0023405 0x001C9932 // Check acquire func argument instruction header (LE)
+_L 0x101C9910 0x00000002 // Set radius value for release func
+_L 0x101C9930 0x00000002 // Set radius value for acquire func
 //
 // # pointers in standard format
 //
