@@ -48,6 +48,19 @@ _L 0x203BC9C8 0x34040001 // "li a0, 1"
 //
 _C1 Card lottery - No delay
 _L 0x00D8D130 0x00000001 // 0 + 1 (for safety) = 1
+//
+//
+_C0 Unlock undocumented cars at car dealership
+// Essentially removes the upper bound from the car option id
+// orig
+//08B8B118:14E60002
+//08B8B120:AC8003F4
+//mod
+//08B8B120:00000000
+//can shellcode at least 08B8B114 .. 08B8B120
+_L 0xE00207FF 0x30556952 // check, merchant ptr head (LE)
+_L 0xE00114E6 0x0038B11A // check, chk before correction, 2/2 (1/2 skipped for perf)
+_L 0x2038B120 0x20000000 // patch
 _C0 2x Max Drawing distance
 _L 0xE00407FF 0x303542E2 // camera 1 check (LE)
 _L 0x603542E0 0x00001998 // set value to 0x00001998 (approx 0.8 in both Q20.12 and x4096 int format)
@@ -240,18 +253,6 @@ _L 0xE0033405 0x001C9912 // Check release func argument instruction header (LE)
 _L 0xE0023405 0x001C9932 // Check acquire func argument instruction header (LE)
 _L 0x101C9910 0x00000000 // Set radius value for release func
 _L 0x101C9930 0x00000000 // Set radius value for acquire func
-//
-_C0 Unlock undocumented cars at car dealership
-// Essentially removes the upper bound from the car option id
-// orig
-//08B8B118:14E60002
-//08B8B120:AC8003F4
-//mod
-//08B8B120:00000000
-//can shellcode at least 08B8B114 .. 08B8B120
-_L 0xE00207FF 0x30556952 // check, merchant ptr head (LE)
-_L 0xE00114E6 0x0038B11A // check, chk before correction, 2/2 (1/2 skipped for perf)
-_L 0x2038B120 0x20000000 // patch
 //
 _C0 _________[>>Debug<<]_________
 //
