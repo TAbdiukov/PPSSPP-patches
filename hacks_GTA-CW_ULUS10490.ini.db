@@ -43,6 +43,18 @@ _L 0xE0020003 0x003BC9CC // check 4/4, 1/2
 _L 0xE0011080 0x003BC9CE // check 4/4, 2/2
 _L 0x203BC9C8 0x34040001 // "li a0, 1"
 //
+_C0 2x Max Drawing distance
+_L 0xE00407FF 0x303542E2 // camera 1 check (LE)
+_L 0x603542E0 0x00001998 // set value to 0x00001998 (approx 0.8 in both Q20.12 and x4096 int format)
+_L 0x00020001 0x0000005c // Near clip distance (0x5c)
+_L 0x603542E0 0x0012C000 // set value to 0x0012C000 (300 in both Q20.12 and x4096 int format)
+_L 0x00020001 0x00000060 // Far clip distance (0x60)
+_L 0xE00407FF 0x303542EA // camera 2 check (LE)
+_L 0x603542E8 0x00001998 // set value to 0x00001998 (approx 0.8 in both Q20.12 and x4096 int format)
+_L 0x00020001 0x0000005c // Near clip distance (0x5c)
+_L 0x603542E8 0x0012C000 // set value to 0x0012C000 (300 in both Q20.12 and x4096 int format)
+_L 0x00020001 0x00000060 // Far clip distance (0x60)
+//
 // Original by [abc123210]( https://web.archive.org/web/20170701165027/http://gtaforums.com/topic/864596-nintendo-ds-top-health-bar-in-pspiosandroid-version/ )
 // Tipped off by [Frog1/Clouder11]( https://github.com/Clouder11 )
 // Converted to CWCheat later
