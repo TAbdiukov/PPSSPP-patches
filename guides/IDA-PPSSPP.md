@@ -369,13 +369,13 @@ In this example: last "z_un" function is at 08B72EF0, and its last address is at
 IDA as of 9.2, does not always create Allegrex functions. Based on [this tip](https://hex-rays.com/blog/igors-tip-of-the-week-152-force-creating-functions), force-create a function.
 
 In IDA Pro,
-1. Press <kbd>G</kbd> (for 'goto'), paste the **range start** address (<kbd>Ctrl+V</kbd>), e.g., `08804000`
+1. Press <kbd>G</kbd> (for 'goto'), paste the **range start** address (<kbd>Ctrl+V</kbd>), e.g., `08804000`  
 
 ![eca139a0dd8dd52e6f3dab93c11a9ccd.png](./img/IDA-PPSSPP/eca139a0dd8dd52e6f3dab93c11a9ccd.png)
 
-2. While staying on the first instruction of the function, use Edit > Begin selection
+2. While staying on the first instruction of the function, use Edit > Begin selection  
 ![38396f711c16a897bce0d7c2448482e5.png](./img/IDA-PPSSPP/38396f711c16a897bce0d7c2448482e5.png)
-3. Press <kbd>G</kbd> (for 'goto'), paste the **range end** address (<kbd>Ctrl+V</kbd>), e.g., `08B72F18`
+3. Press <kbd>G</kbd> (for 'goto'), paste the **range end** address (<kbd>Ctrl+V</kbd>), e.g., `08B72F18`  
 ![40945b31f5e8ca312773fc0f57371e43.png](./img/IDA-PPSSPP/40945b31f5e8ca312773fc0f57371e43.png)
 
 4. Press <kbd>C</kbd> (force ©️Code )
@@ -385,7 +385,7 @@ In IDA Pro,
 ---- | 
 "Perform analysis or force conversion of the selected bytes to instruction(s)?" → [Force]
 
-6. IDA Pro should hang for a minute, but if steps were done correctly, it should not crash.
+6. IDA Pro should hang for a minute, but if steps were done correctly, it should not crash.  
 ![c1cb9a65b897fd3f91f3b6aa7c84fcc5.png](./img/IDA-PPSSPP/c1cb9a65b897fd3f91f3b6aa7c84fcc5.png)
 
 ## Result
