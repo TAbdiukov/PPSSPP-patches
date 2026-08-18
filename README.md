@@ -27,6 +27,7 @@ Highly valuable, though somewhat contradictory.
 ## Local guides
 *(not something readily achievable with CWCheat functionality)*
 
+* [Analysing PPSSPP RAM with IDA Pro](./guides/IDA-PPSSPP.md)
 * [Sims 2 The – Teleport anywhere](./guides/Sims2The_Teleport_anywhere.md)
 * [TDU – repack game to improve graphics and performance](./guides/TDU-hard-improvements.md) *(complementary to the CWCheat patches)*
 * [TDU – (other) interesting parameters](./guides/TDU-interesting-params.md) *(if you feel adventurous)*
