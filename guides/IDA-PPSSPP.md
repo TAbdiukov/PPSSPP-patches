@@ -163,7 +163,7 @@ There are 2 options for this step: either to dump with PPSSPP (simpler, recommen
 
 1. In PPSSPP,  navigate to Debug → Memory view (<kbd>Ctrl + M</kbd>)  
 ![Screenshot 2025-10-13 063846.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20063846.png)
-2. In "Memory Viewer" window, right-click in  the memory area and select "Dump"  
+2. In "Memory Viewer" window, right-click in the memory area and select "Dump"  
 ![Screenshot 2025-10-13 065549.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20065549.png)
 3. Ensure that "Location" selected is "RAM".  
 ![Screenshot 2025-10-13 065743.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20065743.png)
@@ -272,7 +272,7 @@ The following information was used for reference:
 	   - `0x01800000` for 🌐PPSSPP-made dumps
 	   - `0x01F00000` for 💵ArtMoney-made dumps
 
-Click **OK** to apply. You may also refer to a screenshots below,
+Click **OK** to apply. You may also refer to screenshots below,
 
 ![b5ba7864f7d18c182ee2e5a4dbe1250e.png](./img/IDA-PPSSPP/b5ba7864f7d18c182ee2e5a4dbe1250e.png) | ![5b60a8608623c22e5e08e6090a87469d.png](./img/IDA-PPSSPP/5b60a8608623c22e5e08e6090a87469d.png) | 
 ---- | ----
@@ -395,7 +395,7 @@ Now that out analysis is complete, let's go back to the address of the instructi
 
 Press <kbd>F5</kbd> (decompile).
 
-The result (I added some labels and used decimal constants )
+The result (I added some labels and used decimal constants)
 
 ![001e58b8f6bf3582335092d6192845bc.png](./img/IDA-PPSSPP/001e58b8f6bf3582335092d6192845bc.png)
 
