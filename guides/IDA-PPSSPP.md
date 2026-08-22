@@ -1,4 +1,5 @@
 # Analysing PPSSPP RAM with IDA Pro
+*with bonus steps on potentially accelerating your analysis with ChatGPT*
 
 In this walkthrough, to demonstrate the process, we will tackle a sample problem. We want to learn more about GTA Vice City Stories USA (later referred to as GTA:VCS) internal logic that handles in-game time of day, in particular, how and where the in‑game hour changes from 23 to 0 (right after 23:59 in in-game time of day). 
 
@@ -421,7 +422,7 @@ The result (I added some labels and used decimal constants)
 4. In "Upload files", upload the C file of `ppsspp-ram-game-[title-identifier]-[version].c`  from step 1,  
 ![c89d438a5ec4e6a2e365fda45b2edfa4.png](./img/IDA-PPSSPP/c89d438a5ec4e6a2e365fda45b2edfa4.png)  
 *Tip*: Long C files may not be accepted by ChatGPT. There are 2 ways to make ChatGPT accept a long C file.
-    * Option 1 (more effective): simply zip the C file into a .zip file with normal compression. For example, you can use [7-zip](https://www.7-zip.org/) for this. ChatGPT can recognize .ZIP files and unzip them easily (unlike more advanced compression format)
+    * Option 1 (more effective): simply zip the C file into a .zip file with normal compression. For example, you can use [7-zip](https://www.7-zip.org/) for this. ChatGPT can recognize .ZIP files and unzip them easily (unlike more advanced compression formats)
     * Option 2: Minify C file.
 
 5. (Optional) source of generate a cover picture for custom GPT.
