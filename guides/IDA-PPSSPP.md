@@ -1,5 +1,5 @@
 # Analysing PPSSPP RAM with IDA Pro
-*with a bonus part on potentially accelerating your analysis with ChatGPT*
+*with a bonus part on accelerating your analysis with ChatGPT*
 
 ## Getting Started
 
