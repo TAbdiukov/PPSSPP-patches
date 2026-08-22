@@ -1,6 +1,8 @@
 # Analysing PPSSPP RAM with IDA Pro
 *with bonus steps on potentially accelerating your analysis with ChatGPT*
 
+## Getting Started
+
 In this walkthrough, to demonstrate the process, we will tackle a sample problem. We want to learn more about GTA Vice City Stories USA (later referred to as GTA:VCS) internal logic that handles in-game time of day, in particular, how and where the in‑game hour changes from 23 to 0 (right after 23:59 in in-game time of day). 
 
 **The problem**: PSP (as emulated by PPSSPP) has limited RAM, and as such, games have to load and unload data often. As such, there is no guarantee that our in-game data is always present.
