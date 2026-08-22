@@ -181,25 +181,28 @@ There are 2 options for this step: either to dump with PPSSPP (simpler, recommen
 
 Once the breakpoint is hit, do
 
-1. In ArtMoney, click on "🔎Search" (we won't really 'Search' for anything)
+1. In ArtMoney, select process to be "PPSSPP..."  
+![ArtMoney-Select.png](./img/IDA-PPSSPP/ArtMoney-Select.png)
+
+2. In ArtMoney, click on "🔎Search" (we won't really 'Search' for anything)  
 ![3a13252f1efba546e03abb7d540543ba.png](./img/IDA-PPSSPP/3a13252f1efba546e03abb7d540543ba.png)
 
-2. In the newly opened window, for "Search" field, select "Save a memory dump"
+3. In the newly opened window, for "Search" field, select "Save a memory dump"  
 ![075c19b7c44fc0d94d9cc82f7d4b1eb7.png](./img/IDA-PPSSPP/075c19b7c44fc0d94d9cc82f7d4b1eb7.png)
 
-3. Then, for "Emulator" field, ensure to select "PPSSPP x64 0.96+" or "PPSSPP 0.96+".
+4. Then, for "Emulator" field, ensure to select "PPSSPP x64 0.96+" or "PPSSPP 0.96+".  
 ![c57de9b5567a4a359532e33d4fe3060b.png](./img/IDA-PPSSPP/c57de9b5567a4a359532e33d4fe3060b.png)
 
-4. Click "✅OK",  
+5. Click "✅OK",  
 ![51ee50b1fc8f3a282d393f8ea77a7efc.png](./img/IDA-PPSSPP/51ee50b1fc8f3a282d393f8ea77a7efc.png)
 
-5. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,
+6. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,  
 ![f3112a19582d88c0293627c7b9c8c694.png](./img/IDA-PPSSPP/f3112a19582d88c0293627c7b9c8c694.png)
 
-6. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"  
+7. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"  
 ![29fb63d25b9272b6ee5596168f940df1.png](./img/IDA-PPSSPP/29fb63d25b9272b6ee5596168f940df1.png)
 
-7. Give it a meaningful name, e.g., "Tutorial", then click "Save"  
+8. Give it a meaningful name, e.g., "Tutorial", then click "Save"  
 ![c97c5f504de417e16fbfddfacaf918d8.png](./img/IDA-PPSSPP/c97c5f504de417e16fbfddfacaf918d8.png)
 
 **Do NOT close PPSSPP yet, do not unpause the game in debugger**
