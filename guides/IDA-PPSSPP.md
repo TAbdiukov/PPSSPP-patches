@@ -403,9 +403,30 @@ The result (I added some labels and used decimal constants)
 
 ![001e58b8f6bf3582335092d6192845bc.png](./img/IDA-PPSSPP/001e58b8f6bf3582335092d6192845bc.png)
 
-You may also produce a C-file for analysis by accessing File -> Produce file -> Create C file (or <kbd>Ctrl+F5</kbd>).
 
+## Bonus steps: Utilize ChatGPT to accelerate your IDA Pro analysis
+*paid ChatGPT may be required*
+
+1. In IDA Pro may produce a C-file for analysis by accessing File -> Produce file -> Create C file (or <kbd>Ctrl+F5</kbd>). Give it a meaningful name, e.g., `ppsspp-ram-game-[title-identifier]-[version].c`   
 ![7e2e8f12a2b79ec039dc32fd90028b78.png](./img/IDA-PPSSPP/7e2e8f12a2b79ec039dc32fd90028b78.png)
+
+2. Browse to https://chatgpt.com/gpts , click the Create button (top-right corner)  
+![40e32718f3a0a439ba0a948f419fd82b.png](./img/IDA-PPSSPP/40e32718f3a0a439ba0a948f419fd82b.png)
+
+3. Configure,  
+	![fda6d92084e16061541ebab4708ff2d5.png](./img/IDA-PPSSPP/fda6d92084e16061541ebab4708ff2d5.png)
+	- Within "Recommended Model", select the latest available "Pro" model.
+    - Within "Capabilities", untick "Web Search" and "Image Generate", and do tick "Code Interpreter & Data Analysis"
+
+4. In "Upload files", upload the C file of `ppsspp-ram-game-[title-identifier]-[version].c`  from step 1,  
+![c89d438a5ec4e6a2e365fda45b2edfa4.png](./img/IDA-PPSSPP/c89d438a5ec4e6a2e365fda45b2edfa4.png)  
+*Tip*: Long C files may not be accepted by ChatGPT. There are 2 ways to make ChatGPT accept a long C file.
+    * Option 1 (more effective): simply zip the C file into a .zip file with normal compression. For example, you can use [7-zip](https://www.7-zip.org/) for this. ChatGPT can recognize .ZIP files and unzip them easily (unlike more advanced compression format)
+    * Option 2: Minify C file.
+
+5. (Optional) source of generate a cover picture for custom GPT.
+
+6. Do create a custom GPT and enjoy having an AI capable of data-analysing the RAM of a PSP game.
 
 ## Troubleshooting appendix
 
