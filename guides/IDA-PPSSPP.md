@@ -1,4 +1,7 @@
 # Analysing PPSSPP RAM with IDA Pro
+*with a bonus part on accelerating your analysis with ChatGPT*
+
+## Getting Started
 
 In this walkthrough, to demonstrate the process, we will tackle a sample problem. We want to learn more about GTA Vice City Stories USA (later referred to as GTA:VCS) internal logic that handles in-game time of day, in particular, how and where the in‑game hour changes from 23 to 0 (right after 23:59 in in-game time of day). 
 
@@ -163,7 +166,7 @@ There are 2 options for this step: either to dump with PPSSPP (simpler, recommen
 
 1. In PPSSPP,  navigate to Debug → Memory view (<kbd>Ctrl + M</kbd>)  
 ![Screenshot 2025-10-13 063846.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20063846.png)
-2. In "Memory Viewer" window, right-click in  the memory area and select "Dump"  
+2. In "Memory Viewer" window, right-click in the memory area and select "Dump"  
 ![Screenshot 2025-10-13 065549.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20065549.png)
 3. Ensure that "Location" selected is "RAM".  
 ![Screenshot 2025-10-13 065743.png](./img/IDA-PPSSPP/Screenshot%202025-10-13%20065743.png)
@@ -181,25 +184,28 @@ There are 2 options for this step: either to dump with PPSSPP (simpler, recommen
 
 Once the breakpoint is hit, do
 
-1. In ArtMoney, click on "🔎Search" (we won't really 'Search' for anything)
+1. In ArtMoney, select process to be "PPSSPP..."  
+![ArtMoney-Select.png](./img/IDA-PPSSPP/ArtMoney-Select.png)
+
+2. In ArtMoney, click on "🔎Search" (we won't really 'Search' for anything)  
 ![3a13252f1efba546e03abb7d540543ba.png](./img/IDA-PPSSPP/3a13252f1efba546e03abb7d540543ba.png)
 
-2. In the newly opened window, for "Search" field, select "Save a memory dump"
+3. In the newly opened window, for "Search" field, select "Save a memory dump"  
 ![075c19b7c44fc0d94d9cc82f7d4b1eb7.png](./img/IDA-PPSSPP/075c19b7c44fc0d94d9cc82f7d4b1eb7.png)
 
-3. Then, for "Emulator" field, ensure to select "PPSSPP x64 0.96+" or "PPSSPP 0.96+".
+4. Then, for "Emulator" field, ensure to select "PPSSPP x64 0.96+" or "PPSSPP 0.96+".  
 ![c57de9b5567a4a359532e33d4fe3060b.png](./img/IDA-PPSSPP/c57de9b5567a4a359532e33d4fe3060b.png)
 
-4. Click "✅OK",
+5. Click "✅OK",  
 ![51ee50b1fc8f3a282d393f8ea77a7efc.png](./img/IDA-PPSSPP/51ee50b1fc8f3a282d393f8ea77a7efc.png)
 
-5. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,
+6. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,  
 ![f3112a19582d88c0293627c7b9c8c694.png](./img/IDA-PPSSPP/f3112a19582d88c0293627c7b9c8c694.png)
 
-6. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"
+7. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"  
 ![29fb63d25b9272b6ee5596168f940df1.png](./img/IDA-PPSSPP/29fb63d25b9272b6ee5596168f940df1.png)
 
-7. Give it a meaningful name, e.g., "Tutorial", then click "Save"
+8. Give it a meaningful name, e.g., "Tutorial", then click "Save"  
 ![c97c5f504de417e16fbfddfacaf918d8.png](./img/IDA-PPSSPP/c97c5f504de417e16fbfddfacaf918d8.png)
 
 **Do NOT close PPSSPP yet, do not unpause the game in debugger**
@@ -241,7 +247,8 @@ Old (generic) | New (correct and precise)
 Do you want to change the processor type to psp? → [ Yes ]
 
 ### 6.3 Disassembly memory organization
-![dd23dd197f1cbfcd8de635013aa72f70.png](./img/IDA-PPSSPP/dd23dd197f1cbfcd8de635013aa72f70.png)
+![dd23dd197f1cbfcd8de635013aa72f70.png](./img/IDA-PPSSPP/dd23dd197f1cbfcd8de635013aa72f70.png) |
+---- |
 (very important not to make any mistakes)
 
 The following information was used for reference:
@@ -272,7 +279,7 @@ The following information was used for reference:
 	   - `0x01800000` for 🌐PPSSPP-made dumps
 	   - `0x01F00000` for 💵ArtMoney-made dumps
 
-Click **OK** to apply. You may also refer to a screenshots below,
+Click **OK** to apply. You may also refer to screenshots below,
 
 ![b5ba7864f7d18c182ee2e5a4dbe1250e.png](./img/IDA-PPSSPP/b5ba7864f7d18c182ee2e5a4dbe1250e.png) | ![5b60a8608623c22e5e08e6090a87469d.png](./img/IDA-PPSSPP/5b60a8608623c22e5e08e6090a87469d.png) | 
 ---- | ----
@@ -395,13 +402,34 @@ Now that out analysis is complete, let's go back to the address of the instructi
 
 Press <kbd>F5</kbd> (decompile).
 
-The result (I added some labels and used decimal constants )
+The result (I added some labels and used decimal constants)
 
 ![001e58b8f6bf3582335092d6192845bc.png](./img/IDA-PPSSPP/001e58b8f6bf3582335092d6192845bc.png)
 
-You may also produce a C-file for analysis by accessing File -> Produce file -> Create C file (or <kbd>Ctrl+F5</kbd>).
 
+## Bonus part: Utilize ChatGPT to accelerate your IDA Pro analysis
+*paid ChatGPT may be required*
+
+1. In IDA Pro may produce a C-file for analysis by accessing File -> Produce file -> Create C file (or <kbd>Ctrl+F5</kbd>). Give it a meaningful name, e.g., `ppsspp-ram-game-[title-identifier]-[version].c`   
 ![7e2e8f12a2b79ec039dc32fd90028b78.png](./img/IDA-PPSSPP/7e2e8f12a2b79ec039dc32fd90028b78.png)
+
+2. Browse to https://chatgpt.com/gpts , click the Create button (top-right corner)  
+![40e32718f3a0a439ba0a948f419fd82b.png](./img/IDA-PPSSPP/40e32718f3a0a439ba0a948f419fd82b.png)
+
+3. Configure,  
+	![fda6d92084e16061541ebab4708ff2d5.png](./img/IDA-PPSSPP/fda6d92084e16061541ebab4708ff2d5.png)
+	- Within "Recommended Model", select the latest available "Pro" model.
+    - Within "Capabilities", untick "Web Search" and "Image Generate", and do tick "Code Interpreter & Data Analysis"
+
+4. In "Upload files", upload the C file of `ppsspp-ram-game-[title-identifier]-[version].c`  from step 1,  
+![c89d438a5ec4e6a2e365fda45b2edfa4.png](./img/IDA-PPSSPP/c89d438a5ec4e6a2e365fda45b2edfa4.png)  
+*Tip*: Long C files may not be accepted by ChatGPT. There are 2 ways to make ChatGPT accept a long C file.
+    * Option 1 (more effective): simply zip the C file into a .zip file with normal compression. For example, you can use [7-zip](https://www.7-zip.org/) for this. ChatGPT can recognize .ZIP files and unzip them easily (unlike more advanced compression formats)
+    * Option 2: Minify C file.
+
+5. (Optional) source of generate a cover picture for custom GPT.
+
+6. Do create a custom GPT and enjoy having an AI capable of data-analysing the RAM of a PSP game.
 
 ## Troubleshooting appendix
 
