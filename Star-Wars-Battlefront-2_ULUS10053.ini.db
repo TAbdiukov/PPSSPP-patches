@@ -1,0 +1,29 @@
+_S ULUS-10053
+_G Star Wars: Battlefront II [US]
+_C0 _________[>>Hacks<<]_________
+_L 0x00000000 0x00000000
+//
+_C0 Disable ticket bleeding (game rebalance)
+// Relevant code:
+// 08A22E14:27BDFFE0 // func start: addiu sp,sp,-0x20
+// 08A22E18:E48C002C //	set ticket bleed rate: swc1, f12,0x2C(a0)
+// 08A22E1E:3C05 // lbu a1 ..
+// new 08A22E18: E48C002C -> 44806000 (	mtc1 zero,f12)
+_L 0xE005FFE0 0x00222E14 // check, 1/5
+_L 0xE00427BD 0x00222E16 // check, 2/5
+_L 0xE003002C 0x00222E18 // check, 3/5
+_L 0xE002E48C 0x00222E1A // check, 4/5
+_L 0xE0013C05 0x00222E1E // check, 5/5
+_L 0x20222E18 0x44806000 // mtc1 zero,f12
+_C0 Re-enable ticket bleeding
+// Relevant code:
+// 08A22E14:27BDFFE0 // func start: addiu sp,sp,-0x20
+// 08A22E18:44806000 //	set ticket bleed rate: swc1, f12,0x2C(a0)
+// 08A22E1E:3C05 // lbu a1 ..
+// new 08A22E18: 44806000 -> E48C002C
+_L 0xE005FFE0 0x00222E14 // check, 1/5
+_L 0xE00427BD 0x00222E16 // check, 2/5
+_L 0xE0036000 0x00222E18 // check, 3/5 (of mod)
+_L 0xE0024480 0x00222E1A // check, 4/5 (of mod)
+_L 0xE0013C05 0x00222E1E // check, 5/5
+_L 0x20222E18 0xE48C002C // og instruction
