@@ -18,7 +18,7 @@ _L 0x20222E18 0x44806000 // mtc1 zero,f12
 _C0 Re-enable ticket bleeding
 // Relevant code:
 // 08A22E14:27BDFFE0 // func start: addiu sp,sp,-0x20
-// 08A22E18:44806000 //	set ticket bleed rate: swc1, f12,0x2C(a0)
+// 08A22E18:44806000 //	set ticket bleed rate (mod): mtc1 zero,f12
 // 08A22E1E:3C05 // lbu a1 ..
 // new 08A22E18: 44806000 -> E48C002C
 _L 0xE005FFE0 0x00222E14 // check, 1/5
