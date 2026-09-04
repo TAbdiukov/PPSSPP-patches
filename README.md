@@ -32,6 +32,7 @@ Highly valuable, though somewhat contradictory.
 * [TDU – repack game to improve graphics and performance](./guides/TDU-hard-improvements.md) *(complementary to the CWCheat patches)*
 * [TDU – (other) interesting parameters](./guides/TDU-interesting-params.md) *(if you feel adventurous)*
 * [TDU – Teleport anywhere, including secret islands](./guides/TDU-tp-islands.md) *(or "assembly for beginners")*
+* [Misc – Harry Potter: Goblet of Fire - Valid Level IDs](./guides/HP-GoF-Levels.md)
 
 ## ppsspp-cwcheat-clippy
 CWCheat does not obey the traditional virtual memory mapping scheme. To convert a PSP virtual address to the CWCheat one, subtract `0x08800000` HEX from the address.
