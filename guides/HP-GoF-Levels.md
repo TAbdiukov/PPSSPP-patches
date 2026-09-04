@@ -12,7 +12,7 @@ In ULUS10032 release of the game, in function starting at `0x089F031C`, register
 0x09 - Forbidden Forest (initial "Escape" sequence)
 0x0A - Forbidden Forest (ReEntrant, from menu)
 0x0B - Triwizard Task 1: the Dragon (from menu)
-0x0C - <<crash/blank screen>> (Likely originally it was PrefectsBathroom)
+0x0C - <<crash/blank screen>> (Likely originally it was PrefectsBathroom, likely PrefectsBathroom is deeply removed)
 0x0F - Herbology (from menu)
 0x10 - Triwizard Task 2 - the Lake Underwater (from menu)
 0x11 - Triwizard Task 3 - the Maze (from menu)
