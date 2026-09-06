@@ -8,7 +8,7 @@ _C0 Disable ticket bleeding (game rebalance)
 // 08A22E14:27BDFFE0 // func start: addiu sp,sp,-0x20
 // 08A22E18:E48C002C //	set ticket bleed rate: swc1, f12,0x2C(a0)
 // 08A22E1E:3C05 // lbu a1 ..
-// new 08A22E18: E48C002C -> 44806000 (	mtc1 zero,f12)
+// new 08A22E18: E48C002C -> 44806000 (mtc1 zero,f12)
 _L 0xE005FFE0 0x00222E14 // check, 1/5
 _L 0xE00427BD 0x00222E16 // check, 2/5
 _L 0xE003002C 0x00222E18 // check, 3/5
