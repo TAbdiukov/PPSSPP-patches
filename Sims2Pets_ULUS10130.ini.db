@@ -1,7 +1,7 @@
 _S ULUS10130
 _G Sims 2 Pets
 //
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 //
 //
@@ -76,7 +76,7 @@ _L 0x2136ADEC 0x09B6AD70 // Write, Chair10 buymenu container
 _L 0x2136AEB4 0x09B6AE38 // Write, Chair11 buymenu container
 _L 0x2136D5C4 0x09B6D548 // Write, Chair12 buymenu container
 //
-_C0 _________[>>Cheats<<]_________
+_C0 _________[>>>Cheats<<<]_________
 _L 0x00000000 0x00000000
 //
 //

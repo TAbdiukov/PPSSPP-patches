@@ -1,7 +1,7 @@
 _S NPUG-80329
 _G Daxter
 //
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 //
 // NPUG-80329
@@ -14,7 +14,7 @@ _L 0x20229C94 0x00000000
 _S ULUS10249
 _G Test Drive Unlimited [USA]
 //
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 //
 _C0 60FPS "Remove Interpolation" (OC needed)
@@ -29,7 +29,7 @@ _L 0x2009A210 0x10000017
 _S UCUS-98632
 _G UCUS-98632
 //
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 //
 _C1 Enhanced GFX v1.1 (OC 666mhz)
@@ -43,7 +43,7 @@ _L 0x2009A210 0x10000017 // Car Level of Detail Max
 _S ULUS10490
 _G GTA: CW [USA]
 //
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 //
 _C0 60 FPS (beta)

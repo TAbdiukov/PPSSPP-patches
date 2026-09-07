@@ -1,6 +1,6 @@
 _S ULES-01088
 _G NARUTO - Ultimate Ninja Heroes 2
-_C0 _________[>>Hacks<<]_________
+_C0 _________[>>>Hacks<<<]_________
 _L 0x00000000 0x00000000
 // === Dogfights ===
 // Enable one of three only
@@ -72,7 +72,7 @@ _L 0xE0020000 0x001C56B6 // check, 4/4
 _L 0x201C56B0 0x27BDFFE0
 _L 0x201C56B4 0xAFBF001C
 //
-_C0 _________[>>Cheats<<]_________
+_C0 _________[>>>Cheats<<<]_________
 _L 0x00000000 0x00000000
 // === Human Substitutions ====
 // Enable one of two only
