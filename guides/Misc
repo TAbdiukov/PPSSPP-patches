@@ -1,0 +1,13 @@
+# Miscellaneous guides
+
+## Fired Up
+
+I discovered an inbuilt cheat in the PSP game of "Fired Up". It hashes internal names and performs evaluations.
+
+If you set your name to either: 
+* `QQQQQQQQ` (uppercase letter `Q x 8`)
+* `HHHHHHHHH` (uppercase letter `H x 9`)
+
+it enables godmode, infinite ammo, and unlocks the entire story. 
+
+Technical explanation: to enable godmode, the sum of ASCII characters in the name in the name must be equal 648.
