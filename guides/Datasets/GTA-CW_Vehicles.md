@@ -1,7 +1,7 @@
 # GTA: CW - Vehicles:
 
-Number - Name of the vehicle (Very brief description)
-
+Syntax: `Number - Name of the vehicle (Very brief description)`
+```
 0 - Admiral (Car)
 1 - Blista (Car)
 2 - Dukes (Car)
@@ -112,3 +112,4 @@ Number - Name of the vehicle (Very brief description)
 107-111 - {Nothing happens}
 112-116 - {Game crash}
 127 - {Empty}
+```
