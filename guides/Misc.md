@@ -2,7 +2,7 @@
 
 ## Fired Up
 
-I discovered an inbuilt cheat in the PSP game of "Fired Up". It hashes internal names and performs evaluations.
+I discovered an inbuilt undocumented cheat in the PSP game of "Fired Up". It hashes internal names and performs evaluations.
 
 If you set your name to either: 
 * `QQQQQQQQ` (uppercase letter `Q x 8`)
