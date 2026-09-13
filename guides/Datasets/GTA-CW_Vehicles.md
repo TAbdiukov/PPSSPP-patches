@@ -1,4 +1,4 @@
-# GTA: CW - Vehicles:
+# GTA: CW - Vehicle IDs
 
 Syntax: `Number - Name of the vehicle (Very brief description)`
 ```
